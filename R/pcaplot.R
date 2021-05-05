@@ -86,7 +86,7 @@ pcaplot <- function (x, intgroup = "condition", ntop = 500, returnData = FALSE,t
     g <- g + geom_label_repel(mapping = aes_string(label = "names", fill = "group"),
                               color = "white", show.legend = TRUE)
 
-  plot_title <- paste0("PCA plot - top ", ntop, " variable genes")
+  plot_title <- paste0("PCA plot - top ", length(select), " variable genes")
   if (!is.null(title)) {
     g <- g + ggtitle(title)
   } else {
