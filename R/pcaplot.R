@@ -84,8 +84,14 @@ pcaplot <- function (x, intgroup = "condition", ntop = 500, returnData = FALSE,t
 
   if (text_labels)
     g <- g + geom_label_repel(mapping = aes_string(label = "names", fill = "group"),
-                              color = "white", show.legend = TRUE) 
-  if (!is.null(title)) g <- g + ggtitle(title)
+                              color = "white", show.legend = TRUE)
+
+  plot_title <- paste0("PCA plot - top ", ntop, " variable genes")
+  if (!is.null(title)) {
+    g <- g + ggtitle(title)
+  } else {
+    g <- g + ggtitle(plot_title)
+  }
   g <- g + theme_bw()
   # as in http://www.huber.embl.de/msmb/Chap-Graphics.html
   # "well-made PCA plots usually have a width that’s larger than the height"
