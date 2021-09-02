@@ -623,7 +623,7 @@ pcaExplorer <- function(dds = NULL,
                      "computing the pca2go object in advance"),
               "bottom", options = list(container = "body")),
             verbatimTextOutput("speciespkg"),
-            checkboxInput("compact_pca2go", "Display compact tables", value = FALSE),
+            checkboxInput("compact_pca2go", "Display compact tables (for topGO tables)", value = FALSE),
             shinyBS::bsTooltip(
               "compact_pca2go", 
               paste0("Should I display all the columns? If the information content of the ",
@@ -2088,7 +2088,7 @@ pcaExplorer <- function(dds = NULL,
     output$dt_pchor_pos <- DT::renderDataTable({
       if (is.null(values$mypca2go)) return(datatable(NULL))
       goe <- values$mypca2go[[paste0("PC", input$pc_x)]][["posLoad"]]
-      if(input$compact_pca2go)
+      if (input$compact_pca2go & ("p.value_elim" %in% colnames(goe)))
         return(datatable(goe[, c("GO.ID", "Term", "Significant", "p.value_elim")], options = list(pageLength = 5)))
       datatable(goe)
     })
@@ -2096,7 +2096,7 @@ pcaExplorer <- function(dds = NULL,
     output$dt_pchor_neg <- DT::renderDataTable({
       if (is.null(values$mypca2go)) return(datatable(NULL))
       goe <- values$mypca2go[[paste0("PC", input$pc_x)]][["negLoad"]]
-      if (input$compact_pca2go)
+      if (input$compact_pca2go & ("p.value_elim" %in% colnames(goe)))
         return(datatable(goe[, c("GO.ID", "Term", "Significant", "p.value_elim")], options = list(pageLength = 5)))
       datatable(goe)
     })
@@ -2104,7 +2104,7 @@ pcaExplorer <- function(dds = NULL,
     output$dt_pcver_pos <- DT::renderDataTable({
       if (is.null(values$mypca2go)) return(datatable(NULL))
       goe <- values$mypca2go[[paste0("PC", input$pc_y)]][["posLoad"]]
-      if (input$compact_pca2go)
+      if (input$compact_pca2go & ("p.value_elim" %in% colnames(goe)))
         return(datatable(goe[, c("GO.ID", "Term", "Significant", "p.value_elim")], options = list(pageLength = 5)))
       datatable(goe)
     })
@@ -2112,7 +2112,7 @@ pcaExplorer <- function(dds = NULL,
     output$dt_pcver_neg <- DT::renderDataTable({
       if (is.null(values$mypca2go)) return(datatable(NULL))
       goe <- values$mypca2go[[paste0("PC", input$pc_y)]][["negLoad"]]
-      if (input$compact_pca2go)
+      if (input$compact_pca2go & ("p.value_elim" %in% colnames(goe)))
         return(datatable(goe[, c("GO.ID", "Term", "Significant", "p.value_elim")], options = list(pageLength = 5)))
       datatable(goe)
     })
