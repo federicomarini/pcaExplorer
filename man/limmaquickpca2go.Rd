@@ -35,7 +35,7 @@ like it is normally used with the \code{select} function of \code{AnnotationDbi}
 
 \item{scale}{Logical, defaults to FALSE, scale values for the PCA}
 
-\item{...}{Further parameters to be passed to the topGO routine}
+\item{...}{Further parameters to be passed to the goana routine}
 }
 \value{
 A nested list object containing for each principal component the terms enriched
