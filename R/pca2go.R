@@ -328,7 +328,7 @@ topGOtable <- function(DEgenes,                  # Differentially expressed gene
 #' @param loadings_ngenes Number of genes to extract the loadings (in each direction)
 #' @param background_genes Which genes to consider as background.
 #' @param scale Logical, defaults to FALSE, scale values for the PCA
-#' @param ... Further parameters to be passed to the topGO routine
+#' @param ... Further parameters to be passed to the goana routine
 #'
 #' @return A nested list object containing for each principal component the terms enriched
 #' in each direction. This object is to be thought in combination with the displaying feature
