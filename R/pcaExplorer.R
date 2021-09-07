@@ -388,8 +388,8 @@ pcaExplorer <- function(dds = NULL,
               column(
                 width = 4,
                 wellPanel(checkboxInput("sample_labels", "Display sample labels", value = TRUE),
-                          checkboxInput("pca_ellipse", "draw a confidence ellipse for each group", value = FALSE),
-                          sliderInput("pca_cislider", "select the confidence interval level", min = 0, max = 1, value = 0.95)))),
+                          checkboxInput("pca_ellipse", "Draw a confidence ellipse for each group", value = FALSE),
+                          sliderInput("pca_cislider", "Select the confidence interval level", min = 0, max = 1, value = 0.95)))),
             fluidRow(
               column(
                 width = 6,
@@ -469,10 +469,13 @@ pcaExplorer <- function(dds = NULL,
             
             p(h1("Principal Component Analysis on the genes"), "PCA projections of genes abundances onto any pair of components."),
             
-            fluidRow(checkboxInput("variable_labels", "Display variable labels", value = TRUE)),
             fluidRow(
-              checkboxInput("ylimZero_genes", "Set y axis limit to 0", value = TRUE)),
-            
+              column(
+                width = 6,
+                checkboxInput("variable_labels", "Display variable labels", value = TRUE),
+                checkboxInput("ylimZero_genes", "Set y axis limit to 0", value = TRUE)
+              )
+            ),
             fluidRow(
               column(
                 width = 6,
@@ -558,25 +561,29 @@ pcaExplorer <- function(dds = NULL,
             condition = "!output.checkdds",
             p(h1("GeneFinder")),
             fluidRow(
-              wellPanel(
-                width = 5,
-                textInput("genefinder", label = "Type in the name of the gene to search", value = NULL),
-                shinyBS::bsTooltip(
-                  "genefinder", paste0(
-                    "Type in the name of the gene to search. If no annotation is ",
-                    "provided, you need to use IDs that are the row names of the ",
-                    "objects you are using - count matrix, SummarizedExperiments ",
-                    "or similar. If an annotation is provided, that also contains ",
-                    "gene symbols or similar, the gene finder tries to find the ",
-                    "name and the ID, and it suggests if some characters are in a ",
-                    "different case"),
-                  "bottom", options = list(container = "body")),
-                checkboxInput("ylimZero", "Set y axis limit to 0", value = TRUE),
-                checkboxInput("addsamplelabels", "Annotate sample labels to the dots in the plot", value = TRUE)),
-              
-              verbatimTextOutput("searchresult"),
-              verbatimTextOutput("debuggene"),
-              
+              column(
+                width = 6,
+                wellPanel(
+                  width = 5,
+                  textInput("genefinder", label = "Type in the name of the gene to search", value = NULL),
+                  shinyBS::bsTooltip(
+                    "genefinder", paste0(
+                      "Type in the name of the gene to search. If no annotation is ",
+                      "provided, you need to use IDs that are the row names of the ",
+                      "objects you are using - count matrix, SummarizedExperiments ",
+                      "or similar. If an annotation is provided, that also contains ",
+                      "gene symbols or similar, the gene finder tries to find the ",
+                      "name and the ID, and it suggests if some characters are in a ",
+                      "different case"),
+                    "bottom", options = list(container = "body")),
+                  checkboxInput("ylimZero", "Set y axis limit to 0", value = TRUE),
+                  checkboxInput("addsamplelabels", "Annotate sample labels to the dots in the plot", value = TRUE)),
+                
+                verbatimTextOutput("searchresult"),
+                verbatimTextOutput("debuggene")
+              )
+            ),
+            fluidRow(
               column(
                 width = 8,
                 plotOutput("genefinder_plot"),
