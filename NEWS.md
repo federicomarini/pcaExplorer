@@ -1,3 +1,10 @@
+# pcaExplorer 2.20.0
+
+## Other notes
+
+* the tables in the PCA2GO tab panel can be compacted only if they are computed via the `pca2go` function (offline) - at runtime, `limmaquickpca2go` is used and no compaction is required
+* if an annotation is provided with a column `gene_id`, these values are actually overwriting the rownames (makes the object more robust with respect to its provenance)
+
 # pcaExplorer 2.16.0
 
 ## Other notes
