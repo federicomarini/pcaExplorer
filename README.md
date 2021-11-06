@@ -96,6 +96,10 @@ either passed as a parameter when launching the app, or also uploaded as a tab s
 For additional details regarding the functions of **pcaExplorer**, please consult the documentation or 
 write an email to marinif@uni-mainz.de. 
 
+## Code of Conduct
+
+Please note that the pcaExplorer project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
 ### Bug reports/Issues/New features
 
 Please use https://github.com/federicomarini/pcaExplorer/issues for reporting bugs, issues or for 
