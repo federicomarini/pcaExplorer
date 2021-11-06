@@ -49,6 +49,7 @@ jobs:
       - name: Install remotes
         run: |
           install.packages('remotes')
+          install.packages('markdown')
         shell: Rscript {0}
 
       - name: Set BiocManager version
