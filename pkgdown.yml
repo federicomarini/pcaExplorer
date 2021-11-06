@@ -1,8 +1,8 @@
 pandoc: 2.7.3
-pkgdown: 1.6.1.9000
-pkgdown_sha: 84f234cf19153ce99bf1bcf875dc56248ddf0cbe
+pkgdown: 1.9000.9000.9000
+pkgdown_sha: 8122179c440692487eda000d6542d7734a37d36d
 articles:
   pcaExplorer: pcaExplorer.html
   upandrunning: upandrunning.html
-last_built: 2021-02-03T00:01Z
+last_built: 2021-11-06T11:17Z
 

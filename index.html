@@ -22,6 +22,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -34,7 +36,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.17.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.21.0</span>
       </span>
     </div>
 
@@ -42,7 +44,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -71,8 +73,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/federicomarini/pcaExplorer">
-    <span class="fas fa-github fa-lg"></span>
+  <a href="https://github.com/federicomarini/pcaExplorer" class="external-link">
+    <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -88,14 +90,14 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="pcaexplorer---interactive-exploration-of-principal-components-of-samples-and-genes-in-rna-seq-data" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#pcaexplorer---interactive-exploration-of-principal-components-of-samples-and-genes-in-rna-seq-data" class="anchor"></a>pcaExplorer - Interactive exploration of Principal Components of Samples and Genes in RNA-seq data</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="pcaexplorer---interactive-exploration-of-principal-components-of-samples-and-genes-in-rna-seq-data">pcaExplorer - Interactive exploration of Principal Components of Samples and Genes in RNA-seq data<a class="anchor" aria-label="anchor" href="#pcaexplorer---interactive-exploration-of-principal-components-of-samples-and-genes-in-rna-seq-data"></a>
+</h1></div>
 
-<div id="software-status" class="section level2">
-<h2 class="hasAnchor">
-<a href="#software-status" class="anchor"></a>Software status</h2>
-<p><a href="https://github.com/federicomarini/pcaExplorer/actions"><img src="https://github.com/federicomarini/pcaExplorer/workflows/R-CMD-check/badge.svg" alt="R build status"></a></p>
+<div class="section level2">
+<h2 id="software-status">Software status<a class="anchor" aria-label="anchor" href="#software-status"></a>
+</h2>
+<p><a href="https://github.com/federicomarini/pcaExplorer/actions" class="external-link"><img src="https://github.com/federicomarini/pcaExplorer/workflows/R-CMD-check/badge.svg" alt="R build status"></a></p>
 <table class="table">
 <thead><tr class="header">
 <th align="center">Platforms</th>
@@ -104,49 +106,49 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="center">Bioc (<a href="http://bioconductor.org/packages/devel/bioc/html/pcaExplorer.html"><em>devel</em></a>)</td>
+<td align="center">Bioc (<a href="http://bioconductor.org/packages/devel/bioc/html/pcaExplorer.html" class="external-link"><em>devel</em></a>)</td>
 <td align="center">Multiple</td>
-<td align="center"><a href="http://bioconductor.org/checkResults/devel/bioc-LATEST/pcaExplorer"><img src="http://bioconductor.org/shields/build/devel/bioc/pcaExplorer.svg" alt="Bioconductor-devel Build Status"></a></td>
+<td align="center"><a href="http://bioconductor.org/checkResults/devel/bioc-LATEST/pcaExplorer" class="external-link"><img src="http://bioconductor.org/shields/build/devel/bioc/pcaExplorer.svg" alt="Bioconductor-devel Build Status"></a></td>
 </tr>
 <tr class="even">
-<td align="center">Bioc (<a href="http://bioconductor.org/packages/release/bioc/html/pcaExplorer.html"><em>release</em></a>)</td>
+<td align="center">Bioc (<a href="http://bioconductor.org/packages/release/bioc/html/pcaExplorer.html" class="external-link"><em>release</em></a>)</td>
 <td align="center">Multiple</td>
-<td align="center"><a href="http://bioconductor.org/checkResults/release/bioc-LATEST/pcaExplorer"><img src="http://bioconductor.org/shields/build/release/bioc/pcaExplorer.svg" alt="Bioconductor-release Build Status"></a></td>
+<td align="center"><a href="http://bioconductor.org/checkResults/release/bioc-LATEST/pcaExplorer" class="external-link"><img src="http://bioconductor.org/shields/build/release/bioc/pcaExplorer.svg" alt="Bioconductor-release Build Status"></a></td>
 </tr>
 </tbody>
 </table>
-<p><a href="https://codecov.io/github/federicomarini/pcaExplorer?branch=master"><img src="https://codecov.io/github/federicomarini/pcaExplorer/coverage.svg?branch=master" alt="codecov.io"></a></p>
+<p><a href="https://codecov.io/github/federicomarini/pcaExplorer?branch=master" class="external-link"><img src="https://codecov.io/github/federicomarini/pcaExplorer/coverage.svg?branch=master" alt="codecov.io"></a></p>
 <p><code>pcaExplorer</code> is a Bioconductor package containing a Shiny application for analyzing expression data in different conditions and experimental factors.</p>
 <p>It is a general-purpose interactive companion tool for RNA-seq analysis, which guides the user in exploring the Principal Components of the data under inspection.</p>
 <p><code>pcaExplorer</code> provides tools and functionality to detect outlier samples, genes that show particular patterns, and additionally provides a functional interpretation of the principal components for further quality assessment and hypothesis generation on the input data.</p>
 <p>Moreover, a novel visualization approach is presented to simultaneously assess the effect of more than one experimental factor on the expression levels.</p>
 <p>Thanks to its interactive/reactive design, it is designed to become a practical companion to any RNA-seq dataset analysis, making exploratory data analysis accessible also to the bench biologist, while providing additional insight also for the experienced data analyst.</p>
 </div>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p><code>pcaExplorer</code> can be easily installed using <code><a href="https://rdrr.io/pkg/BiocManager/man/install.html">BiocManager::install()</a></code>:</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p><code>pcaExplorer</code> can be easily installed using <code><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">BiocManager::install()</a></code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
-    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
-<span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
+    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
+<span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></code></pre></div>
 <p>or, optionally,</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span><span class="st">"federicomarini/pcaExplorer"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"federicomarini/pcaExplorer"</span><span class="op">)</span>
 <span class="co"># or alternatively...</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"federicomarini/pcaExplorer"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="quick-start" class="section level2">
-<h2 class="hasAnchor">
-<a href="#quick-start" class="anchor"></a>Quick start</h2>
+<div class="section level2">
+<h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
+</h2>
 <p>This command loads the <code>pcaExplorer</code> package</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/federicomarini/pcaExplorer">"pcaExplorer"</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/federicomarini/pcaExplorer" class="external-link">"pcaExplorer"</a></span><span class="op">)</span></code></pre></div>
 <p>The <code>pcaExplorer</code> app can be launched in different modes:</p>
 <ul>
-<li><p><code><a href="reference/pcaExplorer.html">pcaExplorer(dds = dds, dst = dst)</a></code>, where <code>dds</code> is a <code>DESeqDataSet</code> object and <code>dst</code> is a <code>DESeqTransform</code> object, which were created during an existing session for the analysis of an RNA-seq dataset with the <code>DESeq2</code> package</p></li>
-<li><p><code><a href="reference/pcaExplorer.html">pcaExplorer(dds = dds)</a></code>, where <code>dds</code> is a <code>DESeqDataSet</code> object. The <code>dst</code> object is automatically computed upon launch.</p></li>
-<li><p><code><a href="reference/pcaExplorer.html">pcaExplorer(countmatrix = countmatrix, coldata = coldata)</a></code>, where <code>countmatrix</code> is a count matrix, generated after assigning reads to features such as genes via tools such as <code>HTSeq-count</code> or <code>featureCounts</code>, and <code>coldata</code> is a data frame containing the experimental covariates of the experiments, such as condition, tissue, cell line, run batch and so on.</p></li>
+<li><p><code>pcaExplorer(dds = dds, dst = dst)</code>, where <code>dds</code> is a <code>DESeqDataSet</code> object and <code>dst</code> is a <code>DESeqTransform</code> object, which were created during an existing session for the analysis of an RNA-seq dataset with the <code>DESeq2</code> package</p></li>
+<li><p><code>pcaExplorer(dds = dds)</code>, where <code>dds</code> is a <code>DESeqDataSet</code> object. The <code>dst</code> object is automatically computed upon launch.</p></li>
+<li><p><code>pcaExplorer(countmatrix = countmatrix, coldata = coldata)</code>, where <code>countmatrix</code> is a count matrix, generated after assigning reads to features such as genes via tools such as <code>HTSeq-count</code> or <code>featureCounts</code>, and <code>coldata</code> is a data frame containing the experimental covariates of the experiments, such as condition, tissue, cell line, run batch and so on.</p></li>
 <li><p><code><a href="reference/pcaExplorer.html">pcaExplorer()</a></code>, and then subsequently uploading the count matrix and the covariates data frame through the user interface. These files need to be formatted as tab separated files, which is a common format for storing such count values.</p></li>
 </ul>
 <p>Additional parameters and objects that can be provided to the main <code>pcaExplorer</code> function are:</p>
@@ -155,14 +157,19 @@
 <li><p><code>annotation</code>, a data frame object, with <code>row.names</code> as gene identifiers (e.g. ENSEMBL ids) identical to the row names of the count matrix or <code>dds</code> object, and an extra column <code>gene_name</code>, containing e.g. HGNC-based gene symbols. This can be used for making information extraction easier, as ENSEMBL ids (a usual choice when assigning reads to features) do not provide an immediate readout for which gene they refer to. This can be either passed as a parameter when launching the app, or also uploaded as a tab separated text file.</p></li>
 </ul>
 </div>
-<div id="contact" class="section level2">
-<h2 class="hasAnchor">
-<a href="#contact" class="anchor"></a>Contact</h2>
+<div class="section level2">
+<h2 id="contact">Contact<a class="anchor" aria-label="anchor" href="#contact"></a>
+</h2>
 <p>For additional details regarding the functions of <strong>pcaExplorer</strong>, please consult the documentation or write an email to <a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz.de</a>.</p>
-<div id="bug-reportsissuesnew-features" class="section level3">
-<h3 class="hasAnchor">
-<a href="#bug-reportsissuesnew-features" class="anchor"></a>Bug reports/Issues/New features</h3>
-<p>Please use <a href="https://github.com/federicomarini/pcaExplorer/issues" class="uri">https://github.com/federicomarini/pcaExplorer/issues</a> for reporting bugs, issues or for suggesting new features to be implemented.</p>
+</div>
+<div class="section level2">
+<h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
+</h2>
+<p>Please note that the pcaExplorer project is released with a <a href="https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<div class="section level3">
+<h3 id="bug-reportsissuesnew-features">Bug reports/Issues/New features<a class="anchor" aria-label="anchor" href="#bug-reportsissuesnew-features"></a>
+</h3>
+<p>Please use <a href="https://github.com/federicomarini/pcaExplorer/issues" class="external-link uri">https://github.com/federicomarini/pcaExplorer/issues</a> for reporting bugs, issues or for suggesting new features to be implemented.</p>
 </div>
 </div>
 </div>
@@ -170,54 +177,64 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from BIOC at <br><a href="https://www.bioconductor.org/packages/pcaExplorer">https://​www.bioconductor.org/​packages/​pcaExplorer</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/federicomarini/pcaExplorer/">https://​github.com/​federicomarini/​pcaExplorer/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/federicomarini/pcaExplorer/issues">https://​github.com/​federicomarini/​pcaExplorer/​issues</a>
-</li>
+<li><a href="https://www.bioconductor.org/packages/pcaExplorer" class="external-link">View on Bioconductor</a></li>
+<li><a href="https://github.com/federicomarini/pcaExplorer/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/federicomarini/pcaExplorer/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
+<a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
 </li>
 </ul>
 </div>
+
+<div class="community">
+<h2 data-toc-skip>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+</ul>
+</div>
+
 <div class="citation">
-<h2>Citation</h2>
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
 <li><a href="authors.html">Citing pcaExplorer</a></li>
 </ul>
 </div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://federicomarini.github.io">Federico Marini</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-3252-7758" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<a href="https://federicomarini.github.io" class="external-link">Federico Marini</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-3252-7758" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://doi.org/10.1186/s12859-019-2879-1"><img src="https://img.shields.io/badge/doi-pcaExplorer-blue.svg"></a></li>
+<li><a href="https://doi.org/10.1186/s12859-019-2879-1" class="external-link"><img src="https://img.shields.io/badge/doi-pcaExplorer-blue.svg"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://federicomarini.github.io">Federico Marini</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://federicomarini.github.io" class="external-link">Federico Marini</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>
@@ -225,6 +242,8 @@
 
   
 
+
+  
 
   </body>
 </html>
