@@ -123,11 +123,14 @@ pca2go <- function(se,
   probesPC4neg <- rankedGeneLoadings(p, pc = 4, decreasing = FALSE)[1:loadings_ngenes]
   
   if (return_ranked_gene_loadings)
-    return(list(probesPC1pos, probesPC1neg,
-                probesPC2pos, probesPC2neg,
-                probesPC3pos, probesPC3neg,
-                probesPC4pos, probesPC4neg))
-
+    return(
+      list(PC1 = list(posLoad = probesPC1pos, negLoad = probesPC1neg),
+           PC2 = list(posLoad = probesPC2pos, negLoad = probesPC2neg),
+           PC3 = list(posLoad = probesPC3pos, negLoad = probesPC3neg),
+           PC4 = list(posLoad = probesPC4pos, negLoad = probesPC4neg)
+      )
+    )
+  
   message("Ranking genes by the loadings ... done!")
   message("Extracting functional categories enriched in the gene subsets ...")
   topGOpc1pos <- topGOtable(probesPC1pos, BGids, annot = annFUN.org, mapping = annopkg, ...)
