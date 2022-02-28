@@ -699,11 +699,17 @@ They use respectively the `biomaRt` package and the `org.XX.eg.db` packages.
 anno_df_biomart <- get_annotation(dds = dds_airway,
                                   biomart_dataset = "hsapiens_gene_ensembl",
                                   idtype = "ensembl_gene_id")
+```
 
+```{r}
 anno_df_orgdb <- get_annotation_orgdb(dds = dds_airway,
                                       orgdb_species = "org.Hs.eg.db",
                                       idtype = "ENSEMBL")
+
+head(anno_df_orgdb)
 ```
+
+If using datasets and annotation packages for yeast samples (*Saccharomyces cerevisiae*, and the `org.Sc.sgd.db` package), remember to specify the `key_for_genenames` in the call to `get_annotation_orgdb` (an error message is thrown otherwise).
 
 ## `pair_corr`
 
