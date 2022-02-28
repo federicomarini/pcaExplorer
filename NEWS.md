@@ -1,3 +1,9 @@
+# pcaExplorer 2.22.0
+
+## Other notes
+
+* `get_annotation_orgdb()` gains an additional argument, `key_for_genenames`, which defaults to "SYMBOL". This should not change the behavior of the function, if not specified, but accommodates for the use of annotation packages where the information has been encoded differently (e.g. org.Sc.sgd.db where the info is contained in the "ORF" column)
+
 # pcaExplorer 2.20.0
 
 ## Other notes
