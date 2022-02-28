@@ -4,7 +4,7 @@
 \alias{get_annotation_orgdb}
 \title{Get an annotation data frame from org db packages}
 \usage{
-get_annotation_orgdb(dds, orgdb_species, idtype)
+get_annotation_orgdb(dds, orgdb_species, idtype, key_for_genenames = "SYMBOL")
 }
 \arguments{
 \item{dds}{A \code{\link{DESeqDataSet}} object}
@@ -14,6 +14,12 @@ package which should be available in Bioconductor}
 
 \item{idtype}{Character, the ID type of the genes as in the row names of
 \code{dds}, to be used for the call to \code{\link{mapIds}}}
+
+\item{key_for_genenames}{Character, corresponding to the column name for the 
+key in the orgDb package containing the official gene name (often called 
+gene symbol). 
+This parameter defaults to "SYMBOL", but can be adjusted in case the key is not
+found in the annotation package (e.g. for \code{org.Sc.sgd.db}).}
 }
 \value{
 A data frame for ready use in \code{pcaExplorer}, retrieved from the
@@ -29,7 +35,6 @@ airway
 dds_airway <- DESeq2::DESeqDataSetFromMatrix(assay(airway),
                                              colData = colData(airway),
                                              design = ~dex+cell)
-\dontrun{
-get_annotation_orgdb(dds_airway, "org.Hs.eg.db", "ENSEMBL")
-}
+anno_df <- get_annotation_orgdb(dds_airway, "org.Hs.eg.db", "ENSEMBL")
+head(anno_df)
 }

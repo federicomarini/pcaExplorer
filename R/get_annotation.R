@@ -49,6 +49,11 @@ To obtain a list, type mart = useMart('ensembl'), followed by listDatasets(mart)
 #' package which should be available in Bioconductor
 #' @param idtype Character, the ID type of the genes as in the row names of
 #' \code{dds}, to be used for the call to \code{\link{mapIds}}
+#' @param key_for_genenames Character, corresponding to the column name for the 
+#' key in the orgDb package containing the official gene name (often called 
+#' gene symbol). 
+#' This parameter defaults to "SYMBOL", but can be adjusted in case the key is not
+#' found in the annotation package (e.g. for \code{org.Sc.sgd.db}).
 #'
 #' @return A data frame for ready use in \code{pcaExplorer}, retrieved from the
 #' org db packages
@@ -61,10 +66,9 @@ To obtain a list, type mart = useMart('ensembl'), followed by listDatasets(mart)
 #' dds_airway <- DESeq2::DESeqDataSetFromMatrix(assay(airway),
 #'                                              colData = colData(airway),
 #'                                              design = ~dex+cell)
-#' \dontrun{
-#' get_annotation_orgdb(dds_airway, "org.Hs.eg.db", "ENSEMBL")
-#' }
-get_annotation_orgdb <- function(dds, orgdb_species, idtype) {
+#' anno_df <- get_annotation_orgdb(dds_airway, "org.Hs.eg.db", "ENSEMBL")
+#' head(anno_df)
+get_annotation_orgdb <- function(dds, orgdb_species, idtype, key_for_genenames = "SYMBOL") {
   if (is.null(orgdb_species))
     stop("Select a species to generate the corresponding annotation")
 
@@ -86,18 +90,23 @@ get_annotation_orgdb <- function(dds, orgdb_species, idtype) {
   if (!require(orgdb_species, character.only = TRUE))
     stop("The package ", orgdb_species, " is not installed/available. Try installing it with BiocManager::install('", orgdb_species, "')")
 
-
   if (!(idtype %in% keytypes(eval(parse(text = orgdb_species))))) {
     stop("The key you provided is not listed as key for the annotation package. Please try one of ",
          paste(keytypes(eval(parse(text = orgdb_species))), collapse = ","))
   }
 
+  if (!(key_for_genenames %in% keytypes(eval(parse(text = orgdb_species))))) {
+    stop("The key specified for containing gene names is not included in the annotation package. Please try one of ",
+         paste(keytypes(eval(parse(text = orgdb_species))), collapse = ","))
+  }
+  
+  
   pkg <- eval(parse(text = orgdb_species))
 
   if (idtype == "SYMBOL")
     warning("You probably do not need to convert symbol to symbol") # the performance would somehow be affected
 
-  anns_vec <- mapIds(pkg, keys = rownames(dds), column = c("SYMBOL"),
+  anns_vec <- mapIds(pkg, keys = rownames(dds), column = key_for_genenames,
                      keytype = idtype)
 
   anns <- data.frame(
