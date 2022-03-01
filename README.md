@@ -103,4 +103,4 @@ Please note that the pcaExplorer project is released with a [Contributor Code of
 ### Bug reports/Issues/New features
 
 Please use https://github.com/federicomarini/pcaExplorer/issues for reporting bugs, issues or for 
-suggesting new features to be implemented.
+suggesting new features to be implemented. 
