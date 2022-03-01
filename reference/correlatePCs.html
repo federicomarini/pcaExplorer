@@ -20,7 +20,7 @@ variables"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/m
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.21.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.21.2</span>
       </span>
     </div>
 
@@ -78,9 +78,10 @@ and the <code>cor.test</code> based on Spearman's correlation for continuous
 variables</p>
     </div>
 
-    <div class="ref-usage sourceCode"><pre class="sourceCode r"><code><span class="fu">correlatePCs</span><span class="op">(</span><span class="va">pcaobj</span>, <span class="va">coldata</span>, pcs <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></code></pre></div>
+    <div id="ref-usage">
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">correlatePCs</span><span class="op">(</span><span class="va">pcaobj</span>, <span class="va">coldata</span>, pcs <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></code></pre></div>
+    </div>
 
-    <div id="ref-sections">
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>pcaobj</dt>
@@ -96,11 +97,10 @@ covariates</p></dd>
     <p>A <code>data.frame</code> object with computed p values for each covariate
 and for each principal component</p>
     </div>
-    </div>
 
-    <div id="examples">
+    <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: S4Vectors</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: stats4</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
@@ -146,10 +146,10 @@ and for each principal component</p>
 <span class="r-in"><span class="va">pcaobj</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/prcomp.html" class="external-link">prcomp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assay</a></span><span class="op">(</span><span class="va">rlt</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">correlatePCs</span><span class="op">(</span><span class="va">pcaobj</span>, <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        condition      tissue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> PC_1 0.003947752 0.149541355</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> PC_2 0.423339642 0.003947752</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> PC_3 1.000000000 1.000000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> PC_4 0.423339642 0.872780124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PC_1 0.003947752 0.872780124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PC_2 1.000000000 0.003947752</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PC_3 0.872780124 0.872780124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PC_4 0.423339642 0.423339642</span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>
@@ -165,7 +165,7 @@ and for each principal component</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
 </div>
 
       </footer></div>

@@ -19,7 +19,7 @@ and the betaSD_tissue arguments."><!-- mathjax --><script src="https://cdnjs.clo
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.21.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.21.2</span>
       </span>
     </div>
 
@@ -76,7 +76,8 @@ The fold changes between the conditions can be adjusted with the <code>betaSD_co
 and the <code>betaSD_tissue</code> arguments.</p>
     </div>
 
-    <div class="ref-usage sourceCode"><pre class="sourceCode r"><code><span class="fu">makeExampleDESeqDataSet_multifac</span><span class="op">(</span>
+    <div id="ref-usage">
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">makeExampleDESeqDataSet_multifac</span><span class="op">(</span>
   n <span class="op">=</span> <span class="fl">1000</span>,
   m <span class="op">=</span> <span class="fl">12</span>,
   betaSD_condition <span class="op">=</span> <span class="fl">1</span>,
@@ -86,8 +87,8 @@ and the <code>betaSD_tissue</code> arguments.</p>
   dispMeanRel <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fl">4</span><span class="op">/</span><span class="va">x</span> <span class="op">+</span> <span class="fl">0.1</span>,
   sizeFactors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/S4Vectors/man/Vector-class.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="va">m</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
+    </div>
 
-    <div id="ref-sections">
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>n</dt>
@@ -120,11 +121,10 @@ intercept for two factors (condition and tissue) and beta values in the
 <code><a href="https://rdrr.io/pkg/DESeq2/man/makeExampleDESeqDataSet.html" class="external-link">makeExampleDESeqDataSet</a></code> from the <code>DESeq2</code> package. Credits are given
 to Mike Love for the nice initial implementation</p>
     </div>
-    </div>
 
-    <div id="examples">
+    <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu">makeExampleDESeqDataSet_multifac</span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu">makeExampleDESeqDataSet_multifac</span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">dds</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> class: DESeqDataSet </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> dim: 1000 12 </span>
@@ -161,7 +161,7 @@ to Mike Love for the nice initial implementation</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
 </div>
 
       </footer></div>

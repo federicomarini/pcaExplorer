@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.21.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.21.2</span>
       </span>
     </div>
 
@@ -72,9 +72,10 @@
     <p>Get an annotation data frame from org db packages</p>
     </div>
 
-    <div class="ref-usage sourceCode"><pre class="sourceCode r"><code><span class="fu">get_annotation_orgdb</span><span class="op">(</span><span class="va">dds</span>, <span class="va">orgdb_species</span>, <span class="va">idtype</span><span class="op">)</span></code></pre></div>
+    <div id="ref-usage">
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_annotation_orgdb</span><span class="op">(</span><span class="va">dds</span>, <span class="va">orgdb_species</span>, <span class="va">idtype</span>, key_for_genenames <span class="op">=</span> <span class="st">"SYMBOL"</span><span class="op">)</span></code></pre></div>
+    </div>
 
-    <div id="ref-sections">
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>dds</dt>
@@ -85,17 +86,22 @@ package which should be available in Bioconductor</p></dd>
 <dt>idtype</dt>
 <dd><p>Character, the ID type of the genes as in the row names of
 <code>dds</code>, to be used for the call to <code>mapIds</code></p></dd>
+<dt>key_for_genenames</dt>
+<dd><p>Character, corresponding to the column name for the 
+key in the orgDb package containing the official gene name (often called 
+gene symbol). 
+This parameter defaults to "SYMBOL", but can be adjusted in case the key is not
+found in the annotation package (e.g. for <code>org.Sc.sgd.db</code>).</p></dd>
 </dl></div>
     <div id="value">
     <h2>Value</h2>
     <p>A data frame for ready use in <code>pcaExplorer</code>, retrieved from the
 org db packages</p>
     </div>
-    </div>
 
-    <div id="examples">
+    <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">airway</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> class: RangedSummarizedExperiment </span>
@@ -109,9 +115,19 @@ org db packages</p>
 <span class="r-in"><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeqDataSet.html" class="external-link">DESeqDataSetFromMatrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assay</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span>,</span>
 <span class="r-in">                                             colData <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span>,</span>
 <span class="r-in">                                             design <span class="op">=</span> <span class="op">~</span><span class="va">dex</span><span class="op">+</span><span class="va">cell</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu">get_annotation_orgdb</span><span class="op">(</span><span class="va">dds_airway</span>, <span class="st">"org.Hs.eg.db"</span>, <span class="st">"ENSEMBL"</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+<span class="r-in"><span class="va">anno_df</span> <span class="op">&lt;-</span> <span class="fu">get_annotation_orgdb</span><span class="op">(</span><span class="va">dds_airway</span>, <span class="st">"org.Hs.eg.db"</span>, <span class="st">"ENSEMBL"</span><span class="op">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: org.Hs.eg.db</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: AnnotationDbi</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 'select()' returned 1:many mapping between keys and columns</span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/S4Vectors/man/Vector-class.html" class="external-link">head</a></span><span class="op">(</span><span class="va">anno_df</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                         gene_id gene_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000000003 ENSG00000000003    TSPAN6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000000005 ENSG00000000005      TNMD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000000419 ENSG00000000419      DPM1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000000457 ENSG00000000457     SCYL3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000000460 ENSG00000000460  C1orf112</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ENSG00000000938 ENSG00000000938       FGR</span>
 </code></pre></div>
     </div>
   </div>
@@ -126,7 +142,7 @@ org db packages</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
 </div>
 
       </footer></div>
