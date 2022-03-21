@@ -48,7 +48,7 @@ pcaplot <- function (x, intgroup = "condition", ntop = 500, returnData = FALSE,t
   colnames(d)[2] <- paste0("PC", pcY)
 
   if (returnData) {
-    attr(d, "percentVar") <- percentVar[1:2]
+    attr(d, "percentVar") <- percentVar[c(pcX, pcY)]
     return(d)
   }
 
