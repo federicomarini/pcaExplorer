@@ -35,7 +35,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -118,54 +118,54 @@ and a column, <code>gene_name</code>, containing e.g. HGNC-based gene symbols</p
 <span class="r-out co"><span class="r-pr">#&gt;</span> dim: 20 12 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> metadata(1): version</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> assays(1): counts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> rownames(20): gene840 gene772 ... gene589 gene47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rownames(20): gene281 gene614 ... gene509 gene302</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> rowData names(4): trueIntercept trueBeta_condition trueBeta_tissue</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   trueDisp</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> colnames(12): sample1 sample2 ... sample11 sample12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> colData names(2): condition tissue</span>
 <span class="r-in"><span class="fu">hi_loadings</span><span class="op">(</span><span class="va">pcaobj</span>, topN <span class="op">=</span> <span class="fl">10</span>, exprTable <span class="op">=</span> <span class="fu">counts</span><span class="op">(</span><span class="va">dds</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         sample1 sample2 sample3 sample4 sample5 sample6 sample7 sample8 sample9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene840      10      13       0      14      17       5     298    1301     544</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene772      35      20      86      30      47      13    7130    7966    7049</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene305      11      30      42      11      52      33    8540    3640    3788</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene9         1      20       6      36       7      25    2005    7827    2966</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene896       7      13       7       5       4       1    1405    2372    2202</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene490     343     116     181     211     221      83   18294   71406   53512</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene355      18       8      11       4       7       8    1807    3988    2469</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene576      10       9       2       2       4       5    2143     404    4098</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene996       9       6      10       2       7       2    4989    1347    2990</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene66        0       2       2       1       1       4     107    1168    2564</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene296     138      80     115     106      98      79       2       0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene736     108      83     109      56      54      83       2       0       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene5        93     108     131     179     196     323       1       2       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene879      49     132     108      51      35      56       0       0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene727      57      96      81     164     181     102       1       1       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene898      96     148     110      81     105     155       1       2       3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene939      37      39      21     134      63      93       0       0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene692      78      22      73      96     130     108       2       1       1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene589      35      22      40     129      57      52       0       0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene47       12      38      68      29      39      16       0       0       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene281      29      44      21      10       3       6    1396    2188    3676</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene614       0       7       6       0       4      12     246     409     819</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene623      17      33      36      22       6      10    2040    1574    6112</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene111      13      24      14      24      24      11    1474    5308    6487</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene246     130      45      92      60      58      92    7738    6807    4605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene300      43      57      72      69     193      44   13406    6903    8021</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene422       4       1      14      14      48      24    1401    1197    1709</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene780       5       1       7       2       3       9     662    7027    1022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene86       13       4       6      13      16       1    4264    2787     963</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene241       2       3       3       2       2       0     865    1232     229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene796      53      67      35      65      33      61       0       0       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene869      79     145     132     327     177     274       1       0       3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene243     221     217     412     591     872    1086       7       6       4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene972      83      90      92     180      95     175       0       5       1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene297      51     131      54      50      76      39       0       0       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene891      22      33      35      30      54      42       0       0       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene996      33      47      26     118      72     119       0       1       1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene820      31      58      23      35      23      33       0       0       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene509      79      65      62      18      27      10       0       0       1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene302      67      38      67      35     155      74       1       0       0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         sample10 sample11 sample12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene840     2396     2164     2283</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene772     2222     3439     4150</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene305     2843     8471     5398</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene9       4570      810     1562</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene896      991     1492      335</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene490    51445    21731    44163</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene355     1720     2851     1607</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene576      480     1621     1718</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene996     1133      805      682</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene66       226     4595      178</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene296        1        0        1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene736        0        1        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene5          3        4        2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene879        2        0        1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene727        1        2        1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene898        2        1        2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene939        2        1        1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene692        0        2        1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene589        2        2        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gene47         0        0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene281     1409      717     1076</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene614      608      786      328</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene623     2745     1809     1810</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene111     1815      857     2143</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene246    14321    15993    19089</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene300    10573    11550    10669</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene422     6823     2183    10470</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene780      415      990     1415</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene86      3431     2311     3415</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene241     3099     1784     1572</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene796        0        0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene869        2        5        7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene243       15        9       15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene972        4        0        1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene297        1        2        1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene891        0        0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene996        2        0        1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene820        0        0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene509        0        0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> gene302        2        3        1</span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>
