@@ -18,7 +18,7 @@ the algorithm and the implementation in the topGO package"><!-- mathjax --><scri
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
       </span>
     </div>
 
@@ -75,65 +75,96 @@ the algorithm and the implementation in the topGO package</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">topGOtable</span><span class="op">(</span>
-  <span class="va">DEgenes</span>,
-  <span class="va">BGgenes</span>,
-  ontology <span class="op">=</span> <span class="st">"BP"</span>,
-  annot <span class="op">=</span> <span class="va">annFUN.org</span>,
-  mapping <span class="op">=</span> <span class="st">"org.Mm.eg.db"</span>,
-  geneID <span class="op">=</span> <span class="st">"symbol"</span>,
-  topTablerows <span class="op">=</span> <span class="fl">200</span>,
-  fullNamesInRows <span class="op">=</span> <span class="cn">TRUE</span>,
-  addGeneToTerms <span class="op">=</span> <span class="cn">TRUE</span>,
-  plotGraph <span class="op">=</span> <span class="cn">FALSE</span>,
-  plotNodes <span class="op">=</span> <span class="fl">10</span>,
-  writeOutput <span class="op">=</span> <span class="cn">FALSE</span>,
-  outputFile <span class="op">=</span> <span class="st">""</span>,
-  topGO_method2 <span class="op">=</span> <span class="st">"elim"</span>,
-  do_padj <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">topGOtable</span><span class="op">(</span></span>
+<span>  <span class="va">DEgenes</span>,</span>
+<span>  <span class="va">BGgenes</span>,</span>
+<span>  ontology <span class="op">=</span> <span class="st">"BP"</span>,</span>
+<span>  annot <span class="op">=</span> <span class="va">annFUN.org</span>,</span>
+<span>  mapping <span class="op">=</span> <span class="st">"org.Mm.eg.db"</span>,</span>
+<span>  geneID <span class="op">=</span> <span class="st">"symbol"</span>,</span>
+<span>  topTablerows <span class="op">=</span> <span class="fl">200</span>,</span>
+<span>  fullNamesInRows <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  addGeneToTerms <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  plotGraph <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  plotNodes <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  writeOutput <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  outputFile <span class="op">=</span> <span class="st">""</span>,</span>
+<span>  topGO_method2 <span class="op">=</span> <span class="st">"elim"</span>,</span>
+<span>  do_padj <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>DEgenes</dt>
 <dd><p>A vector of (differentially expressed) genes</p></dd>
+
+
 <dt>BGgenes</dt>
 <dd><p>A vector of background genes, e.g. all (expressed) genes in the assays</p></dd>
+
+
 <dt>ontology</dt>
 <dd><p>Which Gene Ontology domain to analyze: <code>BP</code> (Biological Process), <code>MF</code> (Molecular Function), or <code>CC</code> (Cellular Component)</p></dd>
+
+
 <dt>annot</dt>
 <dd><p>Which function to use for annotating genes to GO terms. Defaults to <code>annFUN.org</code></p></dd>
+
+
 <dt>mapping</dt>
 <dd><p>Which <code>org.XX.eg.db</code> to use for annotation - select according to the species</p></dd>
+
+
 <dt>geneID</dt>
 <dd><p>Which format the genes are provided. Defaults to <code>symbol</code>, could also be
 <code>entrez</code> or <code>ENSEMBL</code></p></dd>
+
+
 <dt>topTablerows</dt>
 <dd><p>How many rows to report before any filtering</p></dd>
+
+
 <dt>fullNamesInRows</dt>
 <dd><p>Logical, whether to display or not the full names for the GO terms</p></dd>
+
+
 <dt>addGeneToTerms</dt>
 <dd><p>Logical, whether to add a column with all genes annotated to each GO term</p></dd>
+
+
 <dt>plotGraph</dt>
 <dd><p>Logical, if TRUE additionally plots a graph on the identified GO terms</p></dd>
+
+
 <dt>plotNodes</dt>
 <dd><p>Number of nodes to plot</p></dd>
+
+
 <dt>writeOutput</dt>
 <dd><p>Logical, if TRUE additionally writes out the result to a file</p></dd>
+
+
 <dt>outputFile</dt>
 <dd><p>Name of the file the result should be written into</p></dd>
+
+
 <dt>topGO_method2</dt>
 <dd><p>Character, specifying which of the methods implemented by <code>topGO</code> should be used, in addition to the <code>classic</code> algorithm. Defaults to <code>elim</code></p></dd>
+
+
 <dt>do_padj</dt>
 <dd><p>Logical, whether to perform the adjustment on the p-values from the specific
 topGO method, based on the FDR correction. Defaults to FALSE, since the assumption of 
 independent hypotheses is somewhat violated by the intrinsic DAG-structure of the Gene
 Ontology Terms</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A table containing the computed GO Terms and related enrichment scores</p>
+    
+
+<p>A table containing the computed GO Terms and related enrichment scores</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -145,10 +176,10 @@ documentation of the <code>topGO</code> package itself</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">airway</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">airway</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> class: RangedSummarizedExperiment </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> dim: 64102 8 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> metadata(1): ''</span>
@@ -157,40 +188,40 @@ documentation of the <code>topGO</code> package itself</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> rowData names(0):</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> colData names(9): SampleName cell ... Sample BioSample</span>
-<span class="r-in"><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeqDataSet.html" class="external-link">DESeqDataSet</a></span><span class="op">(</span><span class="va">airway</span>, design<span class="op">=</span> <span class="op">~</span> <span class="va">cell</span> <span class="op">+</span> <span class="va">dex</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># Example, performing extraction of enriched functional categories in</span></span>
-<span class="r-in"><span class="co"># detected significantly expressed genes</span></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeq.html" class="external-link">DESeq</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">res_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/results.html" class="external-link">results</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://bioconductor.org/packages/AnnotationDbi" class="external-link">"AnnotationDbi"</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"org.Hs.eg.db"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">res_airway</span><span class="op">$</span><span class="va">symbol</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,</span>
-<span class="r-in">                            keys <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/row.names.html" class="external-link">row.names</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">)</span>,</span>
-<span class="r-in">                            column <span class="op">=</span> <span class="st">"SYMBOL"</span>,</span>
-<span class="r-in">                            keytype <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span>
-<span class="r-in">                            multiVals <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">res_airway</span><span class="op">$</span><span class="va">entrez</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,</span>
-<span class="r-in">                            keys <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/row.names.html" class="external-link">row.names</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">)</span>,</span>
-<span class="r-in">                            column <span class="op">=</span> <span class="st">"ENTREZID"</span>,</span>
-<span class="r-in">                            keytype <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span>
-<span class="r-in">                            multiVals <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">resOrdered</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">$</span><span class="va">padj</span><span class="op">)</span>,<span class="op">]</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">de_df</span> <span class="op">&lt;-</span> <span class="va">resOrdered</span><span class="op">[</span><span class="va">resOrdered</span><span class="op">$</span><span class="va">padj</span> <span class="op">&lt;</span> <span class="fl">.05</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">resOrdered</span><span class="op">$</span><span class="va">padj</span><span class="op">)</span>,<span class="op">]</span></span>
-<span class="r-in"><span class="va">de_symbols</span> <span class="op">&lt;-</span> <span class="va">de_df</span><span class="op">$</span><span class="va">symbol</span></span>
-<span class="r-in"><span class="va">bg_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/colSums.html" class="external-link">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">bg_symbols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,</span>
-<span class="r-in">                     keys <span class="op">=</span> <span class="va">bg_ids</span>,</span>
-<span class="r-in">                     column <span class="op">=</span> <span class="st">"SYMBOL"</span>,</span>
-<span class="r-in">                     keytype <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span>
-<span class="r-in">                     multiVals <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">topGO</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">topgoDE_airway</span> <span class="op">&lt;-</span> <span class="fu">topGOtable</span><span class="op">(</span><span class="va">de_symbols</span>, <span class="va">bg_symbols</span>,</span>
-<span class="r-in">                             ontology <span class="op">=</span> <span class="st">"BP"</span>,</span>
-<span class="r-in">                             mapping <span class="op">=</span> <span class="st">"org.Hs.eg.db"</span>,</span>
-<span class="r-in">                             geneID <span class="op">=</span> <span class="st">"symbol"</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeqDataSet.html" class="external-link">DESeqDataSet</a></span><span class="op">(</span><span class="va">airway</span>, design<span class="op">=</span> <span class="op">~</span> <span class="va">cell</span> <span class="op">+</span> <span class="va">dex</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Example, performing extraction of enriched functional categories in</span></span></span>
+<span class="r-in"><span><span class="co"># detected significantly expressed genes</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeq.html" class="external-link">DESeq</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">res_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/results.html" class="external-link">results</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://bioconductor.org/packages/AnnotationDbi" class="external-link">"AnnotationDbi"</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"org.Hs.eg.db"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">res_airway</span><span class="op">$</span><span class="va">symbol</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,</span></span>
+<span class="r-in"><span>                            keys <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/row.names.html" class="external-link">row.names</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                            column <span class="op">=</span> <span class="st">"SYMBOL"</span>,</span></span>
+<span class="r-in"><span>                            keytype <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span></span>
+<span class="r-in"><span>                            multiVals <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">res_airway</span><span class="op">$</span><span class="va">entrez</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,</span></span>
+<span class="r-in"><span>                            keys <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/row.names.html" class="external-link">row.names</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                            column <span class="op">=</span> <span class="st">"ENTREZID"</span>,</span></span>
+<span class="r-in"><span>                            keytype <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span></span>
+<span class="r-in"><span>                            multiVals <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">resOrdered</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">res_airway</span><span class="op">$</span><span class="va">padj</span><span class="op">)</span>,<span class="op">]</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">de_df</span> <span class="op">&lt;-</span> <span class="va">resOrdered</span><span class="op">[</span><span class="va">resOrdered</span><span class="op">$</span><span class="va">padj</span> <span class="op">&lt;</span> <span class="fl">.05</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">resOrdered</span><span class="op">$</span><span class="va">padj</span><span class="op">)</span>,<span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">de_symbols</span> <span class="op">&lt;-</span> <span class="va">de_df</span><span class="op">$</span><span class="va">symbol</span></span></span>
+<span class="r-in"><span><span class="va">bg_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/colSums.html" class="external-link">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">bg_symbols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,</span></span>
+<span class="r-in"><span>                     keys <span class="op">=</span> <span class="va">bg_ids</span>,</span></span>
+<span class="r-in"><span>                     column <span class="op">=</span> <span class="st">"SYMBOL"</span>,</span></span>
+<span class="r-in"><span>                     keytype <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span></span>
+<span class="r-in"><span>                     multiVals <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">topGO</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">topgoDE_airway</span> <span class="op">&lt;-</span> <span class="fu">topGOtable</span><span class="op">(</span><span class="va">de_symbols</span>, <span class="va">bg_symbols</span>,</span></span>
+<span class="r-in"><span>                             ontology <span class="op">=</span> <span class="st">"BP"</span>,</span></span>
+<span class="r-in"><span>                             mapping <span class="op">=</span> <span class="st">"org.Hs.eg.db"</span>,</span></span>
+<span class="r-in"><span>                             geneID <span class="op">=</span> <span class="st">"symbol"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -205,7 +236,7 @@ documentation of the <code>topGO</code> package itself</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

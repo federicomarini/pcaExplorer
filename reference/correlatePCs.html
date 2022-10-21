@@ -20,7 +20,7 @@ variables"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/m
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
       </span>
     </div>
 
@@ -79,28 +79,35 @@ variables</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">correlatePCs</span><span class="op">(</span><span class="va">pcaobj</span>, <span class="va">coldata</span>, pcs <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">correlatePCs</span><span class="op">(</span><span class="va">pcaobj</span>, <span class="va">coldata</span>, pcs <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>pcaobj</dt>
 <dd><p>A <code>prcomp</code> object</p></dd>
+
+
 <dt>coldata</dt>
 <dd><p>A <code>data.frame</code> object containing the experimental
 covariates</p></dd>
+
+
 <dt>pcs</dt>
 <dd><p>A numeric vector, containing the corresponding PC number</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A <code>data.frame</code> object with computed p values for each covariate
+    
+
+<p>A <code>data.frame</code> object with computed p values for each covariate
 and for each principal component</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: S4Vectors</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: stats4</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
@@ -141,16 +148,16 @@ and for each principal component</p>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:Biobase’:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     rowMedians</span>
-<span class="r-in"><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">pcaobj</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/prcomp.html" class="external-link">prcomp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assay</a></span><span class="op">(</span><span class="va">rlt</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">correlatePCs</span><span class="op">(</span><span class="va">pcaobj</span>, <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">pcaobj</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/prcomp.html" class="external-link">prcomp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assay</a></span><span class="op">(</span><span class="va">rlt</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">correlatePCs</span><span class="op">(</span><span class="va">pcaobj</span>, <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        condition      tissue</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> PC_1 0.003947752 0.336668368</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PC_1 0.003947752 0.872780124</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> PC_2 1.000000000 0.003947752</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> PC_3 0.872780124 0.748774042</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> PC_4 0.872780124 0.872780124</span>
-<span class="r-in"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PC_3 0.872780124 1.000000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> PC_4 0.748774042 0.872780124</span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -165,7 +172,7 @@ and for each principal component</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

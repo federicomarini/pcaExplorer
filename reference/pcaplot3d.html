@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
       </span>
     </div>
 
@@ -73,18 +73,18 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">pcaplot3d</span><span class="op">(</span>
-  <span class="va">x</span>,
-  intgroup <span class="op">=</span> <span class="st">"condition"</span>,
-  ntop <span class="op">=</span> <span class="fl">500</span>,
-  returnData <span class="op">=</span> <span class="cn">FALSE</span>,
-  title <span class="op">=</span> <span class="cn">NULL</span>,
-  pcX <span class="op">=</span> <span class="fl">1</span>,
-  pcY <span class="op">=</span> <span class="fl">2</span>,
-  pcZ <span class="op">=</span> <span class="fl">3</span>,
-  text_labels <span class="op">=</span> <span class="cn">TRUE</span>,
-  point_size <span class="op">=</span> <span class="fl">3</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">pcaplot3d</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  intgroup <span class="op">=</span> <span class="st">"condition"</span>,</span>
+<span>  ntop <span class="op">=</span> <span class="fl">500</span>,</span>
+<span>  returnData <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  title <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  pcX <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  pcY <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>  pcZ <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  text_labels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  point_size <span class="op">=</span> <span class="fl">3</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -93,38 +93,59 @@
 <dd><p>A <code><a href="https://rdrr.io/pkg/DESeq2/man/DESeqTransform.html" class="external-link">DESeqTransform</a></code> object, with data in <code>assay(x)</code>,
 produced for example by either <code><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlog</a></code> or
 <code><a href="https://rdrr.io/pkg/DESeq2/man/varianceStabilizingTransformation.html" class="external-link">varianceStabilizingTransformation</a></code></p></dd>
+
+
 <dt>intgroup</dt>
 <dd><p>Interesting groups: a character vector of
 names in <code>colData(x)</code> to use for grouping</p></dd>
+
+
 <dt>ntop</dt>
 <dd><p>Number of top genes to use for principal components,
 selected by highest row variance</p></dd>
+
+
 <dt>returnData</dt>
 <dd><p>logical, if TRUE returns a data.frame for further use, containing the
 selected principal components and intgroup covariates for custom plotting</p></dd>
+
+
 <dt>title</dt>
 <dd><p>The plot title</p></dd>
+
+
 <dt>pcX</dt>
 <dd><p>The principal component to display on the x axis</p></dd>
+
+
 <dt>pcY</dt>
 <dd><p>The principal component to display on the y axis</p></dd>
+
+
 <dt>pcZ</dt>
 <dd><p>The principal component to display on the z axis</p></dd>
+
+
 <dt>text_labels</dt>
 <dd><p>Logical, whether to display the labels with the sample identifiers</p></dd>
+
+
 <dt>point_size</dt>
 <dd><p>Integer, the size of the points for the samples</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A html-based visualization of the 3d PCA plot</p>
+    
+
+<p>A html-based visualization of the 3d PCA plot</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">pcaplot3d</span><span class="op">(</span><span class="va">rlt</span>, ntop <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">pcaplot3d</span><span class="op">(</span><span class="va">rlt</span>, ntop <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span></span>
 <div id="we4vDt1PM6" style="width:700px;height:432.632880098888px;" class="scatterplotThree html-widget"></div>
 <script type="application/json" data-for="we4vDt1PM6">{"x":{"NROW":12,"height":null,"width":null,"axis":true,"numticks":[6,6,6],"xticklabs":null,"yticklabs":null,"zticklabs":null,"color":[["#F8766D","#F8766D","#F8766D","#F8766D","#F8766D","#F8766D","#00BFC4","#00BFC4","#00BFC4","#00BFC4","#00BFC4","#00BFC4"]],"size":1.3,"stroke":"black","flipy":true,"grid":true,"renderer":"auto","signif":8,"bg":"#ffffff","cexsymbols":1,"xlim":{},"ylim":{},"zlim":{},"axisscale":[1,1,1],"pch":["@","@","@","@","@","@","@","@","@","@","@","@"],"elementId":"we4vDt1PM6","labels":["sample1","sample2","sample3","sample4","sample5","sample6","sample7","sample8","sample9","sample10","sample11","sample12"],"labelmargin":"50px 50px 50px 50px","axisLabels":["PC1: 79.81% variance","PC3: 2.64% variance","PC2: 5.3% variance"],"linealpha":1,"alpha":[[1,1,1,1,1,1,1,1,1,1,1,1]],"vertices":[[0.015307788,0.21217762,0,0,0.29172806,0.1188254,0.041261751,0.20250342,0.10936751,0.039926343,0.59341492,0.90791909,0.042969276,0.20878748,1,0.028169059,0.52917712,0.93564414,0.97670181,1,0.13225723,0.96375555,0.39349271,0.14217253,0.97380754,0,0.050706224,1,0.17749627,0.80810722,0.94757271,0.2549073,0.9024824,0.97702341,0.20942509,0.98129358]],"xticklab":["-22.06","-13.24","-4.43","4.38","13.20","22.01"],"yticklab":["-5.11","-2.10","0.91","3.92","6.94","9.95"],"zticklab":["6.50","3.94","1.38","-1.19","-3.75","-6.31"],"xtick":[0,0.2,0.4,0.6,0.8,1],"ytick":[0,0.2,0.4,0.6,0.8,1],"ztick":[0,0.2,0.4,0.6,0.8,1],"axislength":[1,1,1]},"evals":[],"jsHooks":[]}</script></code></pre></div>
     </div>
@@ -140,7 +161,7 @@ selected principal components and intgroup covariates for custom plotting</p></d
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

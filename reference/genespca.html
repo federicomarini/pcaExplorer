@@ -18,7 +18,7 @@ the samples as in a typical biplot visualization."><!-- mathjax --><script src="
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
       </span>
     </div>
 
@@ -75,36 +75,36 @@ the samples as in a typical biplot visualization.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">genespca</span><span class="op">(</span>
-  <span class="va">x</span>,
-  <span class="va">ntop</span>,
-  choices <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/S4Vectors/man/Vector-class.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,
-  arrowColors <span class="op">=</span> <span class="st">"steelblue"</span>,
-  groupNames <span class="op">=</span> <span class="st">"group"</span>,
-  biplot <span class="op">=</span> <span class="cn">TRUE</span>,
-  scale <span class="op">=</span> <span class="fl">1</span>,
-  pc.biplot <span class="op">=</span> <span class="cn">TRUE</span>,
-  obs.scale <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="va">scale</span>,
-  var.scale <span class="op">=</span> <span class="va">scale</span>,
-  groups <span class="op">=</span> <span class="cn">NULL</span>,
-  ellipse <span class="op">=</span> <span class="cn">FALSE</span>,
-  ellipse.prob <span class="op">=</span> <span class="fl">0.68</span>,
-  labels <span class="op">=</span> <span class="cn">NULL</span>,
-  labels.size <span class="op">=</span> <span class="fl">3</span>,
-  alpha <span class="op">=</span> <span class="fl">1</span>,
-  var.axes <span class="op">=</span> <span class="cn">TRUE</span>,
-  circle <span class="op">=</span> <span class="cn">FALSE</span>,
-  circle.prob <span class="op">=</span> <span class="fl">0.69</span>,
-  varname.size <span class="op">=</span> <span class="fl">4</span>,
-  varname.adjust <span class="op">=</span> <span class="fl">1.5</span>,
-  varname.abbrev <span class="op">=</span> <span class="cn">FALSE</span>,
-  returnData <span class="op">=</span> <span class="cn">FALSE</span>,
-  coordEqual <span class="op">=</span> <span class="cn">FALSE</span>,
-  scaleArrow <span class="op">=</span> <span class="fl">1</span>,
-  useRownamesAsLabels <span class="op">=</span> <span class="cn">TRUE</span>,
-  point_size <span class="op">=</span> <span class="fl">2</span>,
-  annotation <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">genespca</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  <span class="va">ntop</span>,</span>
+<span>  choices <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
+<span>  arrowColors <span class="op">=</span> <span class="st">"steelblue"</span>,</span>
+<span>  groupNames <span class="op">=</span> <span class="st">"group"</span>,</span>
+<span>  biplot <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  scale <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  pc.biplot <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  obs.scale <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="va">scale</span>,</span>
+<span>  var.scale <span class="op">=</span> <span class="va">scale</span>,</span>
+<span>  groups <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ellipse <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  ellipse.prob <span class="op">=</span> <span class="fl">0.68</span>,</span>
+<span>  labels <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  labels.size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  alpha <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  var.axes <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  circle <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  circle.prob <span class="op">=</span> <span class="fl">0.69</span>,</span>
+<span>  varname.size <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  varname.adjust <span class="op">=</span> <span class="fl">1.5</span>,</span>
+<span>  varname.abbrev <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  returnData <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  coordEqual <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  scaleArrow <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  useRownamesAsLabels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  point_size <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>  annotation <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -113,75 +113,132 @@ the samples as in a typical biplot visualization.</p>
 <dd><p>A <code><a href="https://rdrr.io/pkg/DESeq2/man/DESeqTransform.html" class="external-link">DESeqTransform</a></code> object, with data in <code>assay(x)</code>,
 produced for example by either <code><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlog</a></code> or
 <code><a href="https://rdrr.io/pkg/DESeq2/man/varianceStabilizingTransformation.html" class="external-link">varianceStabilizingTransformation</a></code></p></dd>
+
+
 <dt>ntop</dt>
 <dd><p>Number of top genes to use for principal components,
 selected by highest row variance</p></dd>
+
+
 <dt>choices</dt>
 <dd><p>Vector of two numeric values, to select on which principal components to plot</p></dd>
+
+
 <dt>arrowColors</dt>
 <dd><p>Vector of character, either as long as the number of the samples, or one single value</p></dd>
+
+
 <dt>groupNames</dt>
 <dd><p>Factor containing the groupings for the input data. Is efficiently chosen
 as the (interaction of more) factors in the colData for the object provided</p></dd>
+
+
 <dt>biplot</dt>
 <dd><p>Logical, whether to additionally draw the samples labels as in a biplot representation</p></dd>
+
+
 <dt>scale</dt>
 <dd><p>Covariance biplot (scale = 1), form biplot (scale = 0). When scale = 1,
 the inner product between the variables approximates the covariance and the
 distance between the points approximates the Mahalanobis distance.</p></dd>
+
+
 <dt>pc.biplot</dt>
 <dd><p>Logical, for compatibility with biplot.princomp()</p></dd>
+
+
 <dt>obs.scale</dt>
 <dd><p>Scale factor to apply to observations</p></dd>
+
+
 <dt>var.scale</dt>
 <dd><p>Scale factor to apply to variables</p></dd>
+
+
 <dt>groups</dt>
 <dd><p>Optional factor variable indicating the groups that the observations
 belong to. If provided the points will be colored according to groups</p></dd>
+
+
 <dt>ellipse</dt>
 <dd><p>Logical, draw a normal data ellipse for each group</p></dd>
+
+
 <dt>ellipse.prob</dt>
 <dd><p>Size of the ellipse in Normal probability</p></dd>
+
+
 <dt>labels</dt>
 <dd><p>optional Vector of labels for the observations</p></dd>
+
+
 <dt>labels.size</dt>
 <dd><p>Size of the text used for the labels</p></dd>
+
+
 <dt>alpha</dt>
 <dd><p>Alpha transparency value for the points (0 = transparent, 1 = opaque)</p></dd>
+
+
 <dt>var.axes</dt>
 <dd><p>Logical, draw arrows for the variables?</p></dd>
+
+
 <dt>circle</dt>
 <dd><p>Logical, draw a correlation circle? (only applies when prcomp
 was called with scale = TRUE and when var.scale = 1)</p></dd>
+
+
 <dt>circle.prob</dt>
 <dd><p>Size of the correlation circle in Normal probability</p></dd>
+
+
 <dt>varname.size</dt>
 <dd><p>Size of the text for variable names</p></dd>
+
+
 <dt>varname.adjust</dt>
 <dd><p>Adjustment factor the placement of the variable names,
 &gt;= 1 means farther from the arrow</p></dd>
+
+
 <dt>varname.abbrev</dt>
 <dd><p>Logical, whether or not to abbreviate the variable names</p></dd>
+
+
 <dt>returnData</dt>
 <dd><p>Logical, if TRUE returns a data.frame for further use, containing the
 selected principal components for custom plotting</p></dd>
+
+
 <dt>coordEqual</dt>
 <dd><p>Logical, default FALSE, for allowing brushing. If TRUE, plot using
 equal scale cartesian coordinates</p></dd>
+
+
 <dt>scaleArrow</dt>
 <dd><p>Multiplicative factor, usually &gt;=1, only for visualization purposes,
 to allow for distinguishing where the variables are plotted</p></dd>
+
+
 <dt>useRownamesAsLabels</dt>
 <dd><p>Logical, if TRUE uses the row names as labels for plotting</p></dd>
+
+
 <dt>point_size</dt>
 <dd><p>Size of the points to be plotted for the observations (genes)</p></dd>
+
+
 <dt>annotation</dt>
 <dd><p>A <code>data.frame</code> object, with row.names as gene identifiers (e.g. ENSEMBL ids)
 and a column, <code>gene_name</code>, containing e.g. HGNC-based gene symbols</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>An object created by <code>ggplot</code>, which can be assigned and further customized.</p>
+    
+
+<p>An object created by <code>ggplot</code>, which can be assigned and further customized.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -193,22 +250,22 @@ such as the transformed counts of RNA-seq experiments</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span><span class="op">$</span><span class="va">condition</span></span>
-<span class="r-in"><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">groups</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">groups</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cols</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fl">2</span><span class="op">)</span><span class="op">[</span><span class="va">groups</span><span class="op">]</span></span>
-<span class="r-in"><span class="fu">genespca</span><span class="op">(</span><span class="va">rlt</span>, ntop<span class="op">=</span><span class="fl">100</span>, arrowColors <span class="op">=</span> <span class="va">cols</span>, groupNames <span class="op">=</span> <span class="va">groups</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span><span class="op">$</span><span class="va">condition</span></span></span>
+<span class="r-in"><span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">groups</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">groups</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cols</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fl">2</span><span class="op">)</span><span class="op">[</span><span class="va">groups</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="fu">genespca</span><span class="op">(</span><span class="va">rlt</span>, ntop<span class="op">=</span><span class="fl">100</span>, arrowColors <span class="op">=</span> <span class="va">cols</span>, groupNames <span class="op">=</span> <span class="va">groups</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="genespca-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">groups_multi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/interaction.html" class="external-link">interaction</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">rlt</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/pkg/S4Vectors/man/Vector-class.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"condition"</span>, <span class="st">"tissue"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">groups_multi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">groups_multi</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">groups_multi</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cols_multi</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/S4Vectors/man/Factor-class.html" class="external-link">levels</a></span><span class="op">(</span><span class="va">groups_multi</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">groups_multi</span><span class="op">)</span><span class="op">]</span></span>
-<span class="r-in"><span class="fu">genespca</span><span class="op">(</span><span class="va">rlt</span>, ntop <span class="op">=</span> <span class="fl">100</span>, arrowColors <span class="op">=</span> <span class="va">cols_multi</span>, groupNames <span class="op">=</span> <span class="va">groups_multi</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">groups_multi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/interaction.html" class="external-link">interaction</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">rlt</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"condition"</span>, <span class="st">"tissue"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">groups_multi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">groups_multi</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">groups_multi</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cols_multi</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/S4Vectors/man/Factor-class.html" class="external-link">levels</a></span><span class="op">(</span><span class="va">groups_multi</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">groups_multi</span><span class="op">)</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="fu">genespca</span><span class="op">(</span><span class="va">rlt</span>, ntop <span class="op">=</span> <span class="fl">100</span>, arrowColors <span class="op">=</span> <span class="va">cols_multi</span>, groupNames <span class="op">=</span> <span class="va">groups_multi</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="genespca-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -223,7 +280,7 @@ such as the transformed counts of RNA-seq experiments</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
       </span>
     </div>
 
@@ -73,27 +73,32 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">distro_expr</span><span class="op">(</span><span class="va">rld</span>, plot_type <span class="op">=</span> <span class="st">"density"</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">distro_expr</span><span class="op">(</span><span class="va">rld</span>, plot_type <span class="op">=</span> <span class="st">"density"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>rld</dt>
 <dd><p>A <code><a href="https://rdrr.io/pkg/DESeq2/man/DESeqTransform.html" class="external-link">DESeqTransform</a></code> object.</p></dd>
+
+
 <dt>plot_type</dt>
 <dd><p>Character, choose one of <code>boxplot</code>, <code>violin</code> or
 <code>density</code>. Defaults to <code>density</code></p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A plot with the distribution of the expression values</p>
+    
+
+<p>A plot with the distribution of the expression values</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">distro_expr</span><span class="op">(</span><span class="va">rlt</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">distro_expr</span><span class="op">(</span><span class="va">rlt</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="distro_expr-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
@@ -109,7 +114,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

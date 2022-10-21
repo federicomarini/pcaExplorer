@@ -21,7 +21,7 @@ provided by the limma package"><!-- mathjax --><script src="https://cdnjs.cloudf
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
       </span>
     </div>
 
@@ -80,16 +80,16 @@ provided by the <code>limma</code> package</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">limmaquickpca2go</span><span class="op">(</span>
-  <span class="va">se</span>,
-  pca_ngenes <span class="op">=</span> <span class="fl">10000</span>,
-  inputType <span class="op">=</span> <span class="st">"ENSEMBL"</span>,
-  organism <span class="op">=</span> <span class="st">"Mm"</span>,
-  loadings_ngenes <span class="op">=</span> <span class="fl">500</span>,
-  background_genes <span class="op">=</span> <span class="cn">NULL</span>,
-  scale <span class="op">=</span> <span class="cn">FALSE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">limmaquickpca2go</span><span class="op">(</span></span>
+<span>  <span class="va">se</span>,</span>
+<span>  pca_ngenes <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  inputType <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span>
+<span>  organism <span class="op">=</span> <span class="st">"Mm"</span>,</span>
+<span>  loadings_ngenes <span class="op">=</span> <span class="fl">500</span>,</span>
+<span>  background_genes <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -98,35 +98,52 @@ provided by the <code>limma</code> package</p>
 <dd><p>A <code><a href="https://rdrr.io/pkg/DESeq2/man/DESeqTransform.html" class="external-link">DESeqTransform</a></code> object, with data in <code>assay(se)</code>,
 produced for example by either <code><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlog</a></code> or
 <code><a href="https://rdrr.io/pkg/DESeq2/man/varianceStabilizingTransformation.html" class="external-link">varianceStabilizingTransformation</a></code></p></dd>
+
+
 <dt>pca_ngenes</dt>
 <dd><p>Number of genes to use for the PCA</p></dd>
+
+
 <dt>inputType</dt>
 <dd><p>Input format type of the gene identifiers. Deafults to <code>ENSEMBL</code>, that then will
 be converted to ENTREZ ids. Can assume values such as <code>ENTREZID</code>,<code>GENENAME</code> or <code>SYMBOL</code>,
 like it is normally used with the <code>select</code> function of <code>AnnotationDbi</code></p></dd>
+
+
 <dt>organism</dt>
 <dd><p>Character abbreviation for the species, using <code>org.XX.eg.db</code> for annotation</p></dd>
+
+
 <dt>loadings_ngenes</dt>
 <dd><p>Number of genes to extract the loadings (in each direction)</p></dd>
+
+
 <dt>background_genes</dt>
 <dd><p>Which genes to consider as background.</p></dd>
+
+
 <dt>scale</dt>
 <dd><p>Logical, defaults to FALSE, scale values for the PCA</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Further parameters to be passed to the goana routine</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A nested list object containing for each principal component the terms enriched
+    
+
+<p>A nested list object containing for each principal component the terms enriched
 in each direction. This object is to be thought in combination with the displaying feature
 of the main <code><a href="pcaExplorer.html">pcaExplorer</a></code> function</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://bioinf.wehi.edu.au/limma" class="external-link">limma</a></span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://bioinf.wehi.edu.au/limma" class="external-link">limma</a></span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Attaching package: ‘limma’</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:DESeq2’:</span>
@@ -135,8 +152,8 @@ of the main <code><a href="pcaExplorer.html">pcaExplorer</a></code> function</p>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:BiocGenerics’:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     plotMA</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">airway</span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">airway</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> class: RangedSummarizedExperiment </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> dim: 64102 8 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> metadata(1): ''</span>
@@ -145,15 +162,15 @@ of the main <code><a href="pcaExplorer.html">pcaExplorer</a></code> function</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> rowData names(0):</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> colData names(9): SampleName cell ... Sample BioSample</span>
-<span class="r-in"><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeqDataSet.html" class="external-link">DESeqDataSet</a></span><span class="op">(</span><span class="va">airway</span>, design <span class="op">=</span> <span class="op">~</span> <span class="va">cell</span> <span class="op">+</span> <span class="va">dex</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="va">rld_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">goquick_airway</span> <span class="op">&lt;-</span> <span class="fu">limmaquickpca2go</span><span class="op">(</span><span class="va">rld_airway</span>,</span>
-<span class="r-in">                                   pca_ngenes <span class="op">=</span> <span class="fl">10000</span>,</span>
-<span class="r-in">                                   inputType <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span>
-<span class="r-in">                                   organism <span class="op">=</span> <span class="st">"Hs"</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeqDataSet.html" class="external-link">DESeqDataSet</a></span><span class="op">(</span><span class="va">airway</span>, design <span class="op">=</span> <span class="op">~</span> <span class="va">cell</span> <span class="op">+</span> <span class="va">dex</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="va">rld_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">goquick_airway</span> <span class="op">&lt;-</span> <span class="fu">limmaquickpca2go</span><span class="op">(</span><span class="va">rld_airway</span>,</span></span>
+<span class="r-in"><span>                                   pca_ngenes <span class="op">=</span> <span class="fl">10000</span>,</span></span>
+<span class="r-in"><span>                                   inputType <span class="op">=</span> <span class="st">"ENSEMBL"</span>,</span></span>
+<span class="r-in"><span>                                   organism <span class="op">=</span> <span class="st">"Hs"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -168,7 +185,7 @@ of the main <code><a href="pcaExplorer.html">pcaExplorer</a></code> function</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

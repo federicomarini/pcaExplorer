@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
       </span>
     </div>
 
@@ -73,19 +73,19 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">pcaplot</span><span class="op">(</span>
-  <span class="va">x</span>,
-  intgroup <span class="op">=</span> <span class="st">"condition"</span>,
-  ntop <span class="op">=</span> <span class="fl">500</span>,
-  returnData <span class="op">=</span> <span class="cn">FALSE</span>,
-  title <span class="op">=</span> <span class="cn">NULL</span>,
-  pcX <span class="op">=</span> <span class="fl">1</span>,
-  pcY <span class="op">=</span> <span class="fl">2</span>,
-  text_labels <span class="op">=</span> <span class="cn">TRUE</span>,
-  point_size <span class="op">=</span> <span class="fl">3</span>,
-  ellipse <span class="op">=</span> <span class="cn">TRUE</span>,
-  ellipse.prob <span class="op">=</span> <span class="fl">0.95</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">pcaplot</span><span class="op">(</span></span>
+<span>  <span class="va">x</span>,</span>
+<span>  intgroup <span class="op">=</span> <span class="st">"condition"</span>,</span>
+<span>  ntop <span class="op">=</span> <span class="fl">500</span>,</span>
+<span>  returnData <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  title <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  pcX <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  pcY <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>  text_labels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  point_size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  ellipse <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  ellipse.prob <span class="op">=</span> <span class="fl">0.95</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -94,42 +94,65 @@
 <dd><p>A <code><a href="https://rdrr.io/pkg/DESeq2/man/DESeqTransform.html" class="external-link">DESeqTransform</a></code> object, with data in <code>assay(x)</code>,
 produced for example by either <code><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlog</a></code> or
 <code><a href="https://rdrr.io/pkg/DESeq2/man/varianceStabilizingTransformation.html" class="external-link">varianceStabilizingTransformation</a></code></p></dd>
+
+
 <dt>intgroup</dt>
 <dd><p>Interesting groups: a character vector of
 names in <code>colData(x)</code> to use for grouping</p></dd>
+
+
 <dt>ntop</dt>
 <dd><p>Number of top genes to use for principal components,
 selected by highest row variance</p></dd>
+
+
 <dt>returnData</dt>
 <dd><p>logical, if TRUE returns a data.frame for further use, containing the
 selected principal components and intgroup covariates for custom plotting</p></dd>
+
+
 <dt>title</dt>
 <dd><p>The plot title</p></dd>
+
+
 <dt>pcX</dt>
 <dd><p>The principal component to display on the x axis</p></dd>
+
+
 <dt>pcY</dt>
 <dd><p>The principal component to display on the y axis</p></dd>
+
+
 <dt>text_labels</dt>
 <dd><p>Logical, whether to display the labels with the sample identifiers</p></dd>
+
+
 <dt>point_size</dt>
 <dd><p>Integer, the size of the points for the samples</p></dd>
+
+
 <dt>ellipse</dt>
 <dd><p>Logical, whether to display the confidence ellipse for the selected groups</p></dd>
+
+
 <dt>ellipse.prob</dt>
 <dd><p>Numeric, a value in the interval [0;1)</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>An object created by <code>ggplot</code>, which can be assigned and further customized.</p>
+    
+
+<p>An object created by <code>ggplot</code>, which can be assigned and further customized.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">pcaplot</span><span class="op">(</span><span class="va">rlt</span>, ntop <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>, betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">rlt</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">pcaplot</span><span class="op">(</span><span class="va">rlt</span>, ntop <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="pcaplot-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -144,7 +167,7 @@ selected principal components and intgroup covariates for custom plotting</p></d
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>
