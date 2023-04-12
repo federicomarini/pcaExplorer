@@ -349,6 +349,7 @@ A preview is available in the tab itself, and the report can be generated, saved
 The functionality to display the report preview is based on `knit2html`, and some elements such as `DataTable` objects might not render correctly. 
 To render them correctly, please install the PhantomJS executable before launching the app. 
 This can be done by using the `r CRANpkg("webshot")` package and calling `webshot::install_phantomjs()` - HTML widgets will be rendered automatically as screenshots.
+Alternatively, the more recent `r BiocStyle::CRANpkg("webshot2")` package uses the headless Chrome browser (via the `r BiocStyle::CRANpkg("chromote")` package, requiring Google Chrome or other Chromium-based browser).
 Keep in mind that the fully rendered report (the one you can obtain with the "Generate & Save" button) is not affected by this, since it uses `rmarkdown::render()`.
 
 ## About

@@ -4,6 +4,7 @@ This content has been loaded from the template report `.Rmd` file. Please edit i
 
 If you are viewing this report in the Preview, you might require the installation of the PhantomJS to render correctly some HTML widgets. 
 This can be done by using the `r BiocStyle::CRANpkg("webshot")` package and calling `webshot::install_phantomjs()`.
+Alternatively, the more recent `r BiocStyle::CRANpkg("webshot2")` package uses the headless Chrome browser (via the `r BiocStyle::CRANpkg("chromote")` package, requiring Google Chrome or other Chromium-based browser).
 
 ```{r setup, include=FALSE, eval = TRUE, echo = FALSE}
 opts_chunk$set(
