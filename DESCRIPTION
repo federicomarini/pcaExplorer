@@ -57,6 +57,6 @@ BugReports: https://github.com/federicomarini/pcaExplorer/issues
 biocViews: ImmunoOncology, Visualization, RNASeq, DimensionReduction,
     PrincipalComponent, QualityControl, GUI, ReportWriting
 VignetteBuilder: knitr
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Encoding: UTF-8
 NeedsCompilation: no
