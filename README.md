@@ -1,7 +1,9 @@
-# pcaExplorer - Interactive exploration of Principal Components of Samples and Genes in RNA-seq data
 <img src="man/figures/pcaExplorer.png" align="right" alt="" width="120" />
 
+# pcaExplorer - Interactive exploration of Principal Components of Samples and Genes in RNA-seq data 
+
 <a href="https://doi.org/10.1186/s12859-019-2879-1"><img src="https://img.shields.io/badge/doi-pcaExplorer-blue.svg"><a>
+<a href="https://doi.org/10.1002/cpz1.411"><img src="https://img.shields.io/badge/doi-pcaExplorer_protocol-blue.svg"><a>
 
 ## Software status
 
