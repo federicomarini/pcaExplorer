@@ -20,6 +20,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -32,7 +34,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.15.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.27.1</span>
       </span>
     </div>
 
@@ -51,7 +53,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -69,7 +71,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/federicomarini/pcaExplorer">
+  <a href="https://github.com/federicomarini/pcaExplorer" class="external-link">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -88,16 +90,21 @@
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip></h1>
-<p>Up and running with <em><a href="https://bioconductor.org/packages/3.12/pcaExplorer">pcaExplorer</a></em></p>
-                        <h4 class="author">Federico Marini</h4>
+<p>Up and running with <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em></p>
+                        <h4 data-toc-skip class="author">Federico
+Marini</h4>
             <address class="author_afil">
-      Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI), Mainz<br><a class="author_email" href="mailto:#"></a><a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz.de</a>
+      Institute of Medical Biostatistics, Epidemiology and Informatics
+(IMBEI), MainzCenter for Thrombosis and Hemostasis (CTH),
+Mainz<br><a class="author_email" href="mailto:#"></a><a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz.de</a>
       </address>
-                              <h4 class="author">Harald Binder</h4>
+                              <h4 data-toc-skip class="author">Harald
+Binder</h4>
             <address class="author_afil">
-      Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI), Mainz<br><h4 class="date">2 June 2020</h4>
+      Institute of Medical Biostatistics, Epidemiology and Informatics
+(IMBEI), Mainz<br><h4 data-toc-skip class="date">28 April 2023</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/federicomarini/pcaExplorer/blob/master/vignettes/upandrunning.Rmd"><code>vignettes/upandrunning.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/federicomarini/pcaExplorer/blob/HEAD/vignettes/upandrunning.Rmd" class="external-link"><code>vignettes/upandrunning.Rmd</code></a></small>
       <div class="hidden name"><code>upandrunning.Rmd</code></div>
 
     </address>
@@ -115,163 +122,345 @@
 <!-- - replace links to imgs with github hosted to provide permanent link -->
 <!-- - enforce width="80%" for all imgs (50% for the smaller screenshot) -->
 <!-- - copy content to inst/extdata/instructions_unr.md -->
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/pkg/knitr/man/opts_chunk.html">opts_chunk</a></span>$<span class="fu">set</span>(<span class="kw">crop</span> <span class="kw">=</span> <span class="kw">NULL</span>)</pre></body></html></div>
-<div id="setup" class="section level1">
-<h1 class="hasAnchor">
-<a href="#setup" class="anchor"></a>Setup</h1>
-<p>First things first: install <em><a href="https://bioconductor.org/packages/3.12/pcaExplorer">pcaExplorer</a></em> and load it into your R session. You should receive a message notification if this is completed without errors.</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="kw pkg">BiocManager</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span>(<span class="st">"pcaExplorer"</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"pcaExplorer"</span>)</pre></body></html></div>
-<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.12/pcaExplorer">pcaExplorer</a></em>, based on the dataset in the <em><a href="https://bioconductor.org/packages/3.12/airway">airway</a></em> package. If this package is not available on your machine, please install it by executing:</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="kw pkg">BiocManager</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span>(<span class="st">"airway"</span>)</pre></body></html></div>
-<p>This dataset consists of the gene-level expression measurements (as raw read counts) for an experiment where four different human airway smooth muscle cell lines are either treated with dexamethasone or left untreated.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/knitr/man/opts_chunk.html" class="external-link">opts_chunk</a></span><span class="op">$</span><span class="fu">set</span><span class="op">(</span>crop <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
+</h2>
+<p>First things first: install <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em>
+and load it into your R session. You should receive a message
+notification if this is completed without errors.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/federicomarini/pcaExplorer" class="external-link">"pcaExplorer"</a></span><span class="op">)</span></span></code></pre></div>
+<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em>,
+based on the dataset in the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em>
+package. If this package is not available on your machine, please
+install it by executing:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"airway"</span><span class="op">)</span></span></code></pre></div>
+<p>This dataset consists of the gene-level expression measurements (as
+raw read counts) for an experiment where four different human airway
+smooth muscle cell lines are either treated with dexamethasone or left
+untreated.</p>
 </div>
-<div id="start-exploring---the-beauty-of-interactivity" class="section level1">
-<h1 class="hasAnchor">
-<a href="#start-exploring---the-beauty-of-interactivity" class="anchor"></a>Start exploring - the beauty of interactivity</h1>
+<div class="section level2">
+<h2 id="start-exploring---the-beauty-of-interactivity">Start exploring - the beauty of interactivity<a class="anchor" aria-label="anchor" href="#start-exploring---the-beauty-of-interactivity"></a>
+</h2>
 <p>To start the exploration, you just need the following lines:</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"pcaExplorer"</span>)
-<span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span>()</pre></body></html></div>
-<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.12/airway">airway</a></em> dataset is by clicking on the dedicated button in the <strong>Data Upload</strong> panel. This action will:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/federicomarini/pcaExplorer" class="external-link">"pcaExplorer"</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em>
+dataset is by clicking on the dedicated button in the <strong>Data
+Upload</strong> panel. This action will:</p>
 <ul>
-<li>load the <em><a href="https://bioconductor.org/packages/3.12/airway">airway</a></em> package</li>
+<li>load the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em>
+package</li>
 <li>load the count matrix and the experimental metadata</li>
-<li>compose the <code>dds</code> object, normalize the expression values (using the robust method proposed by Anders and Huber in the original DESeq manuscript), and compute the variance stabilizing transformed expression values (stored in the <code>dst</code> object)</li>
-<li>retrieve the gene annotation information via the <em><a href="https://bioconductor.org/packages/3.12/org.Hs.eg.db">org.Hs.eg.db</a></em>, adding gene symbols to the ENSEMBL ids - this step is optional, but recommended for more human-readable identifiers to be used.</li>
+<li>compose the <code>dds</code> object, normalize the expression values
+(using the robust method proposed by Anders and Huber in the original
+DESeq manuscript), and compute the variance stabilizing transformed
+expression values (stored in the <code>dst</code> object)</li>
+<li>retrieve the gene annotation information via the <em><a href="https://bioconductor.org/packages/3.16/org.Hs.eg.db" class="external-link">org.Hs.eg.db</a></em>,
+adding gene symbols to the ENSEMBL ids - this step is optional, but
+recommended for more human-readable identifiers to be used.</li>
 </ul>
-<p>If you want to load your expression data, please refer to the <a href="https://bioconductor.org/packages/3.12/pcaExplorer/vignettes/pcaExplorer.html">User Guide</a>, which contains detailed information on the formats your data have to respect.</p>
-<p>Once the preprocessing of the input is done, you should get a notification in the lower right corner that you’re all set. The whole preprocessing should take around 5-6 seconds (tested on a MacBook Pro, with i7 and 16 Gb RAM). You can check how each component looks like by clicking on its respective button, once they appeared in the lower half of the panel.</p>
+<p>If you want to load your expression data, please refer to the <a href="https://bioconductor.org/packages/3.16/pcaExplorer/vignettes/pcaExplorer.html" class="external-link">User
+Guide</a>, which contains detailed information on the formats your data
+have to respect.</p>
+<p>Once the preprocessing of the input is done, you should get a
+notification in the lower right corner that you’re all set. The whole
+preprocessing should take around 5-6 seconds (tested on a MacBook Pro,
+with i7 and 16 Gb RAM). You can check how each component looks like by
+clicking on its respective button, once they appeared in the lower half
+of the panel.</p>
 <div class="figure">
 <img src="unr_00_demo_loaded.png" alt="Overview of the Data Upload panel. After clicking on the 'Load the demo airway data' button, all widgets are automatically populated, and each data component (count matrix, experimental data, dds object, annotation) can be previewed in a modal window by clicking on its respective button." width="1543"><p class="caption">
-Overview of the Data Upload panel. After clicking on the ‘Load the demo airway data’ button, all widgets are automatically populated, and each data component (count matrix, experimental data, dds object, annotation) can be previewed in a modal window by clicking on its respective button.
+Overview of the Data Upload panel. After clicking on the ‘Load the demo
+airway data’ button, all widgets are automatically populated, and each
+data component (count matrix, experimental data, dds object, annotation)
+can be previewed in a modal window by clicking on its respective button.
 </p>
 </div>
-<p>You can proceed to explore the expression values of your dataset in the <strong>Counts Table</strong> tab. You can change the data type you are displaying between raw counts, normalized, or transformed, and plot their values in a scatterplot matrix to explore their sample-to-sample correlations. To try this, select for example “Normalized counts”, change the correlation coefficient to “spearman”, and click on the <code>Run</code> action button. The correlation values will also be displayed as a heatmap.</p>
+<p>You can proceed to explore the expression values of your dataset in
+the <strong>Counts Table</strong> tab. You can change the data type you
+are displaying between raw counts, normalized, or transformed, and plot
+their values in a scatterplot matrix to explore their sample-to-sample
+correlations. To try this, select for example “Normalized counts”,
+change the correlation coefficient to “spearman”, and click on the
+<code>Run</code> action button. The correlation values will also be
+displayed as a heatmap.</p>
 <div class="figure">
 <img src="unr_01_splom.png" alt="Screenshot of the sample to sample scatter plot matrix. The user can select the correlation method to use, the option to plot values on log2 scales, and the possibility to use a subset of genes (to obtain a quicker overview if many samples are provided)." width="1072"><p class="caption">
-Screenshot of the sample to sample scatter plot matrix. The user can select the correlation method to use, the option to plot values on log2 scales, and the possibility to use a subset of genes (to obtain a quicker overview if many samples are provided).
+Screenshot of the sample to sample scatter plot matrix. The user can
+select the correlation method to use, the option to plot values on log2
+scales, and the possibility to use a subset of genes (to obtain a
+quicker overview if many samples are provided).
 </p>
 </div>
-<p>Additional features, both for samples and for features, are displayed in the <strong>Data overview</strong> panel. A closer look at the metadata of the <code>airway</code> set highlights how each combination of cell type (<code>cell</code>) and dexamethasone treatment (<code>dex</code>) is represented by a single sequencing experiment. The 8 samples in the demo dataset are themselves a subsample of the <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778">full GEO record</a>, namely the ones non treated with albuterol (<code>alb</code> column).</p>
-<p>The relationship among samples can be seen in the sample-to-sample heatmap. For example, by selecting the Manhattan distance metric, it is evident how the samples cluster by dex treatment, yet they show a dendrogram structure that recalls the 4 different cell types used. The total sum of counts per sample is displayed as a bar plot.</p>
+<p>Additional features, both for samples and for features, are displayed
+in the <strong>Data overview</strong> panel. A closer look at the
+metadata of the <code>airway</code> set highlights how each combination
+of cell type (<code>cell</code>) and dexamethasone treatment
+(<code>dex</code>) is represented by a single sequencing experiment. The
+8 samples in the demo dataset are themselves a subsample of the <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778" class="external-link">full
+GEO record</a>, namely the ones non treated with albuterol
+(<code>alb</code> column).</p>
+<p>The relationship among samples can be seen in the sample-to-sample
+heatmap. For example, by selecting the Manhattan distance metric, it is
+evident how the samples cluster by dex treatment, yet they show a
+dendrogram structure that recalls the 4 different cell types used. The
+total sum of counts per sample is displayed as a bar plot.</p>
 <div class="figure">
 <img src="unr_02_sts_heatmap.png" alt="Screenshot of the sample to sample heatmap. Selected is the Manhattan distance, but Euclidean and correlation-based distance are also provided as options. In this case, the user has also selected the dex and cell factors in the 'Group/color by' widget in the sidebar menu, and these covariates decorate the heatmap to facilitate identification of patterns." width="690"><p class="caption">
-Screenshot of the sample to sample heatmap. Selected is the Manhattan distance, but Euclidean and correlation-based distance are also provided as options. In this case, the user has also selected the dex and cell factors in the ‘Group/color by’ widget in the sidebar menu, and these covariates decorate the heatmap to facilitate identification of patterns.
+Screenshot of the sample to sample heatmap. Selected is the Manhattan
+distance, but Euclidean and correlation-based distance are also provided
+as options. In this case, the user has also selected the dex and cell
+factors in the ‘Group/color by’ widget in the sidebar menu, and these
+covariates decorate the heatmap to facilitate identification of
+patterns.
 </p>
 </div>
-<p>Patterns can become clearer after selecting, in the <strong>App settings</strong> on the left, an experimental factor to group and color by: try selecting <code>dex</code>, for example. If more than one covariate is selected, the interaction between these will be taken as a grouping factor. To remove one, simply click on it to highlight and press the del or backspace key to delete it. Try doing so by also clicking on <code>cell</code>, and then removing <code>dex</code> afterwards.</p>
-<p>Basic summary information is also displayed for the genes. In the count matrix provided, one can check how many genes were detected, by selecting a “Threshold on the row sums of the counts” or on the row means of the normalized counts (more stringent). For example, selecting 5 in both cases, only 24345 genes have a total number of counts, summed by row, and 17745 genes have more than 5 counts (normalized) on average.</p>
+<p>Patterns can become clearer after selecting, in the <strong>App
+settings</strong> on the left, an experimental factor to group and color
+by: try selecting <code>dex</code>, for example. If more than one
+covariate is selected, the interaction between these will be taken as a
+grouping factor. To remove one, simply click on it to highlight and
+press the del or backspace key to delete it. Try doing so by also
+clicking on <code>cell</code>, and then removing <code>dex</code>
+afterwards.</p>
+<p>Basic summary information is also displayed for the genes. In the
+count matrix provided, one can check how many genes were detected, by
+selecting a “Threshold on the row sums of the counts” or on the row
+means of the normalized counts (more stringent). For example, selecting
+5 in both cases, only 24345 genes have a total number of counts, summed
+by row, and 17745 genes have more than 5 counts (normalized) on
+average.</p>
 <div class="figure">
 <img src="unr_03_summary_counts.png" alt="Screenshot of the Basic Summary of the counts in the Data Overview panel. General information are provided, together with an overview on detected genes according to different filtering criteria." width="699"><p class="caption">
-Screenshot of the Basic Summary of the counts in the Data Overview panel. General information are provided, together with an overview on detected genes according to different filtering criteria.
+Screenshot of the Basic Summary of the counts in the Data Overview
+panel. General information are provided, together with an overview on
+detected genes according to different filtering criteria.
 </p>
 </div>
-<p>The <strong>Samples View</strong> and the <strong>Genes View</strong> are the tabs where most results coming from Principal Component Analysis, either performed on the samples or on the genes, can be explored in depth. Assuming you selected <code>cell</code> in the “Group/color by” option on the left, the Samples PCA plot should clearly display how the cell type explain a considerable portion of the variability in the dataset (corresponding to the second PC). To check that <code>dex</code> treatment is the main source of variability, select that instead of <code>cell</code>.</p>
+<p>The <strong>Samples View</strong> and the <strong>Genes View</strong>
+are the tabs where most results coming from Principal Component
+Analysis, either performed on the samples or on the genes, can be
+explored in depth. Assuming you selected <code>cell</code> in the
+“Group/color by” option on the left, the Samples PCA plot should clearly
+display how the cell type explain a considerable portion of the
+variability in the dataset (corresponding to the second PC). To check
+that <code>dex</code> treatment is the main source of variability,
+select that instead of <code>cell</code>.</p>
 <div class="figure">
 <img src="unr_04a_samplespca.png" alt="The Samples View panel. Displayed are a PCA plot (left) and the corresponding scree plot (right), with the samples colored and labeled by cell type - separating on the second principal component." width="1010"><p class="caption">
-The Samples View panel. Displayed are a PCA plot (left) and the corresponding scree plot (right), with the samples colored and labeled by cell type - separating on the second principal component.
+The Samples View panel. Displayed are a PCA plot (left) and the
+corresponding scree plot (right), with the samples colored and labeled
+by cell type - separating on the second principal component.
 </p>
 </div>
-<p>The scree plot on the right shows how many components should be retained for a satisfactory reduced dimension view of the original set, with their eigenvalues from largest to smallest. To explore the PCs other than the first and the second one, you can just select them in the x-axis PC and y-axis PC widgets in the left sidebar.</p>
+<p>The scree plot on the right shows how many components should be
+retained for a satisfactory reduced dimension view of the original set,
+with their eigenvalues from largest to smallest. To explore the PCs
+other than the first and the second one, you can just select them in the
+x-axis PC and y-axis PC widgets in the left sidebar.</p>
 <div class="figure">
 <img src="unr_04b_samples_dex.png" alt="PCA plot for the samples, colored by dexamethasone treatment. The dex factor is the main driver of the variability in the data, and samples separate nicely on the first principal component." width="456"><p class="caption">
-PCA plot for the samples, colored by dexamethasone treatment. The dex factor is the main driver of the variability in the data, and samples separate nicely on the first principal component.
+PCA plot for the samples, colored by dexamethasone treatment. The dex
+factor is the main driver of the variability in the data, and samples
+separate nicely on the first principal component.
 </p>
 </div>
-<p>If you brush (left-click and hold) on the PCA plot, you can display a zoomed version of it in the frame below. If you suspect some samples might be outliers (this is not the case in the <code>airway</code> set, still), you can select them in the dedicated plot, and give a first check on how the remainder of the samples would look like. On the right side, you can quickly check which genes show the top and bottom loadings, split by principal component. First, change the value in the input widget to 20; then, select one of each list and try to check them in the <strong>Gene Finder</strong> tab; try for example with <em>DUSP1</em>, <em>PER1</em>, and <em>DDX3Y</em>.</p>
+<p>If you brush (left-click and hold) on the PCA plot, you can display a
+zoomed version of it in the frame below. If you suspect some samples
+might be outliers (this is not the case in the <code>airway</code> set,
+still), you can select them in the dedicated plot, and give a first
+check on how the remainder of the samples would look like. On the right
+side, you can quickly check which genes show the top and bottom
+loadings, split by principal component. First, change the value in the
+input widget to 20; then, select one of each list and try to check them
+in the <strong>Gene Finder</strong> tab; try for example with
+<em>DUSP1</em>, <em>PER1</em>, and <em>DDX3Y</em>.</p>
 <div class="figure">
 <img src="unr_05_loadings.png" alt="Genes with highest loadings on the first and second principal components. The user can select how many top and bottom genes will be displayed, and the gene names are printed below each gene's contribution on each PC." width="488"><p class="caption">
-Genes with highest loadings on the first and second principal components. The user can select how many top and bottom genes will be displayed, and the gene names are printed below each gene’s contribution on each PC.
+Genes with highest loadings on the first and second principal
+components. The user can select how many top and bottom genes will be
+displayed, and the gene names are printed below each gene’s contribution
+on each PC.
 </p>
 </div>
-<p>While <em>DUSP1</em> and <em>PER1</em> clearly show a change in expression upon dexamethasone treatment (and indeed where reported among the well known glucocorticoid-responsive genes in the original publication of Himes et al., 2014), <em>DDX3Y</em> displays variability at the cell type level (select <code>cell</code> in the Group/color by widget): this gene is almost undetected in N061011 cells, and this high variance is what determines its high loading on the second principal component.</p>
+<p>While <em>DUSP1</em> and <em>PER1</em> clearly show a change in
+expression upon dexamethasone treatment (and indeed where reported among
+the well known glucocorticoid-responsive genes in the original
+publication of Himes et al., 2014), <em>DDX3Y</em> displays variability
+at the cell type level (select <code>cell</code> in the Group/color by
+widget): this gene is almost undetected in N061011 cells, and this high
+variance is what determines its high loading on the second principal
+component.</p>
 <div class="figure">
 <img src="unr_06a_genefinder_dusp1.png" alt="Plot of the gene expression levels of DUSP1. Points are split according to dex treatment, and both graphics and table are displayed." width="1027"><p class="caption">
-Plot of the gene expression levels of DUSP1. Points are split according to dex treatment, and both graphics and table are displayed.
+Plot of the gene expression levels of DUSP1. Points are split according
+to dex treatment, and both graphics and table are displayed.
 </p>
 </div>
 <div class="figure">
 <img src="unr_06b_genefinder_per1.png" alt="Plot of the gene expression levels of PER1. Points are split according to dex treatment." width="677"><p class="caption">
-Plot of the gene expression levels of PER1. Points are split according to dex treatment.
+Plot of the gene expression levels of PER1. Points are split according
+to dex treatment.
 </p>
 </div>
 <div class="figure">
 <img src="unr_06c_genefinder_ddx3y.png" alt="Plot of the gene expression levels of DDX3Y. Points are split according to cell type, as this gene was highly variable across this experimental factor - indeed, in one cell type it is barely detected." width="681"><p class="caption">
-Plot of the gene expression levels of DDX3Y. Points are split according to cell type, as this gene was highly variable across this experimental factor - indeed, in one cell type it is barely detected.
+Plot of the gene expression levels of DDX3Y. Points are split according
+to cell type, as this gene was highly variable across this experimental
+factor - indeed, in one cell type it is barely detected.
 </p>
 </div>
-<p>You can see the single expression values in a table as well, and this information can be downloaded with a simple click.</p>
-<p>Back to the <strong>Samples View</strong>, you can experiment with the number of top variable genes to see how the results of PCA are in this case robust to a wide range of this value - this might not be the case with other datasets, and the simplicity of interacting with these parameters makes it easy to iterate in the exploration steps.</p>
-<p>Proceeding to the <strong>Genes View</strong>, you can see the dual of the Samples PCA: now the samples are displayed as arrows in the genes biplot, which can show which genes display a similar behaviour. You can capture this with a simple brushing action on the plot, and notice how their profiles throughout all samples are shown in the Profile explorer below; moreover, a static and an interactive heatmap, together with a table containing the underlying data, are generated in the rows below.</p>
+<p>You can see the single expression values in a table as well, and this
+information can be downloaded with a simple click.</p>
+<p>Back to the <strong>Samples View</strong>, you can experiment with
+the number of top variable genes to see how the results of PCA are in
+this case robust to a wide range of this value - this might not be the
+case with other datasets, and the simplicity of interacting with these
+parameters makes it easy to iterate in the exploration steps.</p>
+<p>Proceeding to the <strong>Genes View</strong>, you can see the dual
+of the Samples PCA: now the samples are displayed as arrows in the genes
+biplot, which can show which genes display a similar behaviour. You can
+capture this with a simple brushing action on the plot, and notice how
+their profiles throughout all samples are shown in the Profile explorer
+below; moreover, a static and an interactive heatmap, together with a
+table containing the underlying data, are generated in the rows
+below.</p>
 <div class="figure">
 <img src="unr_07_genespca.png" alt="The Genes View panel. Upper panel: the genes biplot, and its zoomed plot, with gene names displayed. Lower panel: the profile explorer of the selected subset of genes (corresponding to the zoomed window), and the boxplot for the gene selected by clicking close to a location in the zoomed window." width="1024"><p class="caption">
-The Genes View panel. Upper panel: the genes biplot, and its zoomed plot, with gene names displayed. Lower panel: the profile explorer of the selected subset of genes (corresponding to the zoomed window), and the boxplot for the gene selected by clicking close to a location in the zoomed window.
+The Genes View panel. Upper panel: the genes biplot, and its zoomed
+plot, with gene names displayed. Lower panel: the profile explorer of
+the selected subset of genes (corresponding to the zoomed window), and
+the boxplot for the gene selected by clicking close to a location in the
+zoomed window.
 </p>
 </div>
-<p>Since we compute the gene annotation table as well, it’s nice to read the gene symbols in the zoomed window (instead of the ENSEMBL ids). By clicking close enough to any of these genes, the expression values are plotted, in a similar fashion as in the <strong>Gene Finder</strong>.</p>
-<p>The tab <strong>PCA2GO</strong> helps you understanding which are the biological common themes (default: the Gene Ontology Biological Process terms) in the genes showing up in the top and in the bottom loadings for each principal component. Since we launched the <code>pcaExplorer</code> app without additional parameters, this information is not available, but can be computed live (this might take a while).</p>
+<p>Since we compute the gene annotation table as well, it’s nice to read
+the gene symbols in the zoomed window (instead of the ENSEMBL ids). By
+clicking close enough to any of these genes, the expression values are
+plotted, in a similar fashion as in the <strong>Gene
+Finder</strong>.</p>
+<p>The tab <strong>PCA2GO</strong> helps you understanding which are the
+biological common themes (default: the Gene Ontology Biological Process
+terms) in the genes showing up in the top and in the bottom loadings for
+each principal component. Since we launched the <code>pcaExplorer</code>
+app without additional parameters, this information is not available,
+but can be computed live (this might take a while).</p>
 <div class="figure">
 <img src="unr_08_pca2go_topgo.png" alt="The PCA2GO panel. Four tables (2 per dimension, here only 3 are displayed) decorate the PCA plot in the middle, and display the top enriched functional categories in each subset of gene with high loadings." width="1352"><p class="caption">
-The PCA2GO panel. Four tables (2 per dimension, here only 3 are displayed) decorate the PCA plot in the middle, and display the top enriched functional categories in each subset of gene with high loadings.
+The PCA2GO panel. Four tables (2 per dimension, here only 3 are
+displayed) decorate the PCA plot in the middle, and display the top
+enriched functional categories in each subset of gene with high
+loadings.
 </p>
 </div>
-<p>Still, a previous call to <code>pca2go</code> is recommended, as it relies on the algorithm of the <em><a href="https://bioconductor.org/packages/3.12/topGO">topGO</a></em> package: it will require some additional computing time, but it is likely to deliver more precise terms (i.e. in turn more relevant from the point of view of their biological relevance). To do so, you should exit the live session, compute this object, and provide it in the call to <code>pcaExplorer</code> (see more how to do so in <a href="https://bioconductor.org/packages/3.12/pcaExplorer/vignettes/pcaExplorer.html">the main user guide</a>).</p>
+<p>Still, a previous call to <code>pca2go</code> is recommended, as it
+relies on the algorithm of the <em><a href="https://bioconductor.org/packages/3.16/topGO" class="external-link">topGO</a></em>
+package: it will require some additional computing time, but it is
+likely to deliver more precise terms (i.e. in turn more relevant from
+the point of view of their biological relevance). To do so, you should
+exit the live session, compute this object, and provide it in the call
+to <code>pcaExplorer</code> (see more how to do so in <a href="https://bioconductor.org/packages/3.16/pcaExplorer/vignettes/pcaExplorer.html" class="external-link">the
+main user guide</a>).</p>
 </div>
-<div id="when-youre-done---the-power-of-reproducibility" class="section level1">
-<h1 class="hasAnchor">
-<a href="#when-youre-done---the-power-of-reproducibility" class="anchor"></a>When you’re done - the power of reproducibility</h1>
-<p>A typical session with <code>pcaExplorer</code> includes one or more iterations on each of these tabs. Once you are finished, you might want to store the results of your analysis in different formats.</p>
+<div class="section level2">
+<h2 id="when-youre-done---the-power-of-reproducibility">When you’re done - the power of reproducibility<a class="anchor" aria-label="anchor" href="#when-youre-done---the-power-of-reproducibility"></a>
+</h2>
+<p>A typical session with <code>pcaExplorer</code> includes one or more
+iterations on each of these tabs. Once you are finished, you might want
+to store the results of your analysis in different formats.</p>
 <div class="figure">
 <img src="unr_90_exitsave.png" alt="The pcaExplorer task menu. Buttons for saving the session to binary data or to a dedicated environment are displayed." width="80%"><p class="caption">
-The pcaExplorer task menu. Buttons for saving the session to binary data or to a dedicated environment are displayed.
+The pcaExplorer task menu. Buttons for saving the session to binary data
+or to a dedicated environment are displayed.
 </p>
 </div>
 <p>With <code>pcaExplorer</code> you can do all of the following:</p>
 <ul>
-<li>save every plot and table by simply clicking on the respective button, below each element</li>
-<li>save the state of the entire app and its reactive elements as a binary <code>.RData</code> file, as if it was a workspace (clicking on the cog icon in the right side of the task menu)</li>
-<li>use the “Exit <code>pcaExplorer</code> and save” saves the state but in a specific environment of your R session, which you can later access by its name, which normally could look like <code>pcaExplorerState_YYYYMMDD_HHMMSS</code> (also accessible from the cog)</li>
-<li>enjoy the beauty of reproducible research in the <strong>Report Editor</strong>: <code>pcaExplorer</code> comes with a template analysis, that picks the latest status of the app during your session, and combines these reactive values together in a R Markdown document, which you can first preview live in the app, and then download as standalone HTML file - to store or share. This document stiches together narrative text, code, and output objects, and constitutes a compendium where all actions are recorded. If you are familiar with R, you can edit that live, with support for autocompletion, in the “Edit report” tab.</li>
+<li>save every plot and table by simply clicking on the respective
+button, below each element</li>
+<li>save the state of the entire app and its reactive elements as a
+binary <code>.RData</code> file, as if it was a workspace (clicking on
+the cog icon in the right side of the task menu)</li>
+<li>use the “Exit <code>pcaExplorer</code> and save” saves the state but
+in a specific environment of your R session, which you can later access
+by its name, which normally could look like
+<code>pcaExplorerState_YYYYMMDD_HHMMSS</code> (also accessible from the
+cog)</li>
+<li>enjoy the beauty of reproducible research in the <strong>Report
+Editor</strong>: <code>pcaExplorer</code> comes with a template
+analysis, that picks the latest status of the app during your session,
+and combines these reactive values together in a R Markdown document,
+which you can first preview live in the app, and then download as
+standalone HTML file - to store or share. This document stiches together
+narrative text, code, and output objects, and constitutes a compendium
+where all actions are recorded. If you are familiar with R, you can edit
+that live, with support for autocompletion, in the “Edit report”
+tab.</li>
 </ul>
 <div class="figure">
 <img src="unr_99_editreport.png" alt="The Report Editor tab. The collapsible elements control general markdown and editor options, which are regarded when the report is compiled. Its content is specified in the Ace editor, integrated in the Shiny app." width="892"><p class="caption">
-The Report Editor tab. The collapsible elements control general markdown and editor options, which are regarded when the report is compiled. Its content is specified in the Ace editor, integrated in the Shiny app.
+The Report Editor tab. The collapsible elements control general markdown
+and editor options, which are regarded when the report is compiled. Its
+content is specified in the Ace editor, integrated in the Shiny app.
 </p>
 </div>
-<p>The functionality to display the report preview is based on <code>knit2html</code>, and some elements such as <code>DataTable</code> objects might not render correctly. To render them correctly, please install the PhantomJS executable before launching the app. This can be done by using the <em><a href="https://CRAN.R-project.org/package=webshot">webshot</a></em> package and calling <code><a href="https://rdrr.io/pkg/webshot/man/install_phantomjs.html">webshot::install_phantomjs()</a></code> - HTML widgets will be rendered automatically as screenshots. Keep in mind that the fully rendered report (the one you can obtain with the “Generate &amp; Save” button) is not affected by this, since it uses <code><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">rmarkdown::render()</a></code>.</p>
+<p>The functionality to display the report preview is based on
+<code>knit2html</code>, and some elements such as <code>DataTable</code>
+objects might not render correctly. To render them correctly, please
+install the PhantomJS executable before launching the app. This can be
+done by using the <em><a href="https://CRAN.R-project.org/package=webshot" class="external-link">webshot</a></em>
+package and calling <code><a href="http://wch.github.io/webshot/reference/install_phantomjs.html" class="external-link">webshot::install_phantomjs()</a></code> - HTML
+widgets will be rendered automatically as screenshots. Alternatively,
+the more recent <em><a href="https://CRAN.R-project.org/package=webshot2" class="external-link">webshot2</a></em>
+package uses the headless Chrome browser (via the <em><a href="https://CRAN.R-project.org/package=chromote" class="external-link">chromote</a></em>
+package, requiring Google Chrome or other Chromium-based browser). Keep
+in mind that the fully rendered report (the one you can obtain with the
+“Generate &amp; Save” button) is not affected by this, since it uses
+<code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render()</a></code>.</p>
 </div>
-<div id="session-info" class="section level1 unnumbered">
-<h1 class="hasAnchor">
-<a href="#session-info" class="anchor"></a>Session Info</h1>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span>()</pre></body></html></div>
-<pre><code>## R version 4.0.0 (2020-04-24)
-## Platform: x86_64-apple-darwin17.0 (64-bit)
-## Running under: macOS Mojave 10.14.6
-## 
-## Matrix products: default
-## BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
-## LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] BiocStyle_2.17.0
-## 
-## loaded via a namespace (and not attached):
-##  [1] Rcpp_1.0.4.6        rstudioapi_0.11     knitr_1.28         
-##  [4] magrittr_1.5        MASS_7.3-51.6       R6_2.4.1           
-##  [7] rlang_0.4.6         highr_0.8           stringr_1.4.0      
-## [10] tools_4.0.0         xfun_0.14           png_0.1-7          
-## [13] htmltools_0.4.0     yaml_2.2.1          assertthat_0.2.1   
-## [16] digest_0.6.25       rprojroot_1.3-2     pkgdown_1.5.1      
-## [19] crayon_1.3.4        bookdown_0.19       BiocManager_1.30.10
-## [22] fs_1.4.1            memoise_1.1.0       evaluate_0.14      
-## [25] rmarkdown_2.1       stringi_1.4.6       compiler_4.0.0     
-## [28] desc_1.2.0          backports_1.1.7</code></pre>
+<div class="section level2">
+<h2 class="unnumbered" id="session-info">Session Info<a class="anchor" aria-label="anchor" href="#session-info"></a>
+</h2>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## R version 4.2.1 (2022-06-23)</span></span>
+<span><span class="co">## Platform: x86_64-apple-darwin17.0 (64-bit)</span></span>
+<span><span class="co">## Running under: macOS Big Sur ... 10.16</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Matrix products: default</span></span>
+<span><span class="co">## BLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib</span></span>
+<span><span class="co">## LAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## locale:</span></span>
+<span><span class="co">## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## attached base packages:</span></span>
+<span><span class="co">## [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## other attached packages:</span></span>
+<span><span class="co">## [1] BiocStyle_2.26.0</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## loaded via a namespace (and not attached):</span></span>
+<span><span class="co">##  [1] rstudioapi_0.14     knitr_1.42          magrittr_2.0.3     </span></span>
+<span><span class="co">##  [4] R6_2.5.1            ragg_1.2.5          rlang_1.1.0        </span></span>
+<span><span class="co">##  [7] fastmap_1.1.1       highr_0.10          stringr_1.5.0      </span></span>
+<span><span class="co">## [10] tools_4.2.1         xfun_0.39           png_0.1-8          </span></span>
+<span><span class="co">## [13] cli_3.6.1           jquerylib_0.1.4     systemfonts_1.0.4  </span></span>
+<span><span class="co">## [16] htmltools_0.5.5     yaml_2.3.7          digest_0.6.31      </span></span>
+<span><span class="co">## [19] rprojroot_2.0.3     lifecycle_1.0.3     pkgdown_2.0.7      </span></span>
+<span><span class="co">## [22] bookdown_0.33       textshaping_0.3.6   purrr_1.0.1        </span></span>
+<span><span class="co">## [25] BiocManager_1.30.20 vctrs_0.6.2         sass_0.4.5         </span></span>
+<span><span class="co">## [28] fs_1.6.2            memoise_2.0.1       glue_1.6.2         </span></span>
+<span><span class="co">## [31] cachem_1.0.7        evaluate_0.20       rmarkdown_2.21     </span></span>
+<span><span class="co">## [34] stringi_1.7.12      compiler_4.2.1      bslib_0.4.2        </span></span>
+<span><span class="co">## [37] desc_1.4.2          jsonlite_1.8.4</span></span></code></pre>
 </div>
   </div>
 
@@ -286,11 +475,13 @@ The Report Editor tab. The collapsible elements control general markdown and edi
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://federicomarini.github.io">Federico Marini</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://federicomarini.github.io" class="external-link">Federico Marini</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -298,6 +489,8 @@ The Report Editor tab. The collapsible elements control general markdown and edi
 
   
 
+
+  
 
   </body>
 </html>
