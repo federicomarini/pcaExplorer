@@ -2445,7 +2445,7 @@ pcaExplorer <- function(dds = NULL,
             on.exit(setwd(owd))
             tmp_content <- paste0(rmd_yaml(), input$acereport_rmd, collapse = "\n")
             incProgress(0.5, detail = "Rendering report...")
-            htmlpreview <- knit2html(text = tmp_content, fragment.only = TRUE, quiet = TRUE)
+            htmlpreview <- knit2html(text = tmp_content, template = FALSE, quiet = TRUE)
             incProgress(1)
             isolate(HTML(htmlpreview))
           })
