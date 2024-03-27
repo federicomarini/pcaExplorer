@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>pcaExplorer User Guide
  • pcaExplorer</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.23.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.29.0</span>
       </span>
     </div>
 
@@ -87,20 +87,25 @@
 
       
 
-      </header><link href="pcaExplorer_files/font-awesome-5.1.0/css/all.css" rel="stylesheet">
-<link href="pcaExplorer_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet">
+      </header><link href="pcaExplorer_files/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
+<link href="pcaExplorer_files/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip></h1>
 <p>pcaExplorer User Guide</p>
-                        <h4 data-toc-skip class="author">Federico Marini</h4>
+                        <h4 data-toc-skip class="author">Federico
+Marini</h4>
             <address class="author_afil">
-      Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI), MainzCenter for Thrombosis and Hemostasis (CTH), Mainz<br><a class="author_email" href="mailto:#"></a><a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz.de</a>
+      Institute of Medical Biostatistics, Epidemiology and Informatics
+(IMBEI), MainzCenter for Thrombosis and Hemostasis (CTH),
+Mainz<br><a class="author_email" href="mailto:#"></a><a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz.de</a>
       </address>
-                              <h4 data-toc-skip class="author">Harald Binder</h4>
+                              <h4 data-toc-skip class="author">Harald
+Binder</h4>
             <address class="author_afil">
-      Institute of Medical Biostatistics, Epidemiology and Informatics (IMBEI), Mainz<br><h4 data-toc-skip class="date">21 October 2022</h4>
+      Institute of Medical Biostatistics, Epidemiology and Informatics
+(IMBEI), Mainz<br><h4 data-toc-skip class="date">27 March 2024</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/federicomarini/pcaExplorer/blob/HEAD/vignettes/pcaExplorer.Rmd" class="external-link"><code>vignettes/pcaExplorer.Rmd</code></a></small>
       <div class="hidden name"><code>pcaExplorer.Rmd</code></div>
@@ -111,10 +116,18 @@
     
         <div class="abstract">
       <p class="abstract">Abstract</p>
-      <p><em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> provides functionality for interactive visualization of RNA-seq datasets based on Principal Components Analysis. Such methods allow for quick information extraction and effective data exploration. A Shiny application encapsulates the whole analysis, and is developed to become a practical companion for any RNA-seq dataset. This app supports reproducible research with state saving and automated report generation.</p>
+      <p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+      provides functionality for interactive visualization of RNA-seq
+      datasets based on Principal Components Analysis. Such methods
+      allow for quick information extraction and effective data
+      exploration. A Shiny application encapsulates the whole analysis,
+      and is developed to become a practical companion for any RNA-seq
+      dataset. This app supports reproducible research with state saving
+      and automated report generation.</p>
     </div>
     
-<p><br><strong>Package</strong>: <em>pcaExplorer</em><br><strong>Authors</strong>: Federico Marini [aut, cre] (<a href="https://orcid.org/0000-0003-3252-7758" class="external-link uri">https://orcid.org/0000-0003-3252-7758</a>)<br><strong>Version</strong>: 2.23.2<br><strong>Compiled date</strong>: 2022-10-21<br><strong>Last edited</strong>: 2019-02-26<br><strong>License</strong>: MIT + file LICENSE<br></p>
+<p><br><strong>Package</strong>: <em>pcaExplorer</em><br><strong>Authors</strong>: Federico Marini [aut, cre] (<a href="https://orcid.org/0000-0003-3252-7758" class="external-link uri">https://orcid.org/0000-0003-3252-7758</a>)<br><strong>Version</strong>: 2.29.0<br><strong>Compiled date</strong>:
+2024-03-27<br><strong>Last edited</strong>: 2019-02-26<br><strong>License</strong>: MIT + file LICENSE<br></p>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelector("h1").className = "title";
@@ -129,39 +142,64 @@ document.addEventListener("DOMContentLoaded", function() {
 </script><div class="section level2">
 <h2 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
 </h2>
-<p><em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> is an R package distributed as part of the <a href="http://bioconductor.org" class="external-link">Bioconductor</a> project. To install the package, start R and enter:</p>
+<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+is an R package distributed as part of the <a href="http://bioconductor.org" class="external-link">Bioconductor</a> project. To install the
+package, start R and enter:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
-<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></span></code></pre></div>
-<p>To install <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> with all its dependencies (i.e. also the ones listed in the <code>Suggests:</code> field of the <code>DESCRIPTION</code> file, which include the dataset from the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em> package used as a demo), use this command instead:</p>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></span></code></pre></div>
+<p>To install <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+with all its dependencies (i.e. also the ones listed in the
+<code>Suggests:</code> field of the <code>DESCRIPTION</code> file, which
+include the dataset from the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+package used as a demo), use this command instead:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p>If you prefer, you can install and use the development version, which can be retrieved via Github (<a href="https://github.com/federicomarini/pcaExplorer" class="external-link uri">https://github.com/federicomarini/pcaExplorer</a>). To do so, use:</p>
+<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p>If you prefer, you can install and use the development version, which
+can be retrieved via Github (<a href="https://github.com/federicomarini/pcaExplorer" class="external-link uri">https://github.com/federicomarini/pcaExplorer</a>). To do
+so, use:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span><span class="op">)</span></span>
 <span><span class="fu">install_github</span><span class="op">(</span><span class="st">"federicomarini/pcaExplorer"</span><span class="op">)</span></span></code></pre></div>
-<p>Once <em>pcaExplorer</em> is installed, it can be loaded by the following command.</p>
+<p>Once <em>pcaExplorer</em> is installed, it can be loaded by the
+following command.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/federicomarini/pcaExplorer" class="external-link">"pcaExplorer"</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p><em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> is a Bioconductor package containing a Shiny application for analyzing expression data in different conditions and experimental factors.</p>
-<p>It is a general-purpose interactive companion tool for RNA-seq analysis, which guides the user in exploring the Principal Components of the data under inspection.</p>
-<p><em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> provides tools and functionality to detect outlier samples, genes that show particular patterns, and additionally provides a functional interpretation of the principal components for further quality assessment and hypothesis generation on the input data.</p>
-<p>Moreover, a novel visualization approach is presented to simultaneously assess the effect of more than one experimental factor on the expression levels.</p>
-<p>Thanks to its interactive/reactive design, it is designed to become a practical companion to any RNA-seq dataset analysis, making exploratory data analysis accessible also to the bench biologist, while providing additional insight also for the experienced data analyst.</p>
-<p>Starting from development version 1.1.3, <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> supports reproducible research with state saving and automated report generation. Each generated plot and table can be exported by simple mouse clicks on the dedicated buttons.</p>
+<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+is a Bioconductor package containing a Shiny application for analyzing
+expression data in different conditions and experimental factors.</p>
+<p>It is a general-purpose interactive companion tool for RNA-seq
+analysis, which guides the user in exploring the Principal Components of
+the data under inspection.</p>
+<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+provides tools and functionality to detect outlier samples, genes that
+show particular patterns, and additionally provides a functional
+interpretation of the principal components for further quality
+assessment and hypothesis generation on the input data.</p>
+<p>Moreover, a novel visualization approach is presented to
+simultaneously assess the effect of more than one experimental factor on
+the expression levels.</p>
+<p>Thanks to its interactive/reactive design, it is designed to become a
+practical companion to any RNA-seq dataset analysis, making exploratory
+data analysis accessible also to the bench biologist, while providing
+additional insight also for the experienced data analyst.</p>
+<p>Starting from development version 1.1.3, <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+supports reproducible research with state saving and automated report
+generation. Each generated plot and table can be exported by simple
+mouse clicks on the dedicated buttons.</p>
 <div class="section level3">
 <h3 id="citation-info">Citation info<a class="anchor" aria-label="anchor" href="#citation-info"></a>
 </h3>
-<p>If you use <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> for your analysis, please cite it as here below:</p>
+<p>If you use <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+for your analysis, please cite it as here below:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>
-Please cite the articles below for the 'pcaExplorer' software itself,
+<pre><code>Please cite the articles below for the 'pcaExplorer' software itself,
 or its usage in combined workflows with the 'ideal' or 'GeneTonic'
 software packages:
 
@@ -184,170 +222,341 @@ bibtex=TRUE)', 'toBibtex(.)', or set
 <div class="section level2">
 <h2 id="launching-the-application">Launching the application<a class="anchor" aria-label="anchor" href="#launching-the-application"></a>
 </h2>
-<p>After loading the package, the <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> app can be launched in different modes:</p>
+<p>After loading the package, the <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+app can be launched in different modes:</p>
 <ul>
-<li><p><code>pcaExplorer(dds = dds, dst = dst)</code>, where <code>dds</code> is a <code>DESeqDataSet</code> object and <code>dst</code> is a <code>DESeqTransform</code> object, which were created during an existing session for the analysis of an RNA-seq dataset with the <em><a href="https://bioconductor.org/packages/3.16/DESeq2" class="external-link">DESeq2</a></em> package.</p></li>
-<li><p><code>pcaExplorer(dds = dds)</code>, where <code>dds</code> is a <code>DESeqDataSet</code> object. The <code>dst</code> object can be automatically computed upon launch, choosing between rlog transformation, variance stabilizing transformations, or shifted logarithm transformation (with pseudocount = 1).</p></li>
-<li><p><code>pcaExplorer(countmatrix = countmatrix, coldata = coldata)</code>, where <code>countmatrix</code> is a count matrix, generated after assigning reads to features such as genes via tools such as <code>HTSeq-count</code> or <code>featureCounts</code>, and <code>coldata</code> is a data frame containing the experimental covariates of the experiments, such as condition, tissue, cell line, run batch and so on. If the data is provided in this way, the user can click on the “Generate the dds and dst objects” button to complete the setup and enable the subsequent steps in the other panels.</p></li>
-<li><p><code><a href="../reference/pcaExplorer.html">pcaExplorer()</a></code>, and then subsequently uploading the count matrix and the covariates data frame through the user interface. These files need to be formatted as tab, semicolon, or comma separated text files, all of which are common formats for storing such count values.</p></li>
+<li><p><code>pcaExplorer(dds = dds, dst = dst)</code>, where
+<code>dds</code> is a <code>DESeqDataSet</code> object and
+<code>dst</code> is a <code>DESeqTransform</code> object, which were
+created during an existing session for the analysis of an RNA-seq
+dataset with the <em><a href="https://bioconductor.org/packages/3.19/DESeq2" class="external-link">DESeq2</a></em>
+package.</p></li>
+<li><p><code>pcaExplorer(dds = dds)</code>, where <code>dds</code> is a
+<code>DESeqDataSet</code> object. The <code>dst</code> object can be
+automatically computed upon launch, choosing between rlog
+transformation, variance stabilizing transformations, or shifted
+logarithm transformation (with pseudocount = 1).</p></li>
+<li><p><code>pcaExplorer(countmatrix = countmatrix, coldata = coldata)</code>,
+where <code>countmatrix</code> is a count matrix, generated after
+assigning reads to features such as genes via tools such as
+<code>HTSeq-count</code> or <code>featureCounts</code>, and
+<code>coldata</code> is a data frame containing the experimental
+covariates of the experiments, such as condition, tissue, cell line, run
+batch and so on. If the data is provided in this way, the user can click
+on the “Generate the dds and dst objects” button to complete the setup
+and enable the subsequent steps in the other panels.</p></li>
+<li><p><code><a href="../reference/pcaExplorer.html">pcaExplorer()</a></code>, and then subsequently uploading the
+count matrix and the covariates data frame through the user interface.
+These files need to be formatted as tab, semicolon, or comma separated
+text files, all of which are common formats for storing such count
+values.</p></li>
 </ul>
-<p>Additional parameters and objects that can be provided to the main <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> function are:</p>
+<p>Additional parameters and objects that can be provided to the main
+<em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+function are:</p>
 <ul>
-<li><p><code>pca2go</code>, which is an object created by the <code>pca2go</code> function, which scans the genes with high loadings in each principal component and each direction, and looks for functions (such as GO Biological Processes) that are enriched above the background. The offline <code>pca2go</code> function is based on the routines and algorithms of the <em><a href="https://bioconductor.org/packages/3.16/topGO" class="external-link">topGO</a></em> package, but as an alternative, this object can be computed live during the execution of the app with <code>limmaquickpca2go</code> (which relies on the <code>goana</code> function provided by the <em><a href="https://bioconductor.org/packages/3.16/limma" class="external-link">limma</a></em> package). Although this likely provides more general (and probably less informative) functions, it is a good compromise for quickly obtaining a further data interpretation.</p></li>
-<li><p><code>annotation</code>, a data frame object, with <code>row.names</code> as gene identifiers (e.g. ENSEMBL ids) identical to the row names of the count matrix or <code>dds</code> object, and an extra column <code>gene_name</code>, containing e.g. HGNC-based gene symbols. This can be used for making information extraction easier, as ENSEMBL ids (a usual choice when assigning reads to features) do not provide an immediate readout for which gene they refer to. This can be either passed as a parameter when launching the app, or also uploaded as a text file (either tab, comma, or semicolon-separated). The package provides two functions, <code>get_annotation</code> and <code>get_annotation_orgdb</code>, as a convenient wrapper to obtain the updated annotation information, respectively from <code>biomaRt</code> or via the <code>org.XX.eg.db</code> packages.</p></li>
+<li><p><code>pca2go</code>, which is an object created by the
+<code>pca2go</code> function, which scans the genes with high loadings
+in each principal component and each direction, and looks for functions
+(such as GO Biological Processes) that are enriched above the
+background. The offline <code>pca2go</code> function is based on the
+routines and algorithms of the <em><a href="https://bioconductor.org/packages/3.19/topGO" class="external-link">topGO</a></em>
+package, but as an alternative, this object can be computed live during
+the execution of the app with <code>limmaquickpca2go</code> (which
+relies on the <code>goana</code> function provided by the <em><a href="https://bioconductor.org/packages/3.19/limma" class="external-link">limma</a></em>
+package). Although this likely provides more general (and probably less
+informative) functions, it is a good compromise for quickly obtaining a
+further data interpretation.</p></li>
+<li><p><code>annotation</code>, a data frame object, with
+<code>row.names</code> as gene identifiers (e.g. ENSEMBL ids) identical
+to the row names of the count matrix or <code>dds</code> object, and an
+extra column <code>gene_name</code>, containing e.g. HGNC-based gene
+symbols. This can be used for making information extraction easier, as
+ENSEMBL ids (a usual choice when assigning reads to features) do not
+provide an immediate readout for which gene they refer to. This can be
+either passed as a parameter when launching the app, or also uploaded as
+a text file (either tab, comma, or semicolon-separated). The package
+provides two functions, <code>get_annotation</code> and
+<code>get_annotation_orgdb</code>, as a convenient wrapper to obtain the
+updated annotation information, respectively from <code>biomaRt</code>
+or via the <code>org.XX.eg.db</code> packages.</p></li>
 </ul>
 <div class="section level3">
-<h3 id="how-to-provide-your-input-data-in-pcaexplorer">How to provide your input data in <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#how-to-provide-your-input-data-in-pcaexplorer"></a>
+<h3 id="how-to-provide-your-input-data-in-pcaexplorer">How to provide your input data in <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#how-to-provide-your-input-data-in-pcaexplorer"></a>
 </h3>
-<p><em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> supports a number of file formats when uploading the data via the file input widgets. Starting from version 2.9.5, we added functionality to select the separator character for each of the uploadable files. An information box is also shown by clicking on the question mark icon in the Data upload panel, with detailed information (text, as well as screenshots of valid input files) on the format specification.</p>
-<p>In general, <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> requires by default tab separated files:</p>
+<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+supports a number of file formats when uploading the data via the file
+input widgets. Starting from version 2.9.5, we added functionality to
+select the separator character for each of the uploadable files. An
+information box is also shown by clicking on the question mark icon in
+the Data upload panel, with detailed information (text, as well as
+screenshots of valid input files) on the format specification.</p>
+<p>In general, <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+requires by default tab separated files:</p>
 <ul>
-<li>the <code>countmatrix</code>: contains the expression matrix, with one gene per row and one sample per column; the first column should contain the gene identifiers, and the header (first row) specifies the sample names.</li>
-<li>the <code>coldata</code>: one sample per row, and one experimental covariate per column. Row names should be specified in the first column, and have to match the column names of the <code>countmatrix</code>. Column names will contain the specific experimental covariates.</li>
-<li>the <code>annotation</code> (optional): one gene per row, and one identifier type per column. Gene identifiers in the first column are identical to the row names of the <code>countmatrix</code> or <code>dds</code> objects. At least an extra column <code>gene_name</code>, containing e.g. HGNC-based gene symbols, needs to be provided.</li>
+<li>the <code>countmatrix</code>: contains the expression matrix, with
+one gene per row and one sample per column; the first column should
+contain the gene identifiers, and the header (first row) specifies the
+sample names.</li>
+<li>the <code>coldata</code>: one sample per row, and one experimental
+covariate per column. Row names should be specified in the first column,
+and have to match the column names of the <code>countmatrix</code>.
+Column names will contain the specific experimental covariates.</li>
+<li>the <code>annotation</code> (optional): one gene per row, and one
+identifier type per column. Gene identifiers in the first column are
+identical to the row names of the <code>countmatrix</code> or
+<code>dds</code> objects. At least an extra column
+<code>gene_name</code>, containing e.g. HGNC-based gene symbols, needs
+to be provided.</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="up-and-running-with-pcaexplorer">Up and running with <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#up-and-running-with-pcaexplorer"></a>
+<h3 id="up-and-running-with-pcaexplorer">Up and running with <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#up-and-running-with-pcaexplorer"></a>
 </h3>
-<p>We recommend users to switch to the <a href="https://bioconductor.org/packages/3.16/pcaExplorer/vignettes/upandrunning.html" class="external-link">dedicated vignette</a>, entitled “Up and running with <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em>”.</p>
-<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em>, based on the dataset in the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em> package.</p>
+<p>We recommend users to switch to the <a href="https://bioconductor.org/packages/3.19/pcaExplorer/vignettes/upandrunning.html" class="external-link">dedicated
+vignette</a>, entitled “Up and running with <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>”.</p>
+<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>,
+based on the dataset in the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+package.</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="the-controls-sidebar">The controls sidebar<a class="anchor" aria-label="anchor" href="#the-controls-sidebar"></a>
 </h2>
-<p>Most of the input controls are located in the sidebar, some are as well in the individual tabs of the app. By changing one or more of the input parameters, the user can get a fine control on what is displayed.</p>
+<p>Most of the input controls are located in the sidebar, some are as
+well in the individual tabs of the app. By changing one or more of the
+input parameters, the user can get a fine control on what is
+displayed.</p>
 <div class="section level3">
 <h3 id="app-settings">App settings<a class="anchor" aria-label="anchor" href="#app-settings"></a>
 </h3>
-<p>Here are the parameters that set input values for most of the tabs. By hovering over with the mouse, the user can receive additional information on how to set the parameter, with tooltips powered by the <em><a href="https://CRAN.R-project.org/package=shinyBS" class="external-link">shinyBS</a></em> package.</p>
+<p>Here are the parameters that set input values for most of the tabs.
+By hovering over with the mouse, the user can receive additional
+information on how to set the parameter, with tooltips powered by the
+<em><a href="https://CRAN.R-project.org/package=shinyBS" class="external-link">shinyBS</a></em>
+package.</p>
 <ul>
 <li>
-<strong>x-axis PC</strong> - Select the principal component to display on the x axis</li>
+<strong>x-axis PC</strong> - Select the principal component to
+display on the x axis</li>
 <li>
-<strong>y-axis PC</strong> - Select the principal component to display on the y axis</li>
+<strong>y-axis PC</strong> - Select the principal component to
+display on the y axis</li>
 <li>
-<strong>Group/color by</strong> - Select the group of samples to stratify the analysis. Can also assume multiple values.</li>
+<strong>Group/color by</strong> - Select the group of samples to
+stratify the analysis. Can also assume multiple values.</li>
 <li>
-<strong>Nr of (most variant) genes</strong> - Number of genes to select for computing the principal components. The top n genes are selected ranked by their variance inter-samples</li>
+<strong>Nr of (most variant) genes</strong> - Number of genes to
+select for computing the principal components. The top n genes are
+selected ranked by their variance inter-samples</li>
 <li>
-<strong>Alpha</strong> - Color transparency for the plots. Can assume values from 0 (transparent) to 1 (opaque)</li>
+<strong>Alpha</strong> - Color transparency for the plots. Can
+assume values from 0 (transparent) to 1 (opaque)</li>
 <li>
-<strong>Labels size</strong> - Size of the labels for the samples in the principal components plots. This parameter also controls the size of the gene labels, which are displayed in the Genes View once the user has brushed an area in the main plot.</li>
+<strong>Labels size</strong> - Size of the labels for the samples in
+the principal components plots. This parameter also controls the size of
+the gene labels, which are displayed in the Genes View once the user has
+brushed an area in the main plot.</li>
 <li>
-<strong>Points size</strong> - Size of the points to be plotted in the principal components plots</li>
+<strong>Points size</strong> - Size of the points to be plotted in
+the principal components plots</li>
 <li>
-<strong>Variable name size</strong> - Size of the labels for the genes PCA - correspond to the samples names</li>
+<strong>Variable name size</strong> - Size of the labels for the
+genes PCA - correspond to the samples names</li>
 <li>
-<strong>Scaling factor</strong> - Scale value for resizing the arrow corresponding to the variables in the PCA for the genes. It should be used for mere visualization purposes</li>
+<strong>Scaling factor</strong> - Scale value for resizing the arrow
+corresponding to the variables in the PCA for the genes. It should be
+used for mere visualization purposes</li>
 <li>
-<strong>Color palette</strong> - Select the color palette to be used in the principal components plots. The number of colors is selected automatically according to the number of samples and to the levels of the factors of interest and their interactions</li>
+<strong>Color palette</strong> - Select the color palette to be used
+in the principal components plots. The number of colors is selected
+automatically according to the number of samples and to the levels of
+the factors of interest and their interactions</li>
 <li>
-<strong>Plot style for gene counts</strong> - Plot either boxplots or violin plots, with jittered points superimposed</li>
+<strong>Plot style for gene counts</strong> - Plot either boxplots
+or violin plots, with jittered points superimposed</li>
 </ul>
 </div>
 <div class="section level3">
 <h3 id="plot-export-settings">Plot export settings<a class="anchor" aria-label="anchor" href="#plot-export-settings"></a>
 </h3>
-<p><strong>Width</strong> and <strong>height</strong> for the figures to export are input here in cm.</p>
-<p>Additional controls available in the single tabs are also assisted by tooltips that show on hovering the mouse. Normally they are tightly related to the plot/output they are placed nearby.</p>
+<p><strong>Width</strong> and <strong>height</strong> for the figures to
+export are input here in cm.</p>
+<p>Additional controls available in the single tabs are also assisted by
+tooltips that show on hovering the mouse. Normally they are tightly
+related to the plot/output they are placed nearby.</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="the-task-menu">The task menu<a class="anchor" aria-label="anchor" href="#the-task-menu"></a>
 </h2>
-<p>The task menu, accessible by clicking on the cog icon in the upper right part of the application, provides two functionalities:</p>
+<p>The task menu, accessible by clicking on the cog icon in the upper
+right part of the application, provides two functionalities:</p>
 <ul>
 <li>
-<code>Exit pcaExplorer &amp; save</code> will close the application and store the content of the <code>input</code> and <code>values</code> reactive objects in two list objects made available in the global environment, called <code>pcaExplorer_inputs_YYYYMMDD_HHMMSS</code> and <code>pcaExplorer_values_YYYYMMDD_HHMMSS</code>
+<code>Exit pcaExplorer &amp; save</code> will close the application
+and store the content of the <code>input</code> and <code>values</code>
+reactive objects in two list objects made available in the global
+environment, called <code>pcaExplorer_inputs_YYYYMMDD_HHMMSS</code> and
+<code>pcaExplorer_values_YYYYMMDD_HHMMSS</code>
 </li>
 <li>
-<code>Save State as .RData</code> will similarly store <code>LiveInputs</code> and <code>r_data</code> in a binary file named <code>pcaExplorerState_YYYYMMDD_HHMMSS.Rdata</code>, without closing the application</li>
+<code>Save State as .RData</code> will similarly store
+<code>LiveInputs</code> and <code>r_data</code> in a binary file named
+<code>pcaExplorerState_YYYYMMDD_HHMMSS.Rdata</code>, without closing the
+application</li>
 </ul>
 </div>
 <div class="section level2">
 <h2 id="the-app-panels">The app panels<a class="anchor" aria-label="anchor" href="#the-app-panels"></a>
 </h2>
-<p>The <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> app is structured in different panels, each focused on a different aspect of the data exploration.</p>
-<p>Most of the panels work extensively with click-based and brush-based interactions, to gain additional depth in the explorations, for example by zooming, subsetting, selecting. This is possible thanks to the recent developments in the <em><a href="https://CRAN.R-project.org/package=shiny" class="external-link">shiny</a></em> package/framework.</p>
+<p>The <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+app is structured in different panels, each focused on a different
+aspect of the data exploration.</p>
+<p>Most of the panels work extensively with click-based and brush-based
+interactions, to gain additional depth in the explorations, for example
+by zooming, subsetting, selecting. This is possible thanks to the recent
+developments in the <em><a href="https://CRAN.R-project.org/package=shiny" class="external-link">shiny</a></em>
+package/framework.</p>
 <p>The available panels are described in the following subsections.</p>
 <div class="section level3">
 <h3 id="data-upload">Data Upload<a class="anchor" aria-label="anchor" href="#data-upload"></a>
 </h3>
-<p>These <strong>file input</strong> controls are available when no <code>dds</code> or <code>countmatrix</code> + <code>coldata</code> are provided. Additionally, it is possible to upload the <code>annotation</code> data frame. If the objects are already passed as parameters, or after they have been successfully uploaded, a brief overview/summary for them can be displayed, by clicking on each respective action button.</p>
+<p>These <strong>file input</strong> controls are available when no
+<code>dds</code> or <code>countmatrix</code> + <code>coldata</code> are
+provided. Additionally, it is possible to upload the
+<code>annotation</code> data frame. If the objects are already passed as
+parameters, or after they have been successfully uploaded, a brief
+overview/summary for them can be displayed, by clicking on each
+respective action button.</p>
 <p align="center">
 <img src="newsnap_01_upload.png" style="width:1000px;"></p>
-<p>This panel is where you can perform the preprocessing steps on the data you uploaded/provided:</p>
+<p>This panel is where you can perform the preprocessing steps on the
+data you uploaded/provided:</p>
 <ul>
-<li>compose the <code>dds</code> object (if you provided <code>countmatrix</code> and <code>coldata</code>)</li>
-<li>normalize the expression values (using the robust method proposed by Anders and Huber in the original DESeq manuscript)</li>
-<li>compute the variance stabilizing transformed expression values (stored in the <code>dst</code> object).</li>
+<li>compose the <code>dds</code> object (if you provided
+<code>countmatrix</code> and <code>coldata</code>)</li>
+<li>normalize the expression values (using the robust method proposed by
+Anders and Huber in the original DESeq manuscript)</li>
+<li>compute the variance stabilizing transformed expression values
+(stored in the <code>dst</code> object).</li>
 </ul>
-<p>As a note regarding the normalization procedure: the normalization method (implemented in <code>estimateSizeFactors</code>) relies on the hypothesis that most of the genes are not differentially expressed across experimental groups, and this holds true for the majority of scenarios. The <code>DESeqDataSet</code> object, which pcaExplorer takes as main data container, can still accommodate sample (and gene) specific normalization factors. Should this assumption be violated, users can pre-compute these factors and store them in the input <code>dds</code> object.</p>
+<p>As a note regarding the normalization procedure: the normalization
+method (implemented in <code>estimateSizeFactors</code>) relies on the
+hypothesis that most of the genes are not differentially expressed
+across experimental groups, and this holds true for the majority of
+scenarios. The <code>DESeqDataSet</code> object, which pcaExplorer takes
+as main data container, can still accommodate sample (and gene) specific
+normalization factors. Should this assumption be violated, users can
+pre-compute these factors and store them in the input <code>dds</code>
+object.</p>
 </div>
 <div class="section level3">
 <h3 id="instructions">Instructions<a class="anchor" aria-label="anchor" href="#instructions"></a>
 </h3>
-<p>This is where you might be reading a version of the “Up and running with <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em>” vignette. Additionally, you can easily reach the fully rendered vignettes, either installed locally, or directly from the Bioconductor package page.</p>
+<p>This is where you might be reading a version of the “Up and running
+with <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>”
+vignette. Additionally, you can easily reach the fully rendered
+vignettes, either installed locally, or directly from the Bioconductor
+package page.</p>
 <p align="center">
 <img src="newsnap_02_instructions.png" style="width:1000px;"></p>
 </div>
 <div class="section level3">
 <h3 id="counts-table">Counts Table<a class="anchor" aria-label="anchor" href="#counts-table"></a>
 </h3>
-<p>Interactive tables for the raw, normalized or transformed (rlog, variance stabilized, or shifted log) counts are shown in this tab. The user can also generate a sample-to-sample correlation scatter plot with the selected data.</p>
+<p>Interactive tables for the raw, normalized or transformed (rlog,
+variance stabilized, or shifted log) counts are shown in this tab. The
+user can also generate a sample-to-sample correlation scatter plot with
+the selected data.</p>
 <p align="center">
 <img src="newsnap_03_countstable.png" style="width:1000px;"></p>
 </div>
 <div class="section level3">
 <h3 id="data-overview">Data Overview<a class="anchor" aria-label="anchor" href="#data-overview"></a>
 </h3>
-<p>This panel displays information on the objects in use, either passed as parameters or generated from the count matrix provided. Displayed information comprise the design metadata, a sample to sample distance heatmap, the number of million of reads per sample and some basic summary for the counts.</p>
+<p>This panel displays information on the objects in use, either passed
+as parameters or generated from the count matrix provided. Displayed
+information comprise the design metadata, a sample to sample distance
+heatmap, the number of million of reads per sample and some basic
+summary for the counts.</p>
 <p align="center">
 <img src="newsnap_04_overview.png" style="width:1000px;"></p>
 </div>
 <div class="section level3">
 <h3 id="samples-view">Samples View<a class="anchor" aria-label="anchor" href="#samples-view"></a>
 </h3>
-<p>This panel displays the PCA projections of sample expression profiles onto any pair of components, a scree plot, a zoomed PCA plot, a plot of the genes with top and bottom loadings. Additionally, this section presents a PCA plot where it is possible to remove samples deemed to be outliers in the analysis, which is very useful to check the effect of excluding them. If needed, an interactive 3D visualization of the principal components is also available.</p>
+<p>This panel displays the PCA projections of sample expression profiles
+onto any pair of components, a scree plot, a zoomed PCA plot, a plot of
+the genes with top and bottom loadings. Additionally, this section
+presents a PCA plot where it is possible to remove samples deemed to be
+outliers in the analysis, which is very useful to check the effect of
+excluding them. If needed, an interactive 3D visualization of the
+principal components is also available.</p>
 <p align="center">
 <img src="newsnap_05_samples.png" style="width:1000px;"></p>
 </div>
 <div class="section level3">
 <h3 id="genes-view">Genes View<a class="anchor" aria-label="anchor" href="#genes-view"></a>
 </h3>
-<p>This panel displays the PCA projections of genes abundances onto any pair of components, with samples as biplot variables, to identify interesting groups of genes. Zooming is also possible, and clicking on single genes, a boxplot is returned, grouped by the factors of interest. A static and an interactive heatmap are provided, including the subset of selected genes, also displayed as (standardized) expression profiles across the samples. These are also reported in <code>datatable</code> objects, accessible in the bottom part of the tab.</p>
+<p>This panel displays the PCA projections of genes abundances onto any
+pair of components, with samples as biplot variables, to identify
+interesting groups of genes. Zooming is also possible, and clicking on
+single genes, a boxplot is returned, grouped by the factors of interest.
+A static and an interactive heatmap are provided, including the subset
+of selected genes, also displayed as (standardized) expression profiles
+across the samples. These are also reported in <code>datatable</code>
+objects, accessible in the bottom part of the tab.</p>
 <p align="center">
 <img src="newsnap_06_genes.png" style="width:1000px;"></p>
 </div>
 <div class="section level3">
 <h3 id="genefinder">GeneFinder<a class="anchor" aria-label="anchor" href="#genefinder"></a>
 </h3>
-<p>The user can search and display the expression values of a gene of interest, either by ID or gene name, as provided in the <code>annotation</code>. A handy panel for quick screening of shortlisted genes, again grouped by the factors of interest. The graphic can be readily exported as it is, and this can be iterated on a shortlisted set of genes. For each of them, the underlying data is displayed in an interactive table, also exportable with a click.</p>
+<p>The user can search and display the expression values of a gene of
+interest, either by ID or gene name, as provided in the
+<code>annotation</code>. A handy panel for quick screening of
+shortlisted genes, again grouped by the factors of interest. The graphic
+can be readily exported as it is, and this can be iterated on a
+shortlisted set of genes. For each of them, the underlying data is
+displayed in an interactive table, also exportable with a click.</p>
 <p align="center">
 <img src="newsnap_07_finder.png" style="width:1000px;"></p>
 </div>
 <div class="section level3">
 <h3 id="pca2go">PCA2GO<a class="anchor" aria-label="anchor" href="#pca2go"></a>
 </h3>
-<p>This panel shows the functional annotation of the principal components, with GO functions enriched in the genes with high loadings on the selected principal components. It allows for the live computing of the object, that can otherwise provided as a parameter when launching the app. The panel displays a PCA plot for the samples, surrounded on each side by the tables with the functions enriched in each component and direction.</p>
+<p>This panel shows the functional annotation of the principal
+components, with GO functions enriched in the genes with high loadings
+on the selected principal components. It allows for the live computing
+of the object, that can otherwise provided as a parameter when launching
+the app. The panel displays a PCA plot for the samples, surrounded on
+each side by the tables with the functions enriched in each component
+and direction.</p>
 <p align="center">
 <img src="newsnap_08_pca2go.png" style="width:1000px;"></p>
 <div class="section level4">
 <h4 id="more-on-the-pca2go-parameter">More on the <code>pca2go</code> parameter<a class="anchor" aria-label="anchor" href="#more-on-the-pca2go-parameter"></a>
 </h4>
-<p>A note on the functionality provided by the PCA2GO tab: if it is not provided in the <code>pca2go</code> parameter, the user can still compute this object while using the app, and this is done using <code><a href="https://rdrr.io/pkg/limma/man/goana.html" class="external-link">limma::goana</a></code>. The implementation of this function supports a few organism packages, which cover many use cases (human, mouse, rat, fruit fly, or chimpanzee), but some use cases are not directly covered (e.g. if you are working with plants like Arabidopsis Thaliana).</p>
-<p>For example, with a dataset from Arabidopsis where the genes are encoded as TAIR (The Arabidopsis Information Resource) identifiers, one would ideally call the following commands</p>
+<p>A note on the functionality provided by the PCA2GO tab: if it is not
+provided in the <code>pca2go</code> parameter, the user can still
+compute this object while using the app, and this is done using
+<code><a href="https://rdrr.io/pkg/limma/man/goana.html" class="external-link">limma::goana</a></code>. The implementation of this function supports
+a few organism packages, which cover many use cases (human, mouse, rat,
+fruit fly, or chimpanzee), but some use cases are not directly covered
+(e.g. if you are working with plants like Arabidopsis Thaliana).</p>
+<p>For example, with a dataset from Arabidopsis where the genes are
+encoded as TAIR (The Arabidopsis Information Resource) identifiers, one
+would ideally call the following commands</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"org.At.tair.db"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"org.At.tair.db"</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"org.At.tair.db"</span><span class="op">)</span></span>
 <span><span class="co"># skipping the steps where you normally would generate your dds_at object...</span></span>
 <span><span class="va">dds_at</span></span>
 <span><span class="va">vst_at</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/vst.html" class="external-link">vst</a></span><span class="op">(</span><span class="va">dds_at</span><span class="op">)</span></span>
 <span><span class="va">anno_at</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_annotation_orgdb.html">get_annotation_orgdb</a></span><span class="op">(</span><span class="va">dds_at</span>,<span class="st">"org.At.tair.db"</span>, idtype <span class="op">=</span> <span class="st">"TAIR"</span><span class="op">)</span></span>
 <span><span class="co"># subset the background to include only the expressed genes</span></span>
-<span><span class="va">bg_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_at</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/colSums.html" class="external-link">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_at</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span></span>
+<span><span class="va">bg_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_at</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/colSums.html" class="external-link">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_at</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">topGO</span><span class="op">)</span></span>
 <span><span class="va">pca2go_at</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pca2go.html">pca2go</a></span><span class="op">(</span><span class="va">vst_at</span>,</span>
 <span>                    annotation <span class="op">=</span> <span class="va">anno_at</span>,</span>
@@ -361,25 +570,68 @@ bibtex=TRUE)', 'toBibtex(.)', or set
 <div class="section level3">
 <h3 id="multifactor-exploration">Multifactor Exploration<a class="anchor" aria-label="anchor" href="#multifactor-exploration"></a>
 </h3>
-<p>This panel allows for the multifactor exploration of datasets with 2 or more experimental factors. The user has to select first the two factors and the levels for each. Then, it is possible to combine samples from Factor1-Level1 in the selected order by clicking on each sample name, one for each level available in the selected Factor2. In order to build the matrix, an equal number of samples for each level of Factor 1 is required, to keep the design somehow balanced. A typical case for choosing factors 1 and 2 is for example when different conditions and tissues are present.</p>
-<p>Once constructed, a plot is returned that tries to represent simultaneously the effect of the two factors on the data. Each gene is represented by a dot-line-dot structure, with the color that is indicating the tissue (factor 2) where the gene is mostly expressed. Each gene has two dots, one for each condition level (factor 1), and the position of the points is dictated by the scores of the principal components calculated on the matrix object. The line connecting the dots is darker when the tissue where the gene is mostly expressed varies throughout the conditions.</p>
-<p>This representation is under active development, and it is promising for identifying interesting sets or clusters of genes according to their behavior on the Principal Components subspaces. Zooming and exporting of the underlying genes is also allowed by brushing on the main plot.</p>
+<p>This panel allows for the multifactor exploration of datasets with 2
+or more experimental factors. The user has to select first the two
+factors and the levels for each. Then, it is possible to combine samples
+from Factor1-Level1 in the selected order by clicking on each sample
+name, one for each level available in the selected Factor2. In order to
+build the matrix, an equal number of samples for each level of Factor 1
+is required, to keep the design somehow balanced. A typical case for
+choosing factors 1 and 2 is for example when different conditions and
+tissues are present.</p>
+<p>Once constructed, a plot is returned that tries to represent
+simultaneously the effect of the two factors on the data. Each gene is
+represented by a dot-line-dot structure, with the color that is
+indicating the tissue (factor 2) where the gene is mostly expressed.
+Each gene has two dots, one for each condition level (factor 1), and the
+position of the points is dictated by the scores of the principal
+components calculated on the matrix object. The line connecting the dots
+is darker when the tissue where the gene is mostly expressed varies
+throughout the conditions.</p>
+<p>This representation is under active development, and it is promising
+for identifying interesting sets or clusters of genes according to their
+behavior on the Principal Components subspaces. Zooming and exporting of
+the underlying genes is also allowed by brushing on the main plot.</p>
 <p align="center">
 <img src="newsnap_09_multifac.png" style="width:1000px;"></p>
 </div>
 <div class="section level3">
 <h3 id="report-editor">Report Editor<a class="anchor" aria-label="anchor" href="#report-editor"></a>
 </h3>
-<p>The report editor is the backbone for generating and editing the interactive report on the basis of the uploaded data and the current state of the application. General <code>Markdown options</code> and <code>Editor options</code> are available, and the text editor, based on the <code>shinyAce</code> package, contains a comprehensive template report, that can be edited to the best convenience of the user.</p>
-<p>The editor supports R code autocompletion, making it easy to add new code chunks for additional sections. A preview is available in the tab itself, and the report can be generated, saved and subsequently shared with simple mouse clicks.</p>
+<p>The report editor is the backbone for generating and editing the
+interactive report on the basis of the uploaded data and the current
+state of the application. General <code>Markdown options</code> and
+<code>Editor options</code> are available, and the text editor, based on
+the <code>shinyAce</code> package, contains a comprehensive template
+report, that can be edited to the best convenience of the user.</p>
+<p>The editor supports R code autocompletion, making it easy to add new
+code chunks for additional sections. A preview is available in the tab
+itself, and the report can be generated, saved and subsequently shared
+with simple mouse clicks.</p>
 <p align="center">
 <img src="newsnap_10_editor.png" style="width:1000px;"></p>
-<p>The functionality to display the report preview is based on <code>knit2html</code>, and some elements such as <code>DataTable</code> objects might not render correctly. To render them correctly, please install the PhantomJS executable before launching the app. This can be done by using the <em><a href="https://CRAN.R-project.org/package=webshot" class="external-link">webshot</a></em> package and calling <code><a href="http://wch.github.io/webshot/reference/install_phantomjs.html" class="external-link">webshot::install_phantomjs()</a></code> - HTML widgets will be rendered automatically as screenshots. Keep in mind that the fully rendered report (the one you can obtain with the “Generate &amp; Save” button) is not affected by this, since it uses <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render()</a></code>.</p>
+<p>The functionality to display the report preview is based on
+<code>knit2html</code>, and some elements such as <code>DataTable</code>
+objects might not render correctly. To render them correctly, please
+install the PhantomJS executable before launching the app. This can be
+done by using the <em><a href="https://CRAN.R-project.org/package=webshot" class="external-link">webshot</a></em>
+package and calling <code><a href="http://wch.github.io/webshot/reference/install_phantomjs.html" class="external-link">webshot::install_phantomjs()</a></code> - HTML
+widgets will be rendered automatically as screenshots. Alternatively,
+the more recent <em><a href="https://CRAN.R-project.org/package=webshot2" class="external-link">webshot2</a></em>
+package uses the headless Chrome browser (via the <em><a href="https://CRAN.R-project.org/package=chromote" class="external-link">chromote</a></em>
+package, requiring Google Chrome or other Chromium-based browser). Keep
+in mind that the fully rendered report (the one you can obtain with the
+“Generate &amp; Save” button) is not affected by this, since it uses
+<code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render()</a></code>.</p>
 </div>
 <div class="section level3">
 <h3 id="about">About<a class="anchor" aria-label="anchor" href="#about"></a>
 </h3>
-<p>Contains general information on <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em>, including the developer’s contact, the link to the development version in Github, as well as the output of <code>sessionInfo</code>, to use for reproducibility sake - or bug reporting. Information for citing <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> is also reported.</p>
+<p>Contains general information on <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>,
+including the developer’s contact, the link to the development version
+in Github, as well as the output of <code>sessionInfo</code>, to use for
+reproducibility sake - or bug reporting. Information for citing <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+is also reported.</p>
 <p align="center">
 <img src="newsnap_11_about.png" style="width:1000px;"></p>
 </div>
@@ -387,50 +639,67 @@ bibtex=TRUE)', 'toBibtex(.)', or set
 <div class="section level2">
 <h2 id="running-pcaexplorer-on-published-datasets">Running <code>pcaExplorer</code> on published datasets<a class="anchor" aria-label="anchor" href="#running-pcaexplorer-on-published-datasets"></a>
 </h2>
-<p>We can run <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> for demonstration purpose on published datasets that are available as SummarizedExperiment in a Bioconductor experiment package.</p>
-<p>We will use the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em> dataset, which can be installed with this command:</p>
+<p>We can run <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+for demonstration purpose on published datasets that are available as
+SummarizedExperiment in a Bioconductor experiment package.</p>
+<p>We will use the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+dataset, which can be installed with this command:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
-<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"airway"</span><span class="op">)</span></span></code></pre></div>
-<p>The <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em> package provides a <code>RangedSummarizedExperiment</code> object of read counts in genes for an RNA-Seq experiment on four human airway smooth muscle cell lines treated with dexamethasone. More details such as gene models and count quantifications can be found in the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em> package vignette.</p>
-<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.16/airway" class="external-link">airway</a></em> dataset is by clicking on the dedicated button in the <strong>Data Upload</strong> panel.</p>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"airway"</span><span class="op">)</span></span></code></pre></div>
+<p>The <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+package provides a <code>RangedSummarizedExperiment</code> object of
+read counts in genes for an RNA-Seq experiment on four human airway
+smooth muscle cell lines treated with dexamethasone. More details such
+as gene models and count quantifications can be found in the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+package vignette.</p>
+<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+dataset is by clicking on the dedicated button in the <strong>Data
+Upload</strong> panel.</p>
 <button id="btn_loaddemo" type="button" class="btn btn-default action-button shiny-bound-input" style="color: #0092AC" data-original-title title>
 <i class="fa fa-play-circle"></i> Load the demo airway data
 </button>
-<p>Otherwise, to run <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> on this dataset from the terminal/RStudio IDE, the following commands are required. First, prepare the objects to be passed as parameters of <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em>.</p>
+<p>Otherwise, to run <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+on this dataset from the terminal/RStudio IDE, the following commands
+are required. First, prepare the objects to be passed as parameters of
+<em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mikelove/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/thelovelab/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeqDataSet.html" class="external-link">DESeqDataSet</a></span><span class="op">(</span><span class="va">airway</span>,design<span class="op">=</span> <span class="op">~</span> <span class="va">cell</span> <span class="op">+</span> <span class="va">dex</span><span class="op">)</span></span>
 <span><span class="va">dds_airway</span></span></code></pre></div>
 <pre><code>class: DESeqDataSet 
-dim: 64102 8 
+dim: 63677 8 
 metadata(2): '' version
 assays(1): counts
-rownames(64102): ENSG00000000003 ENSG00000000005 ... LRG_98 LRG_99
-rowData names(0):
+rownames(63677): ENSG00000000003 ENSG00000000005 ... ENSG00000273492
+  ENSG00000273493
+rowData names(10): gene_id gene_name ... seq_coord_system symbol
 colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521
 colData names(9): SampleName cell ... Sample BioSample</code></pre>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rld_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span>
 <span><span class="va">rld_airway</span></span></code></pre></div>
 <pre><code>class: DESeqTransform 
-dim: 64102 8 
+dim: 63677 8 
 metadata(2): '' version
 assays(1): ''
-rownames(64102): ENSG00000000003 ENSG00000000005 ... LRG_98 LRG_99
-rowData names(7): baseMean baseVar ... dispFit rlogIntercept
+rownames(63677): ENSG00000000003 ENSG00000000005 ... ENSG00000273492
+  ENSG00000273493
+rowData names(17): gene_id gene_name ... dispFit rlogIntercept
 colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521
 colData names(10): SampleName cell ... BioSample sizeFactor</code></pre>
 <p>Then launch the app itself.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>            dst <span class="op">=</span> <span class="va">rld_airway</span><span class="op">)</span></span></code></pre></div>
-<p>The <code>annotation</code> for this dataset can be built by exploiting the <em><a href="https://bioconductor.org/packages/3.16/org.Hs.eg.db" class="external-link">org.Hs.eg.db</a></em> package.</p>
+<p>The <code>annotation</code> for this dataset can be built by
+exploiting the <em><a href="https://bioconductor.org/packages/3.19/org.Hs.eg.db" class="external-link">org.Hs.eg.db</a></em>
+package.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span><span class="op">)</span></span>
 <span><span class="va">genenames_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,keys <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span>,column <span class="op">=</span> <span class="st">"SYMBOL"</span>,keytype<span class="op">=</span><span class="st">"ENSEMBL"</span><span class="op">)</span></span>
@@ -443,9 +712,10 @@ ENSG00000000003    TSPAN6
 ENSG00000000005      TNMD
 ENSG00000000419      DPM1
 ENSG00000000457     SCYL3
-ENSG00000000460  C1orf112
+ENSG00000000460     FIRRM
 ENSG00000000938       FGR</code></pre>
-<p>or alternatively, by using the <code>get_annotation</code> or <code>get_annotation_orgdb</code> wrappers.</p>
+<p>or alternatively, by using the <code>get_annotation</code> or
+<code>get_annotation_orgdb</code> wrappers.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anno_df_orgdb</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_annotation_orgdb.html">get_annotation_orgdb</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>                                      orgdb_species <span class="op">=</span> <span class="st">"org.Hs.eg.db"</span>,</span>
@@ -462,23 +732,29 @@ ENSG00000000003 ENSG00000000003    TSPAN6
 ENSG00000000005 ENSG00000000005      TNMD
 ENSG00000000419 ENSG00000000419      DPM1
 ENSG00000000457 ENSG00000000457     SCYL3
-ENSG00000000460 ENSG00000000460  C1orf112
+ENSG00000000460 ENSG00000000460     FIRRM
 ENSG00000000938 ENSG00000000938       FGR</code></pre>
 <p>Then again, the app can be launched with:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>            dst <span class="op">=</span> <span class="va">rld_airway</span>,</span>
 <span>            annotation <span class="op">=</span> <span class="va">annotation_airway</span><span class="op">)</span> <span class="co"># or anno_df_orgdb, or anno_df_biomart</span></span></code></pre></div>
-<p>If desired, alternatives can be used. See the well written annotation workflow available at the Bioconductor site (<a href="https://bioconductor.org/help/workflows/annotation/annotation/" class="external-link uri">https://bioconductor.org/help/workflows/annotation/annotation/</a>).</p>
+<p>If desired, alternatives can be used. See the well written annotation
+workflow available at the Bioconductor site (<a href="https://bioconductor.org/help/workflows/annotation/annotation/" class="external-link uri">https://bioconductor.org/help/workflows/annotation/annotation/</a>).</p>
 </div>
 <div class="section level2">
 <h2 id="running-pcaexplorer-on-synthetic-datasets">Running <code>pcaExplorer</code> on synthetic datasets<a class="anchor" aria-label="anchor" href="#running-pcaexplorer-on-synthetic-datasets"></a>
 </h2>
-<p>For testing and demonstration purposes, a function is also available to generate synthetic datasets whose counts are generated based on two or more experimental factors.</p>
+<p>For testing and demonstration purposes, a function is also available
+to generate synthetic datasets whose counts are generated based on two
+or more experimental factors.</p>
 <p>This can be called with the command:</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds_multifac</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>,betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
-<p>See all the available parameters by typing <code><a href="../reference/makeExampleDESeqDataSet_multifac.html">?makeExampleDESeqDataSet_multifac</a></code>. Credits are given to the initial implementation by Mike Love in the <em><a href="https://bioconductor.org/packages/3.16/DESeq2" class="external-link">DESeq2</a></em> package.</p>
+<p>See all the available parameters by typing
+<code><a href="../reference/makeExampleDESeqDataSet_multifac.html">?makeExampleDESeqDataSet_multifac</a></code>. Credits are given to the
+initial implementation by Mike Love in the <em><a href="https://bioconductor.org/packages/3.19/DESeq2" class="external-link">DESeq2</a></em>
+package.</p>
 <p>The following steps run the app with the synthetic dataset.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds_multifac</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">1</span>,betaSD_tissue <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
@@ -512,17 +788,25 @@ colData names(3): condition tissue sizeFactor</code></pre>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_multifac</span>,</span>
 <span>            dst <span class="op">=</span> <span class="va">rld_multifac</span><span class="op">)</span></span></code></pre></div>
-<p>When such a dataset is provided, the panel for multifactorial exploration is also usable at its best.</p>
+<p>When such a dataset is provided, the panel for multifactorial
+exploration is also usable at its best.</p>
 </div>
 <div class="section level2">
 <h2 id="functions-exported-by-the-package-for-standalone-usage">Functions exported by the package for standalone usage<a class="anchor" aria-label="anchor" href="#functions-exported-by-the-package-for-standalone-usage"></a>
 </h2>
-<p>The functions exported by the <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> package can be also used in a standalone scenario, provided the required objects are in the working environment. They are listed here for an overview, but please refer to the documentation for additional details. Where possible, for each function a code snippet will be provided for its typical usage.</p>
+<p>The functions exported by the <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+package can be also used in a standalone scenario, provided the required
+objects are in the working environment. They are listed here for an
+overview, but please refer to the documentation for additional details.
+Where possible, for each function a code snippet will be provided for
+its typical usage.</p>
 <div class="section level3">
 <h3 id="pcaplot">
 <code>pcaplot</code><a class="anchor" aria-label="anchor" href="#pcaplot"></a>
 </h3>
-<p><code>pcaplot</code> plots the sample PCA for <code>DESeqTransform</code> objects, such as rlog-transformed data. This is the workhorse of the Samples View tab.</p>
+<p><code>pcaplot</code> plots the sample PCA for
+<code>DESeqTransform</code> objects, such as rlog-transformed data. This
+is the workhorse of the Samples View tab.</p>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pcaplot.html">pcaplot</a></span><span class="op">(</span><span class="va">rld_airway</span>,intgroup <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cell"</span>,<span class="st">"dex"</span><span class="op">)</span>,ntop <span class="op">=</span> <span class="fl">1000</span>,</span>
 <span>        pcX <span class="op">=</span> <span class="fl">1</span>, pcY <span class="op">=</span> <span class="fl">2</span>, title <span class="op">=</span> <span class="st">"airway dataset PCA on samples - PC1 vs PC2"</span><span class="op">)</span></span></code></pre></div>
@@ -538,7 +822,8 @@ colData names(3): condition tissue sizeFactor</code></pre>
 <h3 id="pcaplot3d">
 <code>pcaplot3d</code><a class="anchor" aria-label="anchor" href="#pcaplot3d"></a>
 </h3>
-<p>Same as for <code>pcaplot</code>, but it uses the <code>threejs</code> package for the 3d interactive view.</p>
+<p>Same as for <code>pcaplot</code>, but it uses the
+<code>threejs</code> package for the 3d interactive view.</p>
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pcaplot3d.html">pcaplot3d</a></span><span class="op">(</span><span class="va">rld_airway</span>,intgroup <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"cell"</span>,<span class="st">"dex"</span><span class="op">)</span>,ntop <span class="op">=</span> <span class="fl">1000</span>,</span>
 <span>        pcX <span class="op">=</span> <span class="fl">1</span>, pcY <span class="op">=</span> <span class="fl">2</span>, pcZ <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
@@ -548,7 +833,9 @@ colData names(3): condition tissue sizeFactor</code></pre>
 <h3 id="pcascree">
 <code>pcascree</code><a class="anchor" aria-label="anchor" href="#pcascree"></a>
 </h3>
-<p><code>pcascree</code> produces a scree plot of the PC computed on the samples. A <code>prcomp</code> object needs to be passed as main argument.</p>
+<p><code>pcascree</code> produces a scree plot of the PC computed on the
+samples. A <code>prcomp</code> object needs to be passed as main
+argument.</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pcaobj_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/prcomp.html" class="external-link">prcomp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/t.html" class="external-link">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assay</a></span><span class="op">(</span><span class="va">rld_airway</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/pcascree.html">pcascree</a></span><span class="op">(</span><span class="va">pcaobj_airway</span>,type<span class="op">=</span><span class="st">"pev"</span>,</span>
@@ -559,7 +846,10 @@ colData names(3): condition tissue sizeFactor</code></pre>
 <h3 id="correlatepcs-and-plotpccorrs">
 <code>correlatePCs</code> and <code>plotPCcorrs</code><a class="anchor" aria-label="anchor" href="#correlatepcs-and-plotpccorrs"></a>
 </h3>
-<p><code>correlatePCs</code> and <code>plotPCcorrs</code> respectively compute and plot significance of the (cor)relation of each covariate versus a principal component. The input for <code>correlatePCs</code> is a <code>prcomp</code> object.</p>
+<p><code>correlatePCs</code> and <code>plotPCcorrs</code> respectively
+compute and plot significance of the (cor)relation of each covariate
+versus a principal component. The input for <code>correlatePCs</code> is
+a <code>prcomp</code> object.</p>
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">res_pcairway</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/correlatePCs.html">correlatePCs</a></span><span class="op">(</span><span class="va">pcaobj_airway</span>,<span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -582,7 +872,8 @@ PC_4 0.4288799 0.4288799</code></pre>
 <h3 id="hi_loadings">
 <code>hi_loadings</code><a class="anchor" aria-label="anchor" href="#hi_loadings"></a>
 </h3>
-<p><code>hi_loadings</code> extracts and optionally plots the genes with the highest loadings.</p>
+<p><code>hi_loadings</code> extracts and optionally plots the genes with
+the highest loadings.</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># extract the table of the genes with high loadings</span></span>
 <span><span class="fu"><a href="../reference/hi_loadings.html">hi_loadings</a></span><span class="op">(</span><span class="va">pcaobj_airway</span>,topN <span class="op">=</span> <span class="fl">10</span>,exprTable<span class="op">=</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -637,10 +928,13 @@ ENSG00000146250        123        439         60</code></pre>
 <h3 id="genespca">
 <code>genespca</code><a class="anchor" aria-label="anchor" href="#genespca"></a>
 </h3>
-<p><code>genespca</code> computes and plots the principal components of the genes, eventually displaying the samples as in a typical biplot visualization. This is the function in action for the Genes View tab.</p>
+<p><code>genespca</code> computes and plots the principal components of
+the genes, eventually displaying the samples as in a typical biplot
+visualization. This is the function in action for the Genes View
+tab.</p>
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">groups_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">$</span><span class="va">dex</span></span>
-<span><span class="va">cols_airway</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/hue_pal.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fl">2</span><span class="op">)</span><span class="op">[</span><span class="va">groups_airway</span><span class="op">]</span></span>
+<span><span class="va">cols_airway</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/pal_hue.html" class="external-link">hue_pal</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="fl">2</span><span class="op">)</span><span class="op">[</span><span class="va">groups_airway</span><span class="op">]</span></span>
 <span><span class="co"># with many genes, do not plot the labels of the genes</span></span>
 <span><span class="fu"><a href="../reference/genespca.html">genespca</a></span><span class="op">(</span><span class="va">rld_airway</span>,ntop<span class="op">=</span><span class="fl">5000</span>,</span>
 <span>         choices <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span>,</span>
@@ -665,7 +959,11 @@ ENSG00000146250        123        439         60</code></pre>
 <h3 id="topgotable">
 <code>topGOtable</code><a class="anchor" aria-label="anchor" href="#topgotable"></a>
 </h3>
-<p><code>topGOtable</code> is a convenient wrapper for extracting functional GO terms enriched in a subset of genes (such as the differentially expressed genes), based on the algorithm and the implementation in the <em><a href="https://bioconductor.org/packages/3.16/topGO" class="external-link">topGO</a></em> package.</p>
+<p><code>topGOtable</code> is a convenient wrapper for extracting
+functional GO terms enriched in a subset of genes (such as the
+differentially expressed genes), based on the algorithm and the
+implementation in the <em><a href="https://bioconductor.org/packages/3.19/topGO" class="external-link">topGO</a></em>
+package.</p>
 <div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># example not run due to quite long runtime</span></span>
 <span><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeq.html" class="external-link">DESeq</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span>
@@ -686,7 +984,7 @@ ENSG00000146250        123        439         60</code></pre>
 <span><span class="va">de_df</span> <span class="op">&lt;-</span> <span class="va">resOrdered</span><span class="op">[</span><span class="va">resOrdered</span><span class="op">$</span><span class="va">padj</span> <span class="op">&lt;</span> <span class="fl">.05</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">resOrdered</span><span class="op">$</span><span class="va">padj</span><span class="op">)</span>,<span class="op">]</span></span>
 <span><span class="va">de_symbols</span> <span class="op">&lt;-</span> <span class="va">de_df</span><span class="op">$</span><span class="va">symbol</span></span>
 <span><span class="co"># extract background genes</span></span>
-<span><span class="va">bg_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/colSums.html" class="external-link">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span></span>
+<span><span class="va">bg_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/colSums.html" class="external-link">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span></span>
 <span><span class="va">bg_symbols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/AnnotationDb-class.html" class="external-link">mapIds</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span>,</span>
 <span>                     keys<span class="op">=</span><span class="va">bg_ids</span>,</span>
 <span>                     column<span class="op">=</span><span class="st">"SYMBOL"</span>,</span>
@@ -702,7 +1000,11 @@ ENSG00000146250        123        439         60</code></pre>
 <h3 id="pca2go-docs">
 <code>pca2go</code><a class="anchor" aria-label="anchor" href="#pca2go-docs"></a>
 </h3>
-<p><code>pca2go</code> provides a functional interpretation of the principal components, by extracting the genes with the highest loadings for each PC, and then runs internally <code>topGOtable</code> on them for efficient functional enrichment analysis. This function requires a <code>DESeqTransform</code> object as main parameter.</p>
+<p><code>pca2go</code> provides a functional interpretation of the
+principal components, by extracting the genes with the highest loadings
+for each PC, and then runs internally <code>topGOtable</code> on them
+for efficient functional enrichment analysis. This function requires a
+<code>DESeqTransform</code> object as main parameter.</p>
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pca2go_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pca2go.html">pca2go</a></span><span class="op">(</span><span class="va">rld_airway</span>,</span>
 <span>                        annotation <span class="op">=</span> <span class="va">annotation_airway</span>,</span>
@@ -722,7 +1024,9 @@ ENSG00000146250        123        439         60</code></pre>
 <h3 id="limmaquickpca2go">
 <code>limmaquickpca2go</code><a class="anchor" aria-label="anchor" href="#limmaquickpca2go"></a>
 </h3>
-<p><code>limmaquickpca2go</code> is an alternative to <code>pca2go</code>, used in the live running app, thanks to its fast implementation based on the <code><a href="https://rdrr.io/pkg/limma/man/goana.html" class="external-link">limma::goana</a></code> function.</p>
+<p><code>limmaquickpca2go</code> is an alternative to
+<code>pca2go</code>, used in the live running app, thanks to its fast
+implementation based on the <code><a href="https://rdrr.io/pkg/limma/man/goana.html" class="external-link">limma::goana</a></code> function.</p>
 <div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">goquick_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/limmaquickpca2go.html">limmaquickpca2go</a></span><span class="op">(</span><span class="va">rld_airway</span>,</span>
 <span>                                   pca_ngenes <span class="op">=</span> <span class="fl">10000</span>,</span>
@@ -739,7 +1043,11 @@ ENSG00000146250        123        439         60</code></pre>
 <h3 id="makeexampledeseqdataset_multifac">
 <code>makeExampleDESeqDataSet_multifac</code><a class="anchor" aria-label="anchor" href="#makeexampledeseqdataset_multifac"></a>
 </h3>
-<p><code>makeExampleDESeqDataSet_multifac</code> constructs a simulated <code>DESeqDataSet</code> of Negative Binomial dataset from different conditions. The fold changes between the conditions can be adjusted with the <code>betaSD_condition</code> and <code>betaSD_tissue</code> arguments.</p>
+<p><code>makeExampleDESeqDataSet_multifac</code> constructs a simulated
+<code>DESeqDataSet</code> of Negative Binomial dataset from different
+conditions. The fold changes between the conditions can be adjusted with
+the <code>betaSD_condition</code> and <code>betaSD_tissue</code>
+arguments.</p>
 <div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds_simu</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>,betaSD_tissue <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span>
 <span><span class="va">dds_simu</span></span></code></pre></div>
@@ -779,7 +1087,8 @@ colData names(2): condition tissue</code></pre>
 <h3 id="distro_expr">
 <code>distro_expr</code><a class="anchor" aria-label="anchor" href="#distro_expr"></a>
 </h3>
-<p>Plots the distribution of expression values, either with density lines, boxplots or violin plots.</p>
+<p>Plots the distribution of expression values, either with density
+lines, boxplots or violin plots.</p>
 <div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/distro_expr.html">distro_expr</a></span><span class="op">(</span><span class="va">rld_airway</span>,plot_type <span class="op">=</span> <span class="st">"density"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/distro_expr.html">distro_expr</a></span><span class="op">(</span><span class="va">rld_airway</span>,plot_type <span class="op">=</span> <span class="st">"violin"</span><span class="op">)</span></span></code></pre></div>
@@ -791,7 +1100,8 @@ colData names(2): condition tissue</code></pre>
 <h3 id="geneprofiler">
 <code>geneprofiler</code><a class="anchor" aria-label="anchor" href="#geneprofiler"></a>
 </h3>
-<p>Plots the profile expression of a subset of genes, optionally as standardized values.</p>
+<p>Plots the profile expression of a subset of genes, optionally as
+standardized values.</p>
 <div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>,betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="va">dst</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span>
@@ -803,9 +1113,14 @@ colData names(2): condition tissue</code></pre>
 </div>
 <div class="section level3">
 <h3 id="get_annotation-and-get_annotation_orgdb">
-<code>get_annotation</code> and <code>get_annotation_orgdb</code><a class="anchor" aria-label="anchor" href="#get_annotation-and-get_annotation_orgdb"></a>
+<code>get_annotation</code> and
+<code>get_annotation_orgdb</code><a class="anchor" aria-label="anchor" href="#get_annotation-and-get_annotation_orgdb"></a>
 </h3>
-<p>These two wrapper functions retrieve the latest annotations for the <code>dds</code> object, to be used in the call to the <code>pcaExplorer</code> function. They use respectively the <code>biomaRt</code> package and the <code>org.XX.eg.db</code> packages.</p>
+<p>These two wrapper functions retrieve the latest annotations for the
+<code>dds</code> object, to be used in the call to the
+<code>pcaExplorer</code> function. They use respectively the
+<code>biomaRt</code> package and the <code>org.XX.eg.db</code>
+packages.</p>
 <div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anno_df_biomart</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_annotation.html">get_annotation</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>                                  biomart_dataset <span class="op">=</span> <span class="st">"hsapiens_gene_ensembl"</span>,</span>
@@ -822,15 +1137,20 @@ ENSG00000000003 ENSG00000000003    TSPAN6
 ENSG00000000005 ENSG00000000005      TNMD
 ENSG00000000419 ENSG00000000419      DPM1
 ENSG00000000457 ENSG00000000457     SCYL3
-ENSG00000000460 ENSG00000000460  C1orf112
+ENSG00000000460 ENSG00000000460     FIRRM
 ENSG00000000938 ENSG00000000938       FGR</code></pre>
-<p>If using datasets and annotation packages for yeast samples (<em>Saccharomyces cerevisiae</em>, and the <code>org.Sc.sgd.db</code> package), remember to specify the <code>key_for_genenames</code> in the call to <code>get_annotation_orgdb</code> (an error message is thrown otherwise).</p>
+<p>If using datasets and annotation packages for yeast samples
+(<em>Saccharomyces cerevisiae</em>, and the <code>org.Sc.sgd.db</code>
+package), remember to specify the <code>key_for_genenames</code> in the
+call to <code>get_annotation_orgdb</code> (an error message is thrown
+otherwise).</p>
 </div>
 <div class="section level3">
 <h3 id="pair_corr">
 <code>pair_corr</code><a class="anchor" aria-label="anchor" href="#pair_corr"></a>
 </h3>
-<p>Plots the pairwise scatter plots and computes the correlation coefficient on the expression matrix provided.</p>
+<p>Plots the pairwise scatter plots and computes the correlation
+coefficient on the expression matrix provided.</p>
 <div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># use a subset of the counts to reduce plotting time, it can be time consuming with many samples</span></span>
 <span><span class="fu"><a href="../reference/pair_corr.html">pair_corr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>,<span class="op">]</span><span class="op">)</span></span></code></pre></div>
@@ -840,89 +1160,96 @@ ENSG00000000938 ENSG00000000938       FGR</code></pre>
 <div class="section level2">
 <h2 id="further-development">Further development<a class="anchor" aria-label="anchor" href="#further-development"></a>
 </h2>
-<p>Additional functionality for the <em><a href="https://bioconductor.org/packages/3.16/pcaExplorer" class="external-link">pcaExplorer</a></em> will be added in the future, as it is tightly related to a topic under current development research.</p>
-<p>Improvements, suggestions, bugs, issues and feedback of any type can be sent to <a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz.de</a>.</p>
+<p>Additional functionality for the <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+will be added in the future, as it is tightly related to a topic under
+current development research.</p>
+<p>Improvements, suggestions, bugs, issues and feedback of any type can
+be sent to <a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz.de</a>.</p>
 </div>
 <div class="section level2">
 <h2 class="unnumbered" id="session-info">Session info<a class="anchor" aria-label="anchor" href="#session-info"></a>
 </h2>
 <div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<pre><code>R version 4.2.1 (2022-06-23)
-Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Big Sur ... 10.16
+<pre><code>R Under development (unstable) (2024-03-27 r86211)
+Platform: x86_64-apple-darwin20
+Running under: macOS Monterey 12.7.3
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib
+BLAS:   /Library/Frameworks/R.framework/Versions/4.5-x86_64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.5-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: UTC
+tzcode source: internal
 
 attached base packages:
 [1] stats4    stats     graphics  grDevices utils     datasets  methods  
 [8] base     
 
 other attached packages:
- [1] org.Hs.eg.db_3.16.0         AnnotationDbi_1.59.1       
- [3] DESeq2_1.37.6               airway_1.17.0              
- [5] SummarizedExperiment_1.27.3 GenomicRanges_1.49.1       
- [7] GenomeInfoDb_1.33.13        IRanges_2.31.2             
- [9] S4Vectors_0.35.4            MatrixGenerics_1.9.1       
-[11] matrixStats_0.62.0          pcaExplorer_2.23.2         
-[13] Biobase_2.57.1              BiocGenerics_0.43.4        
-[15] knitr_1.40                  BiocStyle_2.25.0           
+ [1] org.Hs.eg.db_3.18.0         AnnotationDbi_1.65.2       
+ [3] DESeq2_1.43.4               airway_1.23.0              
+ [5] SummarizedExperiment_1.33.3 GenomicRanges_1.55.4       
+ [7] GenomeInfoDb_1.39.9         IRanges_2.37.1             
+ [9] S4Vectors_0.41.5            MatrixGenerics_1.15.0      
+[11] matrixStats_1.2.0           pcaExplorer_2.29.0         
+[13] Biobase_2.63.0              BiocGenerics_0.49.1        
+[15] knitr_1.45                  BiocStyle_2.31.0           
 
 loaded via a namespace (and not attached):
-  [1] GOstats_2.63.0         BiocFileCache_2.5.2    systemfonts_1.0.4     
-  [4] NMF_0.24.0             plyr_1.8.7             igraph_1.3.5          
-  [7] lazyeval_0.2.2         GSEABase_1.59.0        shinydashboard_0.7.2  
- [10] splines_4.2.1          BiocParallel_1.31.14   crosstalk_1.2.0       
- [13] ggplot2_3.3.6          gridBase_0.4-7         digest_0.6.30         
- [16] foreach_1.5.2          htmltools_0.5.3        viridis_0.6.2         
- [19] GO.db_3.16.0           fansi_1.0.3            magrittr_2.0.3        
- [22] memoise_2.0.1          cluster_2.1.4          doParallel_1.0.17     
- [25] limma_3.53.10          Biostrings_2.65.6      annotate_1.75.0       
- [28] pkgdown_2.0.6.9000     prettyunits_1.1.1      colorspace_2.0-3      
- [31] blob_1.2.3             rappdirs_0.3.3         ggrepel_0.9.1         
- [34] textshaping_0.3.6      xfun_0.34              dplyr_1.0.10          
- [37] crayon_1.5.2           RCurl_1.98-1.9         jsonlite_1.8.3        
- [40] graph_1.75.0           genefilter_1.79.0      survival_3.4-0        
- [43] iterators_1.0.14       glue_1.6.2             registry_0.5-1        
- [46] gtable_0.3.1           zlibbioc_1.43.0        XVector_0.37.1        
- [49] webshot_0.5.4          DelayedArray_0.23.2    Rgraphviz_2.41.1      
- [52] SparseM_1.81           scales_1.2.1           pheatmap_1.0.12       
- [55] DBI_1.1.3              rngtools_1.5.2         Rcpp_1.0.9            
- [58] viridisLite_0.4.1      xtable_1.8-4           progress_1.2.2        
- [61] bit_4.0.4              DT_0.26                AnnotationForge_1.39.2
- [64] htmlwidgets_1.5.4      httr_1.4.4             threejs_0.3.3         
- [67] shinyAce_0.4.2         RColorBrewer_1.1-3     ellipsis_0.3.2        
- [70] farver_2.1.1           pkgconfig_2.0.3        XML_3.99-0.11         
- [73] sass_0.4.2             dbplyr_2.2.1           locfit_1.5-9.6        
- [76] utf8_1.2.2             labeling_0.4.2         tidyselect_1.2.0      
- [79] rlang_1.0.6            reshape2_1.4.4         later_1.3.0           
- [82] munsell_0.5.0          tools_4.2.1            cachem_1.0.6          
- [85] cli_3.4.1              generics_0.1.3         RSQLite_2.2.18        
- [88] shinyBS_0.61.1         evaluate_0.17          stringr_1.4.1         
- [91] fastmap_1.1.0          heatmaply_1.4.0        yaml_2.3.6            
- [94] ragg_1.2.3             bit64_4.0.5            fs_1.5.2              
- [97] purrr_0.3.5            KEGGREST_1.37.3        dendextend_1.16.0     
-[100] RBGL_1.73.0            mime_0.12              xml2_1.3.3            
-[103] biomaRt_2.53.3         compiler_4.2.1         plotly_4.10.0         
-[106] filelock_1.0.2         curl_4.3.3             png_0.1-7             
-[109] tibble_3.1.8           geneplotter_1.75.0     bslib_0.4.0           
-[112] stringi_1.7.8          highr_0.9              desc_1.4.2            
-[115] lattice_0.20-45        Matrix_1.5-1           vctrs_0.4.2           
-[118] pillar_1.8.1           lifecycle_1.0.3        BiocManager_1.30.18   
-[121] jquerylib_0.1.4        data.table_1.14.4      bitops_1.0-7          
-[124] seriation_1.3.6        httpuv_1.6.6           R6_2.5.1              
-[127] TSP_1.2-1              bookdown_0.29          promises_1.2.0.1      
-[130] topGO_2.49.0           gridExtra_2.3          codetools_0.2-18      
-[133] assertthat_0.2.1       Category_2.63.0        pkgmaker_0.32.2       
-[136] rprojroot_2.0.3        withr_2.5.0            GenomeInfoDbData_1.2.9
-[139] parallel_4.2.1         hms_1.1.2              grid_4.2.1            
-[142] tidyr_1.2.1            rmarkdown_2.17         shiny_1.7.2           
-[145] base64enc_0.1-3       </code></pre>
+  [1] splines_4.5.0           later_1.3.2             bitops_1.0-7           
+  [4] filelock_1.0.3          tibble_3.2.1            graph_1.81.0           
+  [7] XML_3.99-0.16.1         lifecycle_1.0.4         httr2_1.0.0            
+ [10] topGO_2.55.0            doParallel_1.0.17       lattice_0.22-6         
+ [13] crosstalk_1.2.1         dendextend_1.17.1       magrittr_2.0.3         
+ [16] limma_3.59.6            plotly_4.10.4           sass_0.4.9             
+ [19] rmarkdown_2.26          jquerylib_0.1.4         yaml_2.3.8             
+ [22] shinyBS_0.61.1          httpuv_1.6.15           NMF_0.27               
+ [25] DBI_1.2.2               RColorBrewer_1.1-3      abind_1.4-5            
+ [28] zlibbioc_1.49.3         purrr_1.0.2             RCurl_1.98-1.14        
+ [31] rappdirs_0.3.3          seriation_1.5.4         GenomeInfoDbData_1.2.11
+ [34] ggrepel_0.9.5           AnnotationForge_1.45.0  genefilter_1.85.1      
+ [37] pheatmap_1.0.12         annotate_1.81.2         pkgdown_2.0.7.9000     
+ [40] codetools_0.2-19        DelayedArray_0.29.9     DT_0.32                
+ [43] xml2_1.3.6              tidyselect_1.2.1        GOstats_2.69.0         
+ [46] farver_2.1.1            viridis_0.6.5           TSP_1.2-4              
+ [49] BiocFileCache_2.11.1    base64enc_0.1-3         webshot_0.5.5          
+ [52] jsonlite_1.8.8          survival_3.5-8          iterators_1.0.14       
+ [55] systemfonts_1.0.6       foreach_1.5.2           tools_4.5.0            
+ [58] progress_1.2.3          ragg_1.3.0              Rcpp_1.0.12            
+ [61] glue_1.7.0              gridExtra_2.3           SparseArray_1.3.4      
+ [64] xfun_0.43               dplyr_1.1.4             ca_0.71.1              
+ [67] withr_3.0.0             shinydashboard_0.7.2    BiocManager_1.30.22    
+ [70] Category_2.69.0         fastmap_1.1.1           fansi_1.0.6            
+ [73] SparseM_1.81            digest_0.6.35           R6_2.5.1               
+ [76] mime_0.12               textshaping_0.3.7       colorspace_2.1-0       
+ [79] GO.db_3.18.0            biomaRt_2.59.1          RSQLite_2.3.5          
+ [82] threejs_0.3.3           utf8_1.2.4              tidyr_1.3.1            
+ [85] generics_0.1.3          data.table_1.15.2       prettyunits_1.2.0      
+ [88] httr_1.4.7              htmlwidgets_1.6.4       S4Arrays_1.3.6         
+ [91] pkgconfig_2.0.3         gtable_0.3.4            blob_1.2.4             
+ [94] registry_0.5-1          XVector_0.43.1          htmltools_0.5.8        
+ [97] bookdown_0.38           RBGL_1.79.0             GSEABase_1.65.1        
+[100] scales_1.3.0            png_0.1-8               reshape2_1.4.4         
+[103] curl_5.2.1              shinyAce_0.4.2          cachem_1.0.8           
+[106] stringr_1.5.1           parallel_4.5.0          desc_1.4.3             
+[109] pillar_1.9.0            grid_4.5.0              vctrs_0.6.5            
+[112] promises_1.2.1          dbplyr_2.5.0            xtable_1.8-4           
+[115] cluster_2.1.6           Rgraphviz_2.47.0        evaluate_0.23          
+[118] cli_3.6.2               locfit_1.5-9.9          compiler_4.5.0         
+[121] rlang_1.1.3             crayon_1.5.2            rngtools_1.5.2         
+[124] heatmaply_1.5.0         labeling_0.4.3          plyr_1.8.9             
+[127] fs_1.6.3                stringi_1.8.3           viridisLite_0.4.2      
+[130] gridBase_0.4-7          BiocParallel_1.37.1     assertthat_0.2.1       
+[133] munsell_0.5.0           Biostrings_2.71.5       lazyeval_0.2.2         
+[136] Matrix_1.7-0            hms_1.1.3               bit64_4.0.5            
+[139] ggplot2_3.5.0           KEGGREST_1.43.0         statmod_1.5.0          
+[142] shiny_1.8.1             highr_0.10              fontawesome_0.5.2      
+[145] igraph_2.0.3            memoise_2.0.1           bslib_0.6.2            
+[148] bit_4.0.5              </code></pre>
 </div>
   </div>
 
@@ -943,7 +1270,7 @@ loaded via a namespace (and not attached):
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.9000.</p>
 </div>
 
       </footer>
