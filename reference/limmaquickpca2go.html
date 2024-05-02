@@ -19,7 +19,7 @@ provided by the limma package"><!-- mathjax --><script src="https://cdnjs.cloudf
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.29.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.31.0</span>
       </span>
     </div>
 
@@ -91,39 +91,39 @@ provided by the <code>limma</code> package</p>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>se</dt>
+    <dl><dt id="arg-se">se<a class="anchor" aria-label="anchor" href="#arg-se"></a></dt>
 <dd><p>A <code><a href="https://rdrr.io/pkg/DESeq2/man/DESeqTransform.html" class="external-link">DESeqTransform</a></code> object, with data in <code>assay(se)</code>,
 produced for example by either <code><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlog</a></code> or
 <code><a href="https://rdrr.io/pkg/DESeq2/man/varianceStabilizingTransformation.html" class="external-link">varianceStabilizingTransformation</a></code></p></dd>
 
 
-<dt>pca_ngenes</dt>
+<dt id="arg-pca-ngenes">pca_ngenes<a class="anchor" aria-label="anchor" href="#arg-pca-ngenes"></a></dt>
 <dd><p>Number of genes to use for the PCA</p></dd>
 
 
-<dt>inputType</dt>
+<dt id="arg-inputtype">inputType<a class="anchor" aria-label="anchor" href="#arg-inputtype"></a></dt>
 <dd><p>Input format type of the gene identifiers. Deafults to <code>ENSEMBL</code>, that then will
 be converted to ENTREZ ids. Can assume values such as <code>ENTREZID</code>,<code>GENENAME</code> or <code>SYMBOL</code>,
 like it is normally used with the <code>select</code> function of <code>AnnotationDbi</code></p></dd>
 
 
-<dt>organism</dt>
+<dt id="arg-organism">organism<a class="anchor" aria-label="anchor" href="#arg-organism"></a></dt>
 <dd><p>Character abbreviation for the species, using <code>org.XX.eg.db</code> for annotation</p></dd>
 
 
-<dt>loadings_ngenes</dt>
+<dt id="arg-loadings-ngenes">loadings_ngenes<a class="anchor" aria-label="anchor" href="#arg-loadings-ngenes"></a></dt>
 <dd><p>Number of genes to extract the loadings (in each direction)</p></dd>
 
 
-<dt>background_genes</dt>
+<dt id="arg-background-genes">background_genes<a class="anchor" aria-label="anchor" href="#arg-background-genes"></a></dt>
 <dd><p>Which genes to consider as background.</p></dd>
 
 
-<dt>scale</dt>
+<dt id="arg-scale">scale<a class="anchor" aria-label="anchor" href="#arg-scale"></a></dt>
 <dd><p>Logical, defaults to FALSE, scale values for the PCA</p></dd>
 
 
-<dt>...</dt>
+<dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
 <dd><p>Further parameters to be passed to the goana routine</p></dd>
 
 </dl></div>
@@ -183,7 +183,7 @@ of the main <code><a href="pcaExplorer.html">pcaExplorer</a></code> function</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.9000.</p>
 </div>
 
       </footer></div>

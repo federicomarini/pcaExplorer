@@ -18,7 +18,7 @@ the samples as in a typical biplot visualization."><!-- mathjax --><script src="
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.29.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.31.0</span>
       </span>
     </div>
 
@@ -109,127 +109,127 @@ the samples as in a typical biplot visualization.</p>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>x</dt>
+    <dl><dt id="arg-x">x<a class="anchor" aria-label="anchor" href="#arg-x"></a></dt>
 <dd><p>A <code><a href="https://rdrr.io/pkg/DESeq2/man/DESeqTransform.html" class="external-link">DESeqTransform</a></code> object, with data in <code>assay(x)</code>,
 produced for example by either <code><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlog</a></code> or
 <code><a href="https://rdrr.io/pkg/DESeq2/man/varianceStabilizingTransformation.html" class="external-link">varianceStabilizingTransformation</a></code></p></dd>
 
 
-<dt>ntop</dt>
+<dt id="arg-ntop">ntop<a class="anchor" aria-label="anchor" href="#arg-ntop"></a></dt>
 <dd><p>Number of top genes to use for principal components,
 selected by highest row variance</p></dd>
 
 
-<dt>choices</dt>
+<dt id="arg-choices">choices<a class="anchor" aria-label="anchor" href="#arg-choices"></a></dt>
 <dd><p>Vector of two numeric values, to select on which principal components to plot</p></dd>
 
 
-<dt>arrowColors</dt>
+<dt id="arg-arrowcolors">arrowColors<a class="anchor" aria-label="anchor" href="#arg-arrowcolors"></a></dt>
 <dd><p>Vector of character, either as long as the number of the samples, or one single value</p></dd>
 
 
-<dt>groupNames</dt>
+<dt id="arg-groupnames">groupNames<a class="anchor" aria-label="anchor" href="#arg-groupnames"></a></dt>
 <dd><p>Factor containing the groupings for the input data. Is efficiently chosen
 as the (interaction of more) factors in the colData for the object provided</p></dd>
 
 
-<dt>biplot</dt>
+<dt id="arg-biplot">biplot<a class="anchor" aria-label="anchor" href="#arg-biplot"></a></dt>
 <dd><p>Logical, whether to additionally draw the samples labels as in a biplot representation</p></dd>
 
 
-<dt>scale</dt>
+<dt id="arg-scale">scale<a class="anchor" aria-label="anchor" href="#arg-scale"></a></dt>
 <dd><p>Covariance biplot (scale = 1), form biplot (scale = 0). When scale = 1,
 the inner product between the variables approximates the covariance and the
 distance between the points approximates the Mahalanobis distance.</p></dd>
 
 
-<dt>pc.biplot</dt>
+<dt id="arg-pc-biplot">pc.biplot<a class="anchor" aria-label="anchor" href="#arg-pc-biplot"></a></dt>
 <dd><p>Logical, for compatibility with biplot.princomp()</p></dd>
 
 
-<dt>obs.scale</dt>
+<dt id="arg-obs-scale">obs.scale<a class="anchor" aria-label="anchor" href="#arg-obs-scale"></a></dt>
 <dd><p>Scale factor to apply to observations</p></dd>
 
 
-<dt>var.scale</dt>
+<dt id="arg-var-scale">var.scale<a class="anchor" aria-label="anchor" href="#arg-var-scale"></a></dt>
 <dd><p>Scale factor to apply to variables</p></dd>
 
 
-<dt>groups</dt>
+<dt id="arg-groups">groups<a class="anchor" aria-label="anchor" href="#arg-groups"></a></dt>
 <dd><p>Optional factor variable indicating the groups that the observations
 belong to. If provided the points will be colored according to groups</p></dd>
 
 
-<dt>ellipse</dt>
+<dt id="arg-ellipse">ellipse<a class="anchor" aria-label="anchor" href="#arg-ellipse"></a></dt>
 <dd><p>Logical, draw a normal data ellipse for each group</p></dd>
 
 
-<dt>ellipse.prob</dt>
+<dt id="arg-ellipse-prob">ellipse.prob<a class="anchor" aria-label="anchor" href="#arg-ellipse-prob"></a></dt>
 <dd><p>Size of the ellipse in Normal probability</p></dd>
 
 
-<dt>labels</dt>
+<dt id="arg-labels">labels<a class="anchor" aria-label="anchor" href="#arg-labels"></a></dt>
 <dd><p>optional Vector of labels for the observations</p></dd>
 
 
-<dt>labels.size</dt>
+<dt id="arg-labels-size">labels.size<a class="anchor" aria-label="anchor" href="#arg-labels-size"></a></dt>
 <dd><p>Size of the text used for the labels</p></dd>
 
 
-<dt>alpha</dt>
+<dt id="arg-alpha">alpha<a class="anchor" aria-label="anchor" href="#arg-alpha"></a></dt>
 <dd><p>Alpha transparency value for the points (0 = transparent, 1 = opaque)</p></dd>
 
 
-<dt>var.axes</dt>
+<dt id="arg-var-axes">var.axes<a class="anchor" aria-label="anchor" href="#arg-var-axes"></a></dt>
 <dd><p>Logical, draw arrows for the variables?</p></dd>
 
 
-<dt>circle</dt>
+<dt id="arg-circle">circle<a class="anchor" aria-label="anchor" href="#arg-circle"></a></dt>
 <dd><p>Logical, draw a correlation circle? (only applies when prcomp
 was called with scale = TRUE and when var.scale = 1)</p></dd>
 
 
-<dt>circle.prob</dt>
+<dt id="arg-circle-prob">circle.prob<a class="anchor" aria-label="anchor" href="#arg-circle-prob"></a></dt>
 <dd><p>Size of the correlation circle in Normal probability</p></dd>
 
 
-<dt>varname.size</dt>
+<dt id="arg-varname-size">varname.size<a class="anchor" aria-label="anchor" href="#arg-varname-size"></a></dt>
 <dd><p>Size of the text for variable names</p></dd>
 
 
-<dt>varname.adjust</dt>
+<dt id="arg-varname-adjust">varname.adjust<a class="anchor" aria-label="anchor" href="#arg-varname-adjust"></a></dt>
 <dd><p>Adjustment factor the placement of the variable names,
 &gt;= 1 means farther from the arrow</p></dd>
 
 
-<dt>varname.abbrev</dt>
+<dt id="arg-varname-abbrev">varname.abbrev<a class="anchor" aria-label="anchor" href="#arg-varname-abbrev"></a></dt>
 <dd><p>Logical, whether or not to abbreviate the variable names</p></dd>
 
 
-<dt>returnData</dt>
+<dt id="arg-returndata">returnData<a class="anchor" aria-label="anchor" href="#arg-returndata"></a></dt>
 <dd><p>Logical, if TRUE returns a data.frame for further use, containing the
 selected principal components for custom plotting</p></dd>
 
 
-<dt>coordEqual</dt>
+<dt id="arg-coordequal">coordEqual<a class="anchor" aria-label="anchor" href="#arg-coordequal"></a></dt>
 <dd><p>Logical, default FALSE, for allowing brushing. If TRUE, plot using
 equal scale cartesian coordinates</p></dd>
 
 
-<dt>scaleArrow</dt>
+<dt id="arg-scalearrow">scaleArrow<a class="anchor" aria-label="anchor" href="#arg-scalearrow"></a></dt>
 <dd><p>Multiplicative factor, usually &gt;=1, only for visualization purposes,
 to allow for distinguishing where the variables are plotted</p></dd>
 
 
-<dt>useRownamesAsLabels</dt>
+<dt id="arg-userownamesaslabels">useRownamesAsLabels<a class="anchor" aria-label="anchor" href="#arg-userownamesaslabels"></a></dt>
 <dd><p>Logical, if TRUE uses the row names as labels for plotting</p></dd>
 
 
-<dt>point_size</dt>
+<dt id="arg-point-size">point_size<a class="anchor" aria-label="anchor" href="#arg-point-size"></a></dt>
 <dd><p>Size of the points to be plotted for the observations (genes)</p></dd>
 
 
-<dt>annotation</dt>
+<dt id="arg-annotation">annotation<a class="anchor" aria-label="anchor" href="#arg-annotation"></a></dt>
 <dd><p>A <code>data.frame</code> object, with row.names as gene identifiers (e.g. ENSEMBL ids)
 and a column, <code>gene_name</code>, containing e.g. HGNC-based gene symbols</p></dd>
 
@@ -280,7 +280,7 @@ such as the transformed counts of RNA-seq experiments</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.9000.</p>
 </div>
 
       </footer></div>

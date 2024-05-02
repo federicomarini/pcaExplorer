@@ -18,7 +18,7 @@ the algorithm and the implementation in the topGO package"><!-- mathjax --><scri
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.29.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.31.0</span>
       </span>
     </div>
 
@@ -96,64 +96,64 @@ the algorithm and the implementation in the topGO package</p>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>DEgenes</dt>
+    <dl><dt id="arg-degenes">DEgenes<a class="anchor" aria-label="anchor" href="#arg-degenes"></a></dt>
 <dd><p>A vector of (differentially expressed) genes</p></dd>
 
 
-<dt>BGgenes</dt>
+<dt id="arg-bggenes">BGgenes<a class="anchor" aria-label="anchor" href="#arg-bggenes"></a></dt>
 <dd><p>A vector of background genes, e.g. all (expressed) genes in the assays</p></dd>
 
 
-<dt>ontology</dt>
+<dt id="arg-ontology">ontology<a class="anchor" aria-label="anchor" href="#arg-ontology"></a></dt>
 <dd><p>Which Gene Ontology domain to analyze: <code>BP</code> (Biological Process), <code>MF</code> (Molecular Function), or <code>CC</code> (Cellular Component)</p></dd>
 
 
-<dt>annot</dt>
+<dt id="arg-annot">annot<a class="anchor" aria-label="anchor" href="#arg-annot"></a></dt>
 <dd><p>Which function to use for annotating genes to GO terms. Defaults to <code>annFUN.org</code></p></dd>
 
 
-<dt>mapping</dt>
+<dt id="arg-mapping">mapping<a class="anchor" aria-label="anchor" href="#arg-mapping"></a></dt>
 <dd><p>Which <code>org.XX.eg.db</code> to use for annotation - select according to the species</p></dd>
 
 
-<dt>geneID</dt>
+<dt id="arg-geneid">geneID<a class="anchor" aria-label="anchor" href="#arg-geneid"></a></dt>
 <dd><p>Which format the genes are provided. Defaults to <code>symbol</code>, could also be
 <code>entrez</code> or <code>ENSEMBL</code></p></dd>
 
 
-<dt>topTablerows</dt>
+<dt id="arg-toptablerows">topTablerows<a class="anchor" aria-label="anchor" href="#arg-toptablerows"></a></dt>
 <dd><p>How many rows to report before any filtering</p></dd>
 
 
-<dt>fullNamesInRows</dt>
+<dt id="arg-fullnamesinrows">fullNamesInRows<a class="anchor" aria-label="anchor" href="#arg-fullnamesinrows"></a></dt>
 <dd><p>Logical, whether to display or not the full names for the GO terms</p></dd>
 
 
-<dt>addGeneToTerms</dt>
+<dt id="arg-addgenetoterms">addGeneToTerms<a class="anchor" aria-label="anchor" href="#arg-addgenetoterms"></a></dt>
 <dd><p>Logical, whether to add a column with all genes annotated to each GO term</p></dd>
 
 
-<dt>plotGraph</dt>
+<dt id="arg-plotgraph">plotGraph<a class="anchor" aria-label="anchor" href="#arg-plotgraph"></a></dt>
 <dd><p>Logical, if TRUE additionally plots a graph on the identified GO terms</p></dd>
 
 
-<dt>plotNodes</dt>
+<dt id="arg-plotnodes">plotNodes<a class="anchor" aria-label="anchor" href="#arg-plotnodes"></a></dt>
 <dd><p>Number of nodes to plot</p></dd>
 
 
-<dt>writeOutput</dt>
+<dt id="arg-writeoutput">writeOutput<a class="anchor" aria-label="anchor" href="#arg-writeoutput"></a></dt>
 <dd><p>Logical, if TRUE additionally writes out the result to a file</p></dd>
 
 
-<dt>outputFile</dt>
+<dt id="arg-outputfile">outputFile<a class="anchor" aria-label="anchor" href="#arg-outputfile"></a></dt>
 <dd><p>Name of the file the result should be written into</p></dd>
 
 
-<dt>topGO_method2</dt>
+<dt id="arg-topgo-method-">topGO_method2<a class="anchor" aria-label="anchor" href="#arg-topgo-method-"></a></dt>
 <dd><p>Character, specifying which of the methods implemented by <code>topGO</code> should be used, in addition to the <code>classic</code> algorithm. Defaults to <code>elim</code></p></dd>
 
 
-<dt>do_padj</dt>
+<dt id="arg-do-padj">do_padj<a class="anchor" aria-label="anchor" href="#arg-do-padj"></a></dt>
 <dd><p>Logical, whether to perform the adjustment on the p-values from the specific
 topGO method, based on the FDR correction. Defaults to FALSE, since the assumption of 
 independent hypotheses is somewhat violated by the intrinsic DAG-structure of the Gene
@@ -237,7 +237,7 @@ documentation of the <code>topGO</code> package itself</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.9000.</p>
 </div>
 
       </footer></div>
