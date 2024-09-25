@@ -14,14 +14,13 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="pcaExplorer User Guide
 ">
-<meta property="og:description" content="pcaExplorer">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -35,7 +34,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.31.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.99.1</span>
       </span>
     </div>
 
@@ -44,7 +43,7 @@
 <li>
   <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
-     
+
   </a>
 </li>
 <li>
@@ -56,7 +55,7 @@
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
-     
+
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -74,7 +73,7 @@
 <li>
   <a href="https://github.com/federicomarini/pcaExplorer" class="external-link">
     <span class="fa fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -85,7 +84,7 @@
 </div>
 <!--/.navbar -->
 
-      
+
 
       </header><link href="pcaExplorer_files/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="pcaExplorer_files/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
@@ -105,9 +104,9 @@ Mainz<br><a class="author_email" href="mailto:#"></a><a href="mailto:marinif@uni
 Binder</h4>
             <address class="author_afil">
       Institute of Medical Biostatistics, Epidemiology and Informatics
-(IMBEI), Mainz<br><h4 data-toc-skip class="date">2 May 2024</h4>
+(IMBEI), Mainz<br><h4 data-toc-skip class="date">25 September 2024</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/federicomarini/pcaExplorer/blob/HEAD/vignettes/pcaExplorer.Rmd" class="external-link"><code>vignettes/pcaExplorer.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/federicomarini/pcaExplorer/blob/devel/vignettes/pcaExplorer.Rmd" class="external-link"><code>vignettes/pcaExplorer.Rmd</code></a></small>
       <div class="hidden name"><code>pcaExplorer.Rmd</code></div>
 
     </address>
@@ -116,7 +115,7 @@ Binder</h4>
     
         <div class="abstract">
       <p class="abstract">Abstract</p>
-      <p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+      <p><em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
       provides functionality for interactive visualization of RNA-seq
       datasets based on Principal Components Analysis. Such methods
       allow for quick information extraction and effective data
@@ -126,8 +125,8 @@ Binder</h4>
       and automated report generation.</p>
     </div>
     
-<p><br><strong>Package</strong>: <em>pcaExplorer</em><br><strong>Authors</strong>: Federico Marini [aut, cre] (<a href="https://orcid.org/0000-0003-3252-7758" class="external-link uri">https://orcid.org/0000-0003-3252-7758</a>)<br><strong>Version</strong>: 2.31.0<br><strong>Compiled date</strong>:
-2024-05-02<br><strong>Last edited</strong>: 2019-02-26<br><strong>License</strong>: MIT + file LICENSE<br></p>
+<p><br><strong>Package</strong>: <em>pcaExplorer</em><br><strong>Authors</strong>: Federico Marini [aut, cre] (<a href="https://orcid.org/0000-0003-3252-7758" class="external-link uri">https://orcid.org/0000-0003-3252-7758</a>)<br><strong>Version</strong>: 2.99.1<br><strong>Compiled date</strong>:
+2024-09-25<br><strong>Last edited</strong>: 2019-02-26<br><strong>License</strong>: MIT + file LICENSE<br></p>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelector("h1").className = "title";
@@ -139,20 +138,21 @@ document.addEventListener("DOMContentLoaded", function() {
     if (links[i].hostname != window.location.hostname)
       links[i].target = '_blank';
 });
-</script><div class="section level2">
+</script><p><img src="..%2F..%2F..%2F_temp%2FLibrary%2FpcaExplorer%2Fwww%2FpcaExplorer.png" width="50%" style="display: block; margin: auto;"></p>
+<div class="section level2">
 <h2 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
 </h2>
-<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p><em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 is an R package distributed as part of the <a href="http://bioconductor.org" class="external-link">Bioconductor</a> project. To install the
 package, start R and enter:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
 <span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></span></code></pre></div>
-<p>To install <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>To install <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 with all its dependencies (i.e. also the ones listed in the
 <code>Suggests:</code> field of the <code>DESCRIPTION</code> file, which
-include the dataset from the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+include the dataset from the <em><a href="https://bioconductor.org/packages/3.20/airway" class="external-link">airway</a></em>
 package used as a demo), use this command instead:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
@@ -170,13 +170,13 @@ following command.</p>
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p><em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 is a Bioconductor package containing a Shiny application for analyzing
 expression data in different conditions and experimental factors.</p>
 <p>It is a general-purpose interactive companion tool for RNA-seq
 analysis, which guides the user in exploring the Principal Components of
 the data under inspection.</p>
-<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p><em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 provides tools and functionality to detect outlier samples, genes that
 show particular patterns, and additionally provides a functional
 interpretation of the principal components for further quality
@@ -188,48 +188,48 @@ the expression levels.</p>
 practical companion to any RNA-seq dataset analysis, making exploratory
 data analysis accessible also to the bench biologist, while providing
 additional insight also for the experienced data analyst.</p>
-<p>Starting from development version 1.1.3, <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>Starting from development version 1.1.3, <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 supports reproducible research with state saving and automated report
 generation. Each generated plot and table can be exported by simple
 mouse clicks on the dedicated buttons.</p>
 <div class="section level3">
 <h3 id="citation-info">Citation info<a class="anchor" aria-label="anchor" href="#citation-info"></a>
 </h3>
-<p>If you use <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>If you use <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 for your analysis, please cite it as here below:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>Please cite the articles below for the 'pcaExplorer' software itself,
-or its usage in combined workflows with the 'ideal' or 'GeneTonic'
-software packages:
-
-  Federico Marini, Harald Binder (2019). pcaExplorer: an R/Bioconductor
-  package for interacting with RNA-seq principal components. BMC
-  Bioinformatics, 20 (1), 331, &lt;doi:10.1186/s12859-019-2879-1&gt;,
-  &lt;doi:10.18129/B9.bioc.pcaExplorer&gt;.
-
-  Annekathrin Ludt, Arsenij Ustjanzew, Harald Binder, Konstantin
-  Strauch, Federico Marini (2022). Interactive and Reproducible
-  Workflows for Exploring and Modeling RNA-seq Data with pcaExplorer,
-  ideal, and GeneTonic. Current Protocols, 2 (4), e411,
-  &lt;doi:10.1002/cpz1.411&gt;.
-
-To see these entries in BibTeX format, use 'print(&lt;citation&gt;,
-bibtex=TRUE)', 'toBibtex(.)', or set
-'options(citation.bibtex.max=999)'.</code></pre>
+<pre><code><span><span class="co">#&gt; Please cite the articles below for the 'pcaExplorer' software itself,</span></span>
+<span><span class="co">#&gt; or its usage in combined workflows with the 'ideal' or 'GeneTonic'</span></span>
+<span><span class="co">#&gt; software packages:</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   Federico Marini, Harald Binder (2019). pcaExplorer: an R/Bioconductor</span></span>
+<span><span class="co">#&gt;   package for interacting with RNA-seq principal components. BMC</span></span>
+<span><span class="co">#&gt;   Bioinformatics, 20 (1), 331, &lt;doi:10.1186/s12859-019-2879-1&gt;,</span></span>
+<span><span class="co">#&gt;   &lt;doi:10.18129/B9.bioc.pcaExplorer&gt;.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   Annekathrin Ludt, Arsenij Ustjanzew, Harald Binder, Konstantin</span></span>
+<span><span class="co">#&gt;   Strauch, Federico Marini (2022). Interactive and Reproducible</span></span>
+<span><span class="co">#&gt;   Workflows for Exploring and Modeling RNA-seq Data with pcaExplorer,</span></span>
+<span><span class="co">#&gt;   ideal, and GeneTonic. Current Protocols, 2 (4), e411,</span></span>
+<span><span class="co">#&gt;   &lt;doi:10.1002/cpz1.411&gt;.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; To see these entries in BibTeX format, use 'print(&lt;citation&gt;,</span></span>
+<span><span class="co">#&gt; bibtex=TRUE)', 'toBibtex(.)', or set</span></span>
+<span><span class="co">#&gt; 'options(citation.bibtex.max=999)'.</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="launching-the-application">Launching the application<a class="anchor" aria-label="anchor" href="#launching-the-application"></a>
 </h2>
-<p>After loading the package, the <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>After loading the package, the <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 app can be launched in different modes:</p>
 <ul>
 <li><p><code>pcaExplorer(dds = dds, dst = dst)</code>, where
 <code>dds</code> is a <code>DESeqDataSet</code> object and
 <code>dst</code> is a <code>DESeqTransform</code> object, which were
 created during an existing session for the analysis of an RNA-seq
-dataset with the <em><a href="https://bioconductor.org/packages/3.19/DESeq2" class="external-link">DESeq2</a></em>
+dataset with the <em><a href="https://bioconductor.org/packages/3.20/DESeq2" class="external-link">DESeq2</a></em>
 package.</p></li>
 <li><p><code>pcaExplorer(dds = dds)</code>, where <code>dds</code> is a
 <code>DESeqDataSet</code> object. The <code>dst</code> object can be
@@ -252,7 +252,7 @@ text files, all of which are common formats for storing such count
 values.</p></li>
 </ul>
 <p>Additional parameters and objects that can be provided to the main
-<em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 function are:</p>
 <ul>
 <li><p><code>pca2go</code>, which is an object created by the
@@ -260,10 +260,10 @@ function are:</p>
 in each principal component and each direction, and looks for functions
 (such as GO Biological Processes) that are enriched above the
 background. The offline <code>pca2go</code> function is based on the
-routines and algorithms of the <em><a href="https://bioconductor.org/packages/3.19/topGO" class="external-link">topGO</a></em>
+routines and algorithms of the <em><a href="https://bioconductor.org/packages/3.20/topGO" class="external-link">topGO</a></em>
 package, but as an alternative, this object can be computed live during
 the execution of the app with <code>limmaquickpca2go</code> (which
-relies on the <code>goana</code> function provided by the <em><a href="https://bioconductor.org/packages/3.19/limma" class="external-link">limma</a></em>
+relies on the <code>goana</code> function provided by the <em><a href="https://bioconductor.org/packages/3.20/limma" class="external-link">limma</a></em>
 package). Although this likely provides more general (and probably less
 informative) functions, it is a good compromise for quickly obtaining a
 further data interpretation.</p></li>
@@ -282,16 +282,16 @@ updated annotation information, respectively from <code>biomaRt</code>
 or via the <code>org.XX.eg.db</code> packages.</p></li>
 </ul>
 <div class="section level3">
-<h3 id="how-to-provide-your-input-data-in-pcaexplorer">How to provide your input data in <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#how-to-provide-your-input-data-in-pcaexplorer"></a>
+<h3 id="how-to-provide-your-input-data-in-pcaexplorer">How to provide your input data in <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#how-to-provide-your-input-data-in-pcaexplorer"></a>
 </h3>
-<p><em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p><em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 supports a number of file formats when uploading the data via the file
 input widgets. Starting from version 2.9.5, we added functionality to
 select the separator character for each of the uploadable files. An
 information box is also shown by clicking on the question mark icon in
 the Data upload panel, with detailed information (text, as well as
 screenshots of valid input files) on the format specification.</p>
-<p>In general, <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>In general, <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 requires by default tab separated files:</p>
 <ul>
 <li>the <code>countmatrix</code>: contains the expression matrix, with
@@ -311,12 +311,12 @@ to be provided.</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="up-and-running-with-pcaexplorer">Up and running with <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#up-and-running-with-pcaexplorer"></a>
+<h3 id="up-and-running-with-pcaexplorer">Up and running with <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em><a class="anchor" aria-label="anchor" href="#up-and-running-with-pcaexplorer"></a>
 </h3>
-<p>We recommend users to switch to the <a href="https://bioconductor.org/packages/3.19/pcaExplorer/vignettes/upandrunning.html" class="external-link">dedicated
-vignette</a>, entitled “Up and running with <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>”.</p>
-<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>,
-based on the dataset in the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+<p>We recommend users to switch to the <a href="https://bioconductor.org/packages/3.20/pcaExplorer/vignettes/upandrunning.html" class="external-link">dedicated
+vignette</a>, entitled “Up and running with <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>”.</p>
+<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>,
+based on the dataset in the <em><a href="https://bioconductor.org/packages/3.20/airway" class="external-link">airway</a></em>
 package.</p>
 </div>
 </div>
@@ -346,7 +346,7 @@ display on the y axis</li>
 <strong>Group/color by</strong> - Select the group of samples to
 stratify the analysis. Can also assume multiple values.</li>
 <li>
-<strong>Nr of (most variant) genes</strong> - Number of genes to
+<strong>Nr of (most variable) genes</strong> - Number of genes to
 select for computing the principal components. The top n genes are
 selected ranked by their variance inter-samples</li>
 <li>
@@ -410,7 +410,7 @@ application</li>
 <div class="section level2">
 <h2 id="the-app-panels">The app panels<a class="anchor" aria-label="anchor" href="#the-app-panels"></a>
 </h2>
-<p>The <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>The <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 app is structured in different panels, each focused on a different
 aspect of the data exploration.</p>
 <p>Most of the panels work extensively with click-based and brush-based
@@ -455,7 +455,7 @@ object.</p>
 <h3 id="instructions">Instructions<a class="anchor" aria-label="anchor" href="#instructions"></a>
 </h3>
 <p>This is where you might be reading a version of the “Up and running
-with <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>”
+with <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>”
 vignette. Additionally, you can easily reach the fully rendered
 vignettes, either installed locally, or directly from the Bioconductor
 package page.</p>
@@ -627,10 +627,10 @@ in mind that the fully rendered report (the one you can obtain with the
 <div class="section level3">
 <h3 id="about">About<a class="anchor" aria-label="anchor" href="#about"></a>
 </h3>
-<p>Contains general information on <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>,
+<p>Contains general information on <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>,
 including the developer’s contact, the link to the development version
 in Github, as well as the output of <code>sessionInfo</code>, to use for
-reproducibility sake - or bug reporting. Information for citing <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+reproducibility sake - or bug reporting. Information for citing <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 is also reported.</p>
 <p align="center">
 <img src="newsnap_11_about.png" style="width:1000px;"></p>
@@ -639,66 +639,66 @@ is also reported.</p>
 <div class="section level2">
 <h2 id="running-pcaexplorer-on-published-datasets">Running <code>pcaExplorer</code> on published datasets<a class="anchor" aria-label="anchor" href="#running-pcaexplorer-on-published-datasets"></a>
 </h2>
-<p>We can run <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>We can run <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 for demonstration purpose on published datasets that are available as
 SummarizedExperiment in a Bioconductor experiment package.</p>
-<p>We will use the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+<p>We will use the <em><a href="https://bioconductor.org/packages/3.20/airway" class="external-link">airway</a></em>
 dataset, which can be installed with this command:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
 <span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"airway"</span><span class="op">)</span></span></code></pre></div>
-<p>The <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+<p>The <em><a href="https://bioconductor.org/packages/3.20/airway" class="external-link">airway</a></em>
 package provides a <code>RangedSummarizedExperiment</code> object of
 read counts in genes for an RNA-Seq experiment on four human airway
 smooth muscle cell lines treated with dexamethasone. More details such
-as gene models and count quantifications can be found in the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+as gene models and count quantifications can be found in the <em><a href="https://bioconductor.org/packages/3.20/airway" class="external-link">airway</a></em>
 package vignette.</p>
-<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.19/airway" class="external-link">airway</a></em>
+<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.20/airway" class="external-link">airway</a></em>
 dataset is by clicking on the dedicated button in the <strong>Data
 Upload</strong> panel.</p>
 <button id="btn_loaddemo" type="button" class="btn btn-default action-button shiny-bound-input" style="color: #0092AC" data-original-title title>
 <i class="fa fa-play-circle"></i> Load the demo airway data
 </button>
-<p>Otherwise, to run <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>Otherwise, to run <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 on this dataset from the terminal/RStudio IDE, the following commands
 are required. First, prepare the objects to be passed as parameters of
-<em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>.</p>
+<em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/thelovelab/DESeq2" class="external-link">DESeq2</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"airway"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/thelovelab/DESeq2" class="external-link">"DESeq2"</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">airway</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"airway"</span>, package <span class="op">=</span> <span class="st">"airway"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">dds_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/DESeqDataSet.html" class="external-link">DESeqDataSet</a></span><span class="op">(</span><span class="va">airway</span>,design<span class="op">=</span> <span class="op">~</span> <span class="va">cell</span> <span class="op">+</span> <span class="va">dex</span><span class="op">)</span></span>
 <span><span class="va">dds_airway</span></span></code></pre></div>
-<pre><code>class: DESeqDataSet 
-dim: 63677 8 
-metadata(2): '' version
-assays(1): counts
-rownames(63677): ENSG00000000003 ENSG00000000005 ... ENSG00000273492
-  ENSG00000273493
-rowData names(10): gene_id gene_name ... seq_coord_system symbol
-colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521
-colData names(9): SampleName cell ... Sample BioSample</code></pre>
+<pre><code><span><span class="co">#&gt; class: DESeqDataSet </span></span>
+<span><span class="co">#&gt; dim: 63677 8 </span></span>
+<span><span class="co">#&gt; metadata(2): '' version</span></span>
+<span><span class="co">#&gt; assays(1): counts</span></span>
+<span><span class="co">#&gt; rownames(63677): ENSG00000000003 ENSG00000000005 ... ENSG00000273492</span></span>
+<span><span class="co">#&gt;   ENSG00000273493</span></span>
+<span><span class="co">#&gt; rowData names(10): gene_id gene_name ... seq_coord_system symbol</span></span>
+<span><span class="co">#&gt; colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521</span></span>
+<span><span class="co">#&gt; colData names(9): SampleName cell ... Sample BioSample</span></span></code></pre>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rld_airway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span></span>
 <span><span class="va">rld_airway</span></span></code></pre></div>
-<pre><code>class: DESeqTransform 
-dim: 63677 8 
-metadata(2): '' version
-assays(1): ''
-rownames(63677): ENSG00000000003 ENSG00000000005 ... ENSG00000273492
-  ENSG00000273493
-rowData names(17): gene_id gene_name ... dispFit rlogIntercept
-colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521
-colData names(10): SampleName cell ... BioSample sizeFactor</code></pre>
+<pre><code><span><span class="co">#&gt; class: DESeqTransform </span></span>
+<span><span class="co">#&gt; dim: 63677 8 </span></span>
+<span><span class="co">#&gt; metadata(2): '' version</span></span>
+<span><span class="co">#&gt; assays(1): ''</span></span>
+<span><span class="co">#&gt; rownames(63677): ENSG00000000003 ENSG00000000005 ... ENSG00000273492</span></span>
+<span><span class="co">#&gt;   ENSG00000273493</span></span>
+<span><span class="co">#&gt; rowData names(17): gene_id gene_name ... dispFit rlogIntercept</span></span>
+<span><span class="co">#&gt; colnames(8): SRR1039508 SRR1039509 ... SRR1039520 SRR1039521</span></span>
+<span><span class="co">#&gt; colData names(10): SampleName cell ... BioSample sizeFactor</span></span></code></pre>
 <p>Then launch the app itself.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>            dst <span class="op">=</span> <span class="va">rld_airway</span><span class="op">)</span></span></code></pre></div>
 <p>The <code>annotation</code> for this dataset can be built by
-exploiting the <em><a href="https://bioconductor.org/packages/3.19/org.Hs.eg.db" class="external-link">org.Hs.eg.db</a></em>
+exploiting the <em><a href="https://bioconductor.org/packages/3.20/org.Hs.eg.db" class="external-link">org.Hs.eg.db</a></em>
 package.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">org.Hs.eg.db</span><span class="op">)</span></span>
@@ -707,13 +707,13 @@ package.</p>
 <span>                                row.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span>,</span>
 <span>                                stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">annotation_airway</span><span class="op">)</span>                                </span></code></pre></div>
-<pre><code>                gene_name
-ENSG00000000003    TSPAN6
-ENSG00000000005      TNMD
-ENSG00000000419      DPM1
-ENSG00000000457     SCYL3
-ENSG00000000460     FIRRM
-ENSG00000000938       FGR</code></pre>
+<pre><code><span><span class="co">#&gt;                 gene_name</span></span>
+<span><span class="co">#&gt; ENSG00000000003    TSPAN6</span></span>
+<span><span class="co">#&gt; ENSG00000000005      TNMD</span></span>
+<span><span class="co">#&gt; ENSG00000000419      DPM1</span></span>
+<span><span class="co">#&gt; ENSG00000000457     SCYL3</span></span>
+<span><span class="co">#&gt; ENSG00000000460     FIRRM</span></span>
+<span><span class="co">#&gt; ENSG00000000938       FGR</span></span></code></pre>
 <p>or alternatively, by using the <code>get_annotation</code> or
 <code>get_annotation_orgdb</code> wrappers.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
@@ -724,16 +724,16 @@ ENSG00000000938       FGR</code></pre>
 <span><span class="va">anno_df_biomart</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_annotation.html">get_annotation</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>                                  biomart_dataset <span class="op">=</span> <span class="st">"hsapiens_gene_ensembl"</span>,</span>
 <span>                                  idtype <span class="op">=</span> <span class="st">"ensembl_gene_id"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>'select()' returned 1:many mapping between keys and columns</code></pre>
+<pre><code><span><span class="co">#&gt; 'select()' returned 1:many mapping between keys and columns</span></span></code></pre>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">anno_df_orgdb</span><span class="op">)</span></span></code></pre></div>
-<pre><code>                        gene_id gene_name
-ENSG00000000003 ENSG00000000003    TSPAN6
-ENSG00000000005 ENSG00000000005      TNMD
-ENSG00000000419 ENSG00000000419      DPM1
-ENSG00000000457 ENSG00000000457     SCYL3
-ENSG00000000460 ENSG00000000460     FIRRM
-ENSG00000000938 ENSG00000000938       FGR</code></pre>
+<pre><code><span><span class="co">#&gt;                         gene_id gene_name</span></span>
+<span><span class="co">#&gt; ENSG00000000003 ENSG00000000003    TSPAN6</span></span>
+<span><span class="co">#&gt; ENSG00000000005 ENSG00000000005      TNMD</span></span>
+<span><span class="co">#&gt; ENSG00000000419 ENSG00000000419      DPM1</span></span>
+<span><span class="co">#&gt; ENSG00000000457 ENSG00000000457     SCYL3</span></span>
+<span><span class="co">#&gt; ENSG00000000460 ENSG00000000460     FIRRM</span></span>
+<span><span class="co">#&gt; ENSG00000000938 ENSG00000000938       FGR</span></span></code></pre>
 <p>Then again, the app can be launched with:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
@@ -753,33 +753,33 @@ or more experimental factors.</p>
 <code class="sourceCode R"><span><span class="va">dds_multifac</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>,betaSD_tissue <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 <p>See all the available parameters by typing
 <code><a href="../reference/makeExampleDESeqDataSet_multifac.html">?makeExampleDESeqDataSet_multifac</a></code>. Credits are given to the
-initial implementation by Mike Love in the <em><a href="https://bioconductor.org/packages/3.19/DESeq2" class="external-link">DESeq2</a></em>
+initial implementation by Mike Love in the <em><a href="https://bioconductor.org/packages/3.20/DESeq2" class="external-link">DESeq2</a></em>
 package.</p>
 <p>The following steps run the app with the synthetic dataset.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds_multifac</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">1</span>,betaSD_tissue <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
 <span><span class="va">dds_multifac</span></span></code></pre></div>
-<pre><code>class: DESeqDataSet 
-dim: 1000 12 
-metadata(1): version
-assays(1): counts
-rownames(1000): gene1 gene2 ... gene999 gene1000
-rowData names(4): trueIntercept trueBeta_condition trueBeta_tissue
-  trueDisp
-colnames(12): sample1 sample2 ... sample11 sample12
-colData names(2): condition tissue</code></pre>
+<pre><code><span><span class="co">#&gt; class: DESeqDataSet </span></span>
+<span><span class="co">#&gt; dim: 1000 12 </span></span>
+<span><span class="co">#&gt; metadata(1): version</span></span>
+<span><span class="co">#&gt; assays(1): counts</span></span>
+<span><span class="co">#&gt; rownames(1000): gene1 gene2 ... gene999 gene1000</span></span>
+<span><span class="co">#&gt; rowData names(4): trueIntercept trueBeta_condition trueBeta_tissue</span></span>
+<span><span class="co">#&gt;   trueDisp</span></span>
+<span><span class="co">#&gt; colnames(12): sample1 sample2 ... sample11 sample12</span></span>
+<span><span class="co">#&gt; colData names(2): condition tissue</span></span></code></pre>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rld_multifac</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds_multifac</span><span class="op">)</span></span>
 <span><span class="va">rld_multifac</span></span></code></pre></div>
-<pre><code>class: DESeqTransform 
-dim: 1000 12 
-metadata(1): version
-assays(1): ''
-rownames(1000): gene1 gene2 ... gene999 gene1000
-rowData names(11): trueIntercept trueBeta_condition ... dispFit
-  rlogIntercept
-colnames(12): sample1 sample2 ... sample11 sample12
-colData names(3): condition tissue sizeFactor</code></pre>
+<pre><code><span><span class="co">#&gt; class: DESeqTransform </span></span>
+<span><span class="co">#&gt; dim: 1000 12 </span></span>
+<span><span class="co">#&gt; metadata(1): version</span></span>
+<span><span class="co">#&gt; assays(1): ''</span></span>
+<span><span class="co">#&gt; rownames(1000): gene1 gene2 ... gene999 gene1000</span></span>
+<span><span class="co">#&gt; rowData names(11): trueIntercept trueBeta_condition ... dispFit</span></span>
+<span><span class="co">#&gt;   rlogIntercept</span></span>
+<span><span class="co">#&gt; colnames(12): sample1 sample2 ... sample11 sample12</span></span>
+<span><span class="co">#&gt; colData names(3): condition tissue sizeFactor</span></span></code></pre>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## checking how the samples cluster on the PCA plot</span></span>
 <span><span class="fu"><a href="../reference/pcaplot.html">pcaplot</a></span><span class="op">(</span><span class="va">rld_multifac</span>,intgroup <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"condition"</span>,<span class="st">"tissue"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -794,7 +794,7 @@ exploration is also usable at its best.</p>
 <div class="section level2">
 <h2 id="functions-exported-by-the-package-for-standalone-usage">Functions exported by the package for standalone usage<a class="anchor" aria-label="anchor" href="#functions-exported-by-the-package-for-standalone-usage"></a>
 </h2>
-<p>The functions exported by the <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>The functions exported by the <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 package can be also used in a standalone scenario, provided the required
 objects are in the working environment. They are listed here for an
 overview, but please refer to the documentation for additional details.
@@ -854,16 +854,16 @@ a <code>prcomp</code> object.</p>
 <code class="sourceCode R"><span><span class="va">res_pcairway</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/correlatePCs.html">correlatePCs</a></span><span class="op">(</span><span class="va">pcaobj_airway</span>,<span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">colData</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">res_pcairway</span></span></code></pre></div>
-<pre><code>     SampleName       cell        dex albut       Run avgLength Experiment
-PC_1  0.4288799 0.68227033 0.02092134    NA 0.4288799 0.2554109  0.4288799
-PC_2  0.4288799 0.11161023 0.56370286    NA 0.4288799 0.1993592  0.4288799
-PC_3  0.4288799 0.10377716 0.38647623    NA 0.4288799 0.1864725  0.4288799
-PC_4  0.4288799 0.08331631 0.56370286    NA 0.4288799 0.4635148  0.4288799
-        Sample BioSample
-PC_1 0.4288799 0.4288799
-PC_2 0.4288799 0.4288799
-PC_3 0.4288799 0.4288799
-PC_4 0.4288799 0.4288799</code></pre>
+<pre><code><span><span class="co">#&gt;      SampleName       cell        dex albut       Run avgLength Experiment</span></span>
+<span><span class="co">#&gt; PC_1  0.4288799 0.68227033 0.02092134    NA 0.4288799 0.2554109  0.4288799</span></span>
+<span><span class="co">#&gt; PC_2  0.4288799 0.11161023 0.56370286    NA 0.4288799 0.1993592  0.4288799</span></span>
+<span><span class="co">#&gt; PC_3  0.4288799 0.10377716 0.38647623    NA 0.4288799 0.1864725  0.4288799</span></span>
+<span><span class="co">#&gt; PC_4  0.4288799 0.08331631 0.56370286    NA 0.4288799 0.4635148  0.4288799</span></span>
+<span><span class="co">#&gt;         Sample BioSample</span></span>
+<span><span class="co">#&gt; PC_1 0.4288799 0.4288799</span></span>
+<span><span class="co">#&gt; PC_2 0.4288799 0.4288799</span></span>
+<span><span class="co">#&gt; PC_3 0.4288799 0.4288799</span></span>
+<span><span class="co">#&gt; PC_4 0.4288799 0.4288799</span></span></code></pre>
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plotPCcorrs.html">plotPCcorrs</a></span><span class="op">(</span><span class="va">res_pcairway</span><span class="op">)</span></span></code></pre></div>
 <p><img src="pcaExplorer_files/figure-html/func-correlatepcs-1.png" width="700" style="display: block; margin: auto;"></p>
@@ -877,48 +877,48 @@ the highest loadings.</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># extract the table of the genes with high loadings</span></span>
 <span><span class="fu"><a href="../reference/hi_loadings.html">hi_loadings</a></span><span class="op">(</span><span class="va">pcaobj_airway</span>,topN <span class="op">=</span> <span class="fl">10</span>,exprTable<span class="op">=</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>                SRR1039508 SRR1039509 SRR1039512 SRR1039513 SRR1039516
-ENSG00000143127         11        108         24        485         41
-ENSG00000168309         12        274         35        451          1
-ENSG00000101347       1632      17126       2098      19694       1598
-ENSG00000211445        916      15749       3142      24057       1627
-ENSG00000096060        260       4652        381       3875        601
-ENSG00000163884         70       1325         52        702         36
-ENSG00000171819          4         50         19        543          1
-ENSG00000127954         13        247         25        889          2
-ENSG00000152583         62       2040         99       1172        100
-ENSG00000109906          4        739          5        429          1
-ENSG00000162692        914         62       1192         55       1359
-ENSG00000178695       4746        830       4805        414       5321
-ENSG00000214814        312         24        193         28        501
-ENSG00000164742       1506        347        275         14        137
-ENSG00000138316       1327        207       1521        118       1962
-ENSG00000123610        444        136        303         36       1170
-ENSG00000124766       2483        406       2057        185       2829
-ENSG00000105989        562         47       1575        106        106
-ENSG00000013293        268         23        435         56        558
-ENSG00000146250        330         41        907         89        720
-                SRR1039517 SRR1039520 SRR1039521
-ENSG00000143127        607         77        660
-ENSG00000168309         65          4        193
-ENSG00000101347      17697       1683      32036
-ENSG00000211445      16274       1741      24883
-ENSG00000096060       5493        154       4118
-ENSG00000163884        487         34       1355
-ENSG00000171819         10         14       1067
-ENSG00000127954        199         20        462
-ENSG00000152583       1924         79       2138
-ENSG00000109906        581         12       1113
-ENSG00000162692        171        646         31
-ENSG00000178695       1391       4411        606
-ENSG00000214814         65        789         76
-ENSG00000164742         37        475         56
-ENSG00000138316        618       1045        152
-ENSG00000123610        195        473         37
-ENSG00000124766        870       1851        301
-ENSG00000105989         24        382         46
-ENSG00000013293         75        562         74
-ENSG00000146250        123        439         60</code></pre>
+<pre><code><span><span class="co">#&gt;                 SRR1039508 SRR1039509 SRR1039512 SRR1039513 SRR1039516</span></span>
+<span><span class="co">#&gt; ENSG00000143127         11        108         24        485         41</span></span>
+<span><span class="co">#&gt; ENSG00000168309         12        274         35        451          1</span></span>
+<span><span class="co">#&gt; ENSG00000101347       1632      17126       2098      19694       1598</span></span>
+<span><span class="co">#&gt; ENSG00000211445        916      15749       3142      24057       1627</span></span>
+<span><span class="co">#&gt; ENSG00000096060        260       4652        381       3875        601</span></span>
+<span><span class="co">#&gt; ENSG00000163884         70       1325         52        702         36</span></span>
+<span><span class="co">#&gt; ENSG00000171819          4         50         19        543          1</span></span>
+<span><span class="co">#&gt; ENSG00000127954         13        247         25        889          2</span></span>
+<span><span class="co">#&gt; ENSG00000152583         62       2040         99       1172        100</span></span>
+<span><span class="co">#&gt; ENSG00000109906          4        739          5        429          1</span></span>
+<span><span class="co">#&gt; ENSG00000162692        914         62       1192         55       1359</span></span>
+<span><span class="co">#&gt; ENSG00000178695       4746        830       4805        414       5321</span></span>
+<span><span class="co">#&gt; ENSG00000214814        312         24        193         28        501</span></span>
+<span><span class="co">#&gt; ENSG00000164742       1506        347        275         14        137</span></span>
+<span><span class="co">#&gt; ENSG00000138316       1327        207       1521        118       1962</span></span>
+<span><span class="co">#&gt; ENSG00000123610        444        136        303         36       1170</span></span>
+<span><span class="co">#&gt; ENSG00000124766       2483        406       2057        185       2829</span></span>
+<span><span class="co">#&gt; ENSG00000105989        562         47       1575        106        106</span></span>
+<span><span class="co">#&gt; ENSG00000013293        268         23        435         56        558</span></span>
+<span><span class="co">#&gt; ENSG00000146250        330         41        907         89        720</span></span>
+<span><span class="co">#&gt;                 SRR1039517 SRR1039520 SRR1039521</span></span>
+<span><span class="co">#&gt; ENSG00000143127        607         77        660</span></span>
+<span><span class="co">#&gt; ENSG00000168309         65          4        193</span></span>
+<span><span class="co">#&gt; ENSG00000101347      17697       1683      32036</span></span>
+<span><span class="co">#&gt; ENSG00000211445      16274       1741      24883</span></span>
+<span><span class="co">#&gt; ENSG00000096060       5493        154       4118</span></span>
+<span><span class="co">#&gt; ENSG00000163884        487         34       1355</span></span>
+<span><span class="co">#&gt; ENSG00000171819         10         14       1067</span></span>
+<span><span class="co">#&gt; ENSG00000127954        199         20        462</span></span>
+<span><span class="co">#&gt; ENSG00000152583       1924         79       2138</span></span>
+<span><span class="co">#&gt; ENSG00000109906        581         12       1113</span></span>
+<span><span class="co">#&gt; ENSG00000162692        171        646         31</span></span>
+<span><span class="co">#&gt; ENSG00000178695       1391       4411        606</span></span>
+<span><span class="co">#&gt; ENSG00000214814         65        789         76</span></span>
+<span><span class="co">#&gt; ENSG00000164742         37        475         56</span></span>
+<span><span class="co">#&gt; ENSG00000138316        618       1045        152</span></span>
+<span><span class="co">#&gt; ENSG00000123610        195        473         37</span></span>
+<span><span class="co">#&gt; ENSG00000124766        870       1851        301</span></span>
+<span><span class="co">#&gt; ENSG00000105989         24        382         46</span></span>
+<span><span class="co">#&gt; ENSG00000013293         75        562         74</span></span>
+<span><span class="co">#&gt; ENSG00000146250        123        439         60</span></span></code></pre>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># or alternatively plot the values</span></span>
 <span><span class="fu"><a href="../reference/hi_loadings.html">hi_loadings</a></span><span class="op">(</span><span class="va">pcaobj_airway</span>,topN <span class="op">=</span> <span class="fl">10</span>,annotation <span class="op">=</span> <span class="va">annotation_airway</span><span class="op">)</span></span></code></pre></div>
@@ -962,7 +962,7 @@ tab.</p>
 <p><code>topGOtable</code> is a convenient wrapper for extracting
 functional GO terms enriched in a subset of genes (such as the
 differentially expressed genes), based on the algorithm and the
-implementation in the <em><a href="https://bioconductor.org/packages/3.19/topGO" class="external-link">topGO</a></em>
+implementation in the <em><a href="https://bioconductor.org/packages/3.20/topGO" class="external-link">topGO</a></em>
 package.</p>
 <div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># example not run due to quite long runtime</span></span>
@@ -995,6 +995,10 @@ package.</p>
 <span>                             ontology <span class="op">=</span> <span class="st">"BP"</span>,</span>
 <span>                             mapping <span class="op">=</span> <span class="st">"org.Hs.eg.db"</span>,</span>
 <span>                             geneID <span class="op">=</span> <span class="st">"symbol"</span><span class="op">)</span></span></code></pre></div>
+<p>From version 2.32.0 onwards, the <code><a href="../reference/topGOtable.html">topGOtable()</a></code> function
+has been deprecated, in favor of the equivalent
+<code><a href="https://rdrr.io/pkg/mosdef/man/run_topGO.html" class="external-link">mosdef::run_topGO()</a></code> function, which is more robust and
+flexible in its usage.</p>
 </div>
 <div class="section level3">
 <h3 id="pca2go-docs">
@@ -1051,27 +1055,27 @@ arguments.</p>
 <div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds_simu</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">3</span>,betaSD_tissue <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span>
 <span><span class="va">dds_simu</span></span></code></pre></div>
-<pre><code>class: DESeqDataSet 
-dim: 1000 12 
-metadata(1): version
-assays(1): counts
-rownames(1000): gene1 gene2 ... gene999 gene1000
-rowData names(4): trueIntercept trueBeta_condition trueBeta_tissue
-  trueDisp
-colnames(12): sample1 sample2 ... sample11 sample12
-colData names(2): condition tissue</code></pre>
+<pre><code><span><span class="co">#&gt; class: DESeqDataSet </span></span>
+<span><span class="co">#&gt; dim: 1000 12 </span></span>
+<span><span class="co">#&gt; metadata(1): version</span></span>
+<span><span class="co">#&gt; assays(1): counts</span></span>
+<span><span class="co">#&gt; rownames(1000): gene1 gene2 ... gene999 gene1000</span></span>
+<span><span class="co">#&gt; rowData names(4): trueIntercept trueBeta_condition trueBeta_tissue</span></span>
+<span><span class="co">#&gt;   trueDisp</span></span>
+<span><span class="co">#&gt; colnames(12): sample1 sample2 ... sample11 sample12</span></span>
+<span><span class="co">#&gt; colData names(2): condition tissue</span></span></code></pre>
 <div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dds2_simu</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/makeExampleDESeqDataSet_multifac.html">makeExampleDESeqDataSet_multifac</a></span><span class="op">(</span>betaSD_condition <span class="op">=</span> <span class="fl">0.5</span>,betaSD_tissue <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span><span class="va">dds2_simu</span></span></code></pre></div>
-<pre><code>class: DESeqDataSet 
-dim: 1000 12 
-metadata(1): version
-assays(1): counts
-rownames(1000): gene1 gene2 ... gene999 gene1000
-rowData names(4): trueIntercept trueBeta_condition trueBeta_tissue
-  trueDisp
-colnames(12): sample1 sample2 ... sample11 sample12
-colData names(2): condition tissue</code></pre>
+<pre><code><span><span class="co">#&gt; class: DESeqDataSet </span></span>
+<span><span class="co">#&gt; dim: 1000 12 </span></span>
+<span><span class="co">#&gt; metadata(1): version</span></span>
+<span><span class="co">#&gt; assays(1): counts</span></span>
+<span><span class="co">#&gt; rownames(1000): gene1 gene2 ... gene999 gene1000</span></span>
+<span><span class="co">#&gt; rowData names(4): trueIntercept trueBeta_condition trueBeta_tissue</span></span>
+<span><span class="co">#&gt;   trueDisp</span></span>
+<span><span class="co">#&gt; colnames(12): sample1 sample2 ... sample11 sample12</span></span>
+<span><span class="co">#&gt; colData names(2): condition tissue</span></span></code></pre>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rld_simu</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds_simu</span><span class="op">)</span></span>
 <span><span class="va">rld2_simu</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds2_simu</span><span class="op">)</span></span>
@@ -1094,7 +1098,7 @@ lines, boxplots or violin plots.</p>
 <span><span class="fu"><a href="../reference/distro_expr.html">distro_expr</a></span><span class="op">(</span><span class="va">rld_airway</span>,plot_type <span class="op">=</span> <span class="st">"violin"</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/distro_expr.html">distro_expr</a></span><span class="op">(</span><span class="va">rld_airway</span>,plot_type <span class="op">=</span> <span class="st">"boxplot"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="pcaExplorer_files/figure-html/unnamed-chunk-6-1.png" width="700" style="display: block; margin: auto;"></p>
+<p><img src="pcaExplorer_files/figure-html/unnamed-chunk-7-1.png" width="700" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level3">
 <h3 id="geneprofiler">
@@ -1107,9 +1111,9 @@ standardized values.</p>
 <span><span class="va">dst</span> <span class="op">&lt;-</span> <span class="fu">DESeq2</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DESeq2/man/rlog.html" class="external-link">rlogTransformation</a></span><span class="op">(</span><span class="va">dds</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/geneprofiler.html">geneprofiler</a></span><span class="op">(</span><span class="va">dst</span>,<span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"gene"</span>,<span class="fu"><a href="https://rdrr.io/pkg/AnnotationDbi/man/Bimap-envirAPI.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1000</span>,<span class="fl">20</span><span class="op">)</span><span class="op">)</span>, plotZ <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<pre><code>you provided 20 unique identifiers
-20 out of 20 provided genes were found in the data</code></pre>
-<p><img src="pcaExplorer_files/figure-html/unnamed-chunk-7-1.png" width="700" style="display: block; margin: auto;"></p>
+<pre><code><span><span class="co">#&gt; You provided 20 unique identifiers</span></span></code></pre>
+<pre><code><span><span class="co">#&gt; 20 out of 20 provided genes were found in the data</span></span></code></pre>
+<p><img src="pcaExplorer_files/figure-html/unnamed-chunk-8-1.png" width="700" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level3">
 <h3 id="get_annotation-and-get_annotation_orgdb">
@@ -1121,24 +1125,24 @@ standardized values.</p>
 <code>pcaExplorer</code> function. They use respectively the
 <code>biomaRt</code> package and the <code>org.XX.eg.db</code>
 packages.</p>
-<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anno_df_biomart</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_annotation.html">get_annotation</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>                                  biomart_dataset <span class="op">=</span> <span class="st">"hsapiens_gene_ensembl"</span>,</span>
 <span>                                  idtype <span class="op">=</span> <span class="st">"ensembl_gene_id"</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anno_df_orgdb</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_annotation_orgdb.html">get_annotation_orgdb</a></span><span class="op">(</span>dds <span class="op">=</span> <span class="va">dds_airway</span>,</span>
 <span>                                      orgdb_species <span class="op">=</span> <span class="st">"org.Hs.eg.db"</span>,</span>
 <span>                                      idtype <span class="op">=</span> <span class="st">"ENSEMBL"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>'select()' returned 1:many mapping between keys and columns</code></pre>
-<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r">
+<pre><code><span><span class="co">#&gt; 'select()' returned 1:many mapping between keys and columns</span></span></code></pre>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">anno_df_orgdb</span><span class="op">)</span></span></code></pre></div>
-<pre><code>                        gene_id gene_name
-ENSG00000000003 ENSG00000000003    TSPAN6
-ENSG00000000005 ENSG00000000005      TNMD
-ENSG00000000419 ENSG00000000419      DPM1
-ENSG00000000457 ENSG00000000457     SCYL3
-ENSG00000000460 ENSG00000000460     FIRRM
-ENSG00000000938 ENSG00000000938       FGR</code></pre>
+<pre><code><span><span class="co">#&gt;                         gene_id gene_name</span></span>
+<span><span class="co">#&gt; ENSG00000000003 ENSG00000000003    TSPAN6</span></span>
+<span><span class="co">#&gt; ENSG00000000005 ENSG00000000005      TNMD</span></span>
+<span><span class="co">#&gt; ENSG00000000419 ENSG00000000419      DPM1</span></span>
+<span><span class="co">#&gt; ENSG00000000457 ENSG00000000457     SCYL3</span></span>
+<span><span class="co">#&gt; ENSG00000000460 ENSG00000000460     FIRRM</span></span>
+<span><span class="co">#&gt; ENSG00000000938 ENSG00000000938       FGR</span></span></code></pre>
 <p>If using datasets and annotation packages for yeast samples
 (<em>Saccharomyces cerevisiae</em>, and the <code>org.Sc.sgd.db</code>
 package), remember to specify the <code>key_for_genenames</code> in the
@@ -1151,16 +1155,16 @@ otherwise).</p>
 </h3>
 <p>Plots the pairwise scatter plots and computes the correlation
 coefficient on the expression matrix provided.</p>
-<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># use a subset of the counts to reduce plotting time, it can be time consuming with many samples</span></span>
 <span><span class="fu"><a href="../reference/pair_corr.html">pair_corr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>,<span class="op">]</span><span class="op">)</span></span></code></pre></div>
-<p><img src="pcaExplorer_files/figure-html/unnamed-chunk-10-1.png" width="700" style="display: block; margin: auto;"></p>
+<p><img src="pcaExplorer_files/figure-html/unnamed-chunk-11-1.png" width="700" style="display: block; margin: auto;"></p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="further-development">Further development<a class="anchor" aria-label="anchor" href="#further-development"></a>
 </h2>
-<p>Additional functionality for the <em><a href="https://bioconductor.org/packages/3.19/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>Additional functionality for the <em><a href="https://bioconductor.org/packages/3.20/pcaExplorer" class="external-link">pcaExplorer</a></em>
 will be added in the future, as it is tightly related to a topic under
 current development research.</p>
 <p>Improvements, suggestions, bugs, issues and feedback of any type can
@@ -1169,95 +1173,108 @@ be sent to <a href="mailto:marinif@uni-mainz.de" class="email">marinif@uni-mainz
 <div class="section level2">
 <h2 class="unnumbered" id="session-info">Session info<a class="anchor" aria-label="anchor" href="#session-info"></a>
 </h2>
-<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<pre><code>R version 4.4.0 (2024-04-24)
-Platform: aarch64-apple-darwin20
-Running under: macOS Sonoma 14.4.1
-
-Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
-LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
-
-locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-
-time zone: UTC
-tzcode source: internal
-
-attached base packages:
-[1] stats4    stats     graphics  grDevices utils     datasets  methods  
-[8] base     
-
-other attached packages:
- [1] org.Hs.eg.db_3.19.1         AnnotationDbi_1.65.2       
- [3] DESeq2_1.44.0               airway_1.23.0              
- [5] SummarizedExperiment_1.34.0 GenomicRanges_1.55.4       
- [7] GenomeInfoDb_1.40.0         IRanges_2.38.0             
- [9] S4Vectors_0.42.0            MatrixGenerics_1.16.0      
-[11] matrixStats_1.3.0           pcaExplorer_2.31.0         
-[13] Biobase_2.64.0              BiocGenerics_0.50.0        
-[15] knitr_1.46                  BiocStyle_2.32.0           
-
-loaded via a namespace (and not attached):
-  [1] splines_4.4.0           later_1.3.2             bitops_1.0-7           
-  [4] filelock_1.0.3          tibble_3.2.1            graph_1.82.0           
-  [7] XML_3.99-0.16.1         lifecycle_1.0.4         httr2_1.0.1            
- [10] topGO_2.56.0            doParallel_1.0.17       lattice_0.22-6         
- [13] crosstalk_1.2.1         dendextend_1.17.1       magrittr_2.0.3         
- [16] limma_3.60.0            plotly_4.10.4           sass_0.4.9             
- [19] rmarkdown_2.26.2        jquerylib_0.1.4         yaml_2.3.8             
- [22] shinyBS_0.61.1          httpuv_1.6.15           NMF_0.27               
- [25] DBI_1.2.2               RColorBrewer_1.1-3      abind_1.4-5            
- [28] zlibbioc_1.50.0         purrr_1.0.2             RCurl_1.98-1.14        
- [31] rappdirs_0.3.3          seriation_1.5.5         GenomeInfoDbData_1.2.12
- [34] ggrepel_0.9.5           AnnotationForge_1.46.0  genefilter_1.86.0      
- [37] pheatmap_1.0.12         annotate_1.82.0         pkgdown_2.0.9.9000     
- [40] codetools_0.2-20        DelayedArray_0.30.0     DT_0.33                
- [43] xml2_1.3.6              tidyselect_1.2.1        GOstats_2.70.0         
- [46] farver_2.1.1            UCSC.utils_1.0.0        viridis_0.6.5          
- [49] TSP_1.2-4               BiocFileCache_2.12.0    base64enc_0.1-3        
- [52] webshot_0.5.5           jsonlite_1.8.8          survival_3.6-4         
- [55] iterators_1.0.14        systemfonts_1.0.6       foreach_1.5.2          
- [58] tools_4.4.0             progress_1.2.3          ragg_1.3.0             
- [61] Rcpp_1.0.12             glue_1.7.0              gridExtra_2.3          
- [64] SparseArray_1.4.0       xfun_0.43               dplyr_1.1.4            
- [67] ca_0.71.1               withr_3.0.0             shinydashboard_0.7.2   
- [70] BiocManager_1.30.22     Category_2.70.0         fastmap_1.1.1          
- [73] fansi_1.0.6             SparseM_1.81            digest_0.6.35          
- [76] R6_2.5.1                mime_0.12               textshaping_0.3.7      
- [79] colorspace_2.1-0        GO.db_3.19.1            biomaRt_2.60.0         
- [82] RSQLite_2.3.6           threejs_0.3.3           utf8_1.2.4             
- [85] tidyr_1.3.1             generics_0.1.3          data.table_1.15.4      
- [88] prettyunits_1.2.0       httr_1.4.7              htmlwidgets_1.6.4      
- [91] S4Arrays_1.4.0          pkgconfig_2.0.3         gtable_0.3.5           
- [94] blob_1.2.4              registry_0.5-1          XVector_0.44.0         
- [97] htmltools_0.5.8.1       bookdown_0.39           RBGL_1.80.0            
-[100] GSEABase_1.66.0         scales_1.3.0            png_0.1-8              
-[103] reshape2_1.4.4          curl_5.2.1              shinyAce_0.4.2         
-[106] cachem_1.0.8            stringr_1.5.1           parallel_4.4.0         
-[109] desc_1.4.3              pillar_1.9.0            grid_4.4.0             
-[112] vctrs_0.6.5             promises_1.3.0          dbplyr_2.5.0           
-[115] xtable_1.8-4            cluster_2.1.6           Rgraphviz_2.48.0       
-[118] evaluate_0.23           cli_3.6.2               locfit_1.5-9.9         
-[121] compiler_4.4.0          rlang_1.1.3             crayon_1.5.2           
-[124] rngtools_1.5.2          heatmaply_1.5.0         labeling_0.4.3         
-[127] plyr_1.8.9              fs_1.6.4                stringi_1.8.3          
-[130] viridisLite_0.4.2       gridBase_0.4-7          BiocParallel_1.38.0    
-[133] assertthat_0.2.1        munsell_0.5.1           Biostrings_2.72.0      
-[136] lazyeval_0.2.2          Matrix_1.7-0            hms_1.1.3              
-[139] bit64_4.0.5             ggplot2_3.5.1           KEGGREST_1.44.0        
-[142] statmod_1.5.0           shiny_1.8.1.1           highr_0.10             
-[145] fontawesome_0.5.2       igraph_2.0.3            memoise_2.0.1          
-[148] bslib_0.7.0             bit_4.0.5              </code></pre>
+<pre><code><span><span class="co">#&gt; R version 4.4.1 (2024-06-14)</span></span>
+<span><span class="co">#&gt; Platform: aarch64-apple-darwin20</span></span>
+<span><span class="co">#&gt; Running under: macOS Sonoma 14.6.1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Matrix products: default</span></span>
+<span><span class="co">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib </span></span>
+<span><span class="co">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; locale:</span></span>
+<span><span class="co">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; time zone: UTC</span></span>
+<span><span class="co">#&gt; tzcode source: internal</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; attached base packages:</span></span>
+<span><span class="co">#&gt; [1] stats4    stats     graphics  grDevices utils     datasets  methods  </span></span>
+<span><span class="co">#&gt; [8] base     </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; other attached packages:</span></span>
+<span><span class="co">#&gt;  [1] org.Hs.eg.db_3.19.1         AnnotationDbi_1.67.0       </span></span>
+<span><span class="co">#&gt;  [3] DESeq2_1.45.3               airway_1.25.0              </span></span>
+<span><span class="co">#&gt;  [5] SummarizedExperiment_1.35.1 GenomicRanges_1.57.1       </span></span>
+<span><span class="co">#&gt;  [7] GenomeInfoDb_1.41.1         IRanges_2.39.2             </span></span>
+<span><span class="co">#&gt;  [9] S4Vectors_0.43.2            MatrixGenerics_1.17.0      </span></span>
+<span><span class="co">#&gt; [11] matrixStats_1.4.1           pcaExplorer_2.99.1         </span></span>
+<span><span class="co">#&gt; [13] Biobase_2.65.1              BiocGenerics_0.51.1        </span></span>
+<span><span class="co">#&gt; [15] knitr_1.48                  BiocStyle_2.33.1           </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
+<span><span class="co">#&gt;   [1] bitops_1.0-8             fs_1.6.4                 enrichplot_1.25.2       </span></span>
+<span><span class="co">#&gt;   [4] fontawesome_0.5.2        httr_1.4.7               webshot_0.5.5           </span></span>
+<span><span class="co">#&gt;   [7] RColorBrewer_1.1-3       doParallel_1.0.17        Rgraphviz_2.49.0        </span></span>
+<span><span class="co">#&gt;  [10] tools_4.4.1              utf8_1.2.4               R6_2.5.1                </span></span>
+<span><span class="co">#&gt;  [13] DT_0.33                  mgcv_1.9-1               lazyeval_0.2.2          </span></span>
+<span><span class="co">#&gt;  [16] withr_3.0.1              prettyunits_1.2.0        gridExtra_2.3           </span></span>
+<span><span class="co">#&gt;  [19] cli_3.6.3                textshaping_0.4.0        TSP_1.2-4               </span></span>
+<span><span class="co">#&gt;  [22] scatterpie_0.2.4         labeling_0.4.3           sass_0.4.9              </span></span>
+<span><span class="co">#&gt;  [25] topGO_2.57.0             genefilter_1.87.0        goseq_1.57.2            </span></span>
+<span><span class="co">#&gt;  [28] pkgdown_2.1.1.9000       Rsamtools_2.21.1         systemfonts_1.1.0       </span></span>
+<span><span class="co">#&gt;  [31] yulab.utils_0.1.7        txdbmaker_1.1.1          gson_0.1.0              </span></span>
+<span><span class="co">#&gt;  [34] DOSE_3.99.1              R.utils_2.12.3           AnnotationForge_1.47.1  </span></span>
+<span><span class="co">#&gt;  [37] limma_3.61.10            RSQLite_2.3.7            GOstats_2.71.0          </span></span>
+<span><span class="co">#&gt;  [40] BiocIO_1.15.2            generics_0.1.3           gridGraphics_0.5-1      </span></span>
+<span><span class="co">#&gt;  [43] crosstalk_1.2.1          dplyr_1.1.4              dendextend_1.17.1       </span></span>
+<span><span class="co">#&gt;  [46] GO.db_3.19.1             Matrix_1.7-0             fansi_1.0.6             </span></span>
+<span><span class="co">#&gt;  [49] abind_1.4-8              R.methodsS3_1.8.2        lifecycle_1.0.4         </span></span>
+<span><span class="co">#&gt;  [52] yaml_2.3.10              qvalue_2.37.0            SparseArray_1.5.39      </span></span>
+<span><span class="co">#&gt;  [55] BiocFileCache_2.13.0     grid_4.4.1               blob_1.2.4              </span></span>
+<span><span class="co">#&gt;  [58] promises_1.3.0           crayon_1.5.3             shinydashboard_0.7.2    </span></span>
+<span><span class="co">#&gt;  [61] lattice_0.22-6           cowplot_1.1.3            GenomicFeatures_1.57.0  </span></span>
+<span><span class="co">#&gt;  [64] annotate_1.83.0          KEGGREST_1.45.1          pillar_1.9.0            </span></span>
+<span><span class="co">#&gt;  [67] fgsea_1.31.0             rjson_0.2.23             codetools_0.2-20        </span></span>
+<span><span class="co">#&gt;  [70] fastmatch_1.1-4          glue_1.7.0               ggfun_0.1.6             </span></span>
+<span><span class="co">#&gt;  [73] data.table_1.16.0        vctrs_0.6.5              png_0.1-8               </span></span>
+<span><span class="co">#&gt;  [76] treeio_1.29.1            gtable_0.3.5             assertthat_0.2.1        </span></span>
+<span><span class="co">#&gt;  [79] cachem_1.1.0             xfun_0.47                S4Arrays_1.5.8          </span></span>
+<span><span class="co">#&gt;  [82] mime_0.12                tidygraph_1.3.1          survival_3.7-0          </span></span>
+<span><span class="co">#&gt;  [85] pheatmap_1.0.12          seriation_1.5.6          iterators_1.0.14        </span></span>
+<span><span class="co">#&gt;  [88] statmod_1.5.0            Category_2.71.0          nlme_3.1-166            </span></span>
+<span><span class="co">#&gt;  [91] ggtree_3.13.1            bit64_4.5.2              threejs_0.3.3           </span></span>
+<span><span class="co">#&gt;  [94] progress_1.2.3           filelock_1.0.3           bslib_0.8.0             </span></span>
+<span><span class="co">#&gt;  [97] colorspace_2.1-1         DBI_1.2.3                tidyselect_1.2.1        </span></span>
+<span><span class="co">#&gt; [100] bit_4.5.0                compiler_4.4.1           curl_5.2.3              </span></span>
+<span><span class="co">#&gt; [103] httr2_1.0.4              graph_1.83.0             BiasedUrn_2.0.12        </span></span>
+<span><span class="co">#&gt; [106] SparseM_1.84-2           xml2_1.3.6               desc_1.4.3              </span></span>
+<span><span class="co">#&gt; [109] DelayedArray_0.31.11     plotly_4.10.4            bookdown_0.40           </span></span>
+<span><span class="co">#&gt; [112] shadowtext_0.1.4         rtracklayer_1.65.0       scales_1.3.0            </span></span>
+<span><span class="co">#&gt; [115] mosdef_1.1.1             RBGL_1.81.0              NMF_0.28                </span></span>
+<span><span class="co">#&gt; [118] rappdirs_0.3.3           stringr_1.5.1            digest_0.6.37           </span></span>
+<span><span class="co">#&gt; [121] shinyBS_0.61.1           rmarkdown_2.28           ca_0.71.1               </span></span>
+<span><span class="co">#&gt; [124] XVector_0.45.0           htmltools_0.5.8.1        pkgconfig_2.0.3         </span></span>
+<span><span class="co">#&gt; [127] base64enc_0.1-3          highr_0.11               dbplyr_2.5.0            </span></span>
+<span><span class="co">#&gt; [130] fastmap_1.2.0            rlang_1.1.4              htmlwidgets_1.6.4       </span></span>
+<span><span class="co">#&gt; [133] UCSC.utils_1.1.0         shiny_1.9.1              farver_2.1.2            </span></span>
+<span><span class="co">#&gt; [136] jquerylib_0.1.4          jsonlite_1.8.9           BiocParallel_1.39.0     </span></span>
+<span><span class="co">#&gt; [139] GOSemSim_2.31.2          R.oo_1.26.0              RCurl_1.98-1.16         </span></span>
+<span><span class="co">#&gt; [142] magrittr_2.0.3           GenomeInfoDbData_1.2.12  ggplotify_0.1.2         </span></span>
+<span><span class="co">#&gt; [145] patchwork_1.3.0          munsell_0.5.1            Rcpp_1.0.13             </span></span>
+<span><span class="co">#&gt; [148] ape_5.8                  viridis_0.6.5            stringi_1.8.4           </span></span>
+<span><span class="co">#&gt; [151] ggraph_2.2.1             zlibbioc_1.51.1          MASS_7.3-61             </span></span>
+<span><span class="co">#&gt; [154] plyr_1.8.9               parallel_4.4.1           ggrepel_0.9.6           </span></span>
+<span><span class="co">#&gt; [157] Biostrings_2.73.1        graphlayouts_1.2.0       splines_4.4.1           </span></span>
+<span><span class="co">#&gt; [160] hms_1.1.3                geneLenDataBase_1.41.2   locfit_1.5-9.10         </span></span>
+<span><span class="co">#&gt; [163] igraph_2.0.3             rngtools_1.5.2           reshape2_1.4.4          </span></span>
+<span><span class="co">#&gt; [166] biomaRt_2.61.3           XML_3.99-0.17            evaluate_1.0.0          </span></span>
+<span><span class="co">#&gt; [169] BiocManager_1.30.25      foreach_1.5.2            tweenr_2.0.3            </span></span>
+<span><span class="co">#&gt; [172] httpuv_1.6.15            tidyr_1.3.1              purrr_1.0.2             </span></span>
+<span><span class="co">#&gt; [175] polyclip_1.10-7          heatmaply_1.5.0          ggplot2_3.5.1           </span></span>
+<span><span class="co">#&gt; [178] gridBase_0.4-7           ggforce_0.4.2            xtable_1.8-4            </span></span>
+<span><span class="co">#&gt; [181] restfulr_0.0.15          tidytree_0.4.6           later_1.3.2             </span></span>
+<span><span class="co">#&gt; [184] viridisLite_0.4.2        ragg_1.3.3               tibble_3.2.1            </span></span>
+<span><span class="co">#&gt; [187] clusterProfiler_4.13.3   aplot_0.2.3              GenomicAlignments_1.41.0</span></span>
+<span><span class="co">#&gt; [190] memoise_2.0.1            registry_0.5-1           cluster_2.1.6           </span></span>
+<span><span class="co">#&gt; [193] GSEABase_1.67.0          shinyAce_0.4.2</span></span></code></pre>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
@@ -1270,16 +1287,16 @@ loaded via a namespace (and not attached):
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.9000.</p>
 </div>
 
       </footer>
 </div>
 
-  
 
 
-  
+
+
 
   </body>
 </html>
