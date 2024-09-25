@@ -61,3 +61,7 @@ reference:
   - '`distro_expr`'
   - '`geneprofiler`'
   - '`makeExampleDESeqDataSet_multifac`'
+- title: Deprecated functions in pcaExplorer
+  desc: ~
+  contents:
+  - '`deprecated`'
