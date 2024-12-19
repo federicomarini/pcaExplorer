@@ -4,7 +4,7 @@
 #' @param whichpc An integer number, corresponding to the principal component of
 #' interest
 #' @param topN Integer, number of genes with top and bottom loadings
-#' @param exprTable A `matrix` object, e.g. the counts of a [DESeqDataSet()].
+#' @param exprTable A `matrix` object, e.g. the counts of a [DESeq2::DESeqDataSet()].
 #' If not NULL, returns the counts matrix for the selected genes
 #' @param annotation A `data.frame` object, with row.names as gene identifiers (e.g. ENSEMBL ids)
 #' and a column, `gene_name`, containing e.g. HGNC-based gene symbols

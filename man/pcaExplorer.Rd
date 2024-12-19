@@ -15,11 +15,11 @@ pcaExplorer(
 )
 }
 \arguments{
-\item{dds}{A \code{\link[=DESeqDataSet]{DESeqDataSet()}} object. If not provided, then a \code{countmatrix}
+\item{dds}{A \code{\link[DESeq2:DESeqDataSet]{DESeq2::DESeqDataSet()}} object. If not provided, then a \code{countmatrix}
 and a \code{coldata} need to be provided. If none of the above is provided, it is possible
 to upload the data during the execution of the Shiny App}
 
-\item{dst}{A \code{\link[=DESeqTransform]{DESeqTransform()}} object. Can be computed from the \code{dds} object
+\item{dst}{A \code{\link[DESeq2:DESeqTransform]{DESeq2::DESeqTransform()}} object. Can be computed from the \code{dds} object
 if left NULL. If none is provided, then a \code{countmatrix}
 and a \code{coldata} need to be provided. If none of the above is provided, it is possible
 to upload the data during the execution of the Shiny App}

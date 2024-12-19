@@ -18,9 +18,9 @@ pcaplot3d(
 )
 }
 \arguments{
-\item{x}{A \code{\link[=DESeqTransform]{DESeqTransform()}} object, with data in \code{assay(x)},
-produced for example by either \code{\link[=rlog]{rlog()}} or
-\code{\link[=varianceStabilizingTransformation]{varianceStabilizingTransformation()}}}
+\item{x}{A \code{\link[DESeq2:DESeqTransform]{DESeq2::DESeqTransform()}} object, with data in \code{assay(x)},
+produced for example by either \code{\link[DESeq2:rlog]{DESeq2::rlog()}} or
+\code{\link[DESeq2:varianceStabilizingTransformation]{DESeq2::varianceStabilizingTransformation()}}}
 
 \item{intgroup}{Interesting groups: a character vector of
 names in \code{colData(x)} to use for grouping}

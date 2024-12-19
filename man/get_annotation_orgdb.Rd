@@ -7,13 +7,13 @@
 get_annotation_orgdb(dds, orgdb_species, idtype, key_for_genenames = "SYMBOL")
 }
 \arguments{
-\item{dds}{A \code{\link[=DESeqDataSet]{DESeqDataSet()}} object}
+\item{dds}{A \code{\link[DESeq2:DESeqDataSet]{DESeq2::DESeqDataSet()}} object}
 
 \item{orgdb_species}{Character string, named as the \code{org.XX.eg.db}
 package which should be available in Bioconductor}
 
 \item{idtype}{Character, the ID type of the genes as in the row names of
-\code{dds}, to be used for the call to \code{\link[=mapIds]{mapIds()}}}
+\code{dds}, to be used for the call to \code{\link[AnnotationDbi:AnnotationDb-class]{AnnotationDbi::mapIds()}}}
 
 \item{key_for_genenames}{Character, corresponding to the column name for the
 key in the orgDb package containing the official gene name (often called

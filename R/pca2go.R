@@ -120,9 +120,9 @@ topGOtable <- function(DEgenes,                  # Differentially expressed gene
 #' performs functional enrichment analysis on them using routines and algorithms from
 #' the `topGO` package
 #'
-#' @param se A [DESeqTransform()] object, with data in `assay(se)`,
-#' produced for example by either [rlog()] or
-#' [varianceStabilizingTransformation()]
+#' @param se A [DESeq2::DESeqTransform()] object, with data in `assay(se)`,
+#' produced for example by either [DESeq2::rlog()] or
+#' [DESeq2::varianceStabilizingTransformation()]
 #' @param pca_ngenes Number of genes to use for the PCA
 #' @param annotation A `data.frame` object, with row.names as gene identifiers (e.g. ENSEMBL ids)
 #' and a column, `gene_name`, containing e.g. HGNC-based gene symbols
@@ -292,9 +292,9 @@ rankedGeneLoadings <- function(x, pc = 1, decreasing = TRUE) {
 #' performs functional enrichment analysis on them using the simple and quick routine
 #' provided by the `limma` package
 #'
-#' @param se A [DESeqTransform()] object, with data in `assay(se)`,
-#' produced for example by either [rlog()] or
-#' [varianceStabilizingTransformation()]
+#' @param se A [DESeq2::DESeqTransform()] object, with data in `assay(se)`,
+#' produced for example by either [DESeq2::rlog()] or
+#' [DESeq2::varianceStabilizingTransformation()]
 #' @param pca_ngenes Number of genes to use for the PCA
 #' @param inputType Input format type of the gene identifiers. Deafults to `ENSEMBL`, that then will
 #' be converted to ENTREZ ids. Can assume values such as `ENTREZID`,`GENENAME` or `SYMBOL`,

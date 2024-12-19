@@ -1,6 +1,6 @@
 #' Plot distribution of expression values
 #'
-#' @param rld A [DESeqTransform()] object.
+#' @param rld A [DESeq2::DESeqTransform()] object.
 #' @param plot_type Character, choose one of `boxplot`, `violin` or
 #' `density`. Defaults to `density`
 #'

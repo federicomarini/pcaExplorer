@@ -17,9 +17,9 @@ limmaquickpca2go(
 )
 }
 \arguments{
-\item{se}{A \code{\link[=DESeqTransform]{DESeqTransform()}} object, with data in \code{assay(se)},
-produced for example by either \code{\link[=rlog]{rlog()}} or
-\code{\link[=varianceStabilizingTransformation]{varianceStabilizingTransformation()}}}
+\item{se}{A \code{\link[DESeq2:DESeqTransform]{DESeq2::DESeqTransform()}} object, with data in \code{assay(se)},
+produced for example by either \code{\link[DESeq2:rlog]{DESeq2::rlog()}} or
+\code{\link[DESeq2:varianceStabilizingTransformation]{DESeq2::varianceStabilizingTransformation()}}}
 
 \item{pca_ngenes}{Number of genes to use for the PCA}
 

@@ -1,10 +1,10 @@
 #' Get an annotation data frame from biomaRt
 #'
-#' @param dds A [DESeqDataSet()] object
+#' @param dds A [DESeq2::DESeqDataSet()] object
 #' @param biomart_dataset A biomaRt dataset to use. To see the list, type
 #' `mart = useMart('ensembl')`, followed by `listDatasets(mart)`.
 #' @param idtype Character, the ID type of the genes as in the row names of
-#' `dds`, to be used for the call to [getBM()]
+#' `dds`, to be used for the call to [biomaRt::getBM()]
 #'
 #' @return A data frame for ready use in `pcaExplorer`, retrieved from biomaRt.
 #' @export
@@ -44,11 +44,11 @@ To obtain a list, type mart = useMart('ensembl'), followed by listDatasets(mart)
 
 #' Get an annotation data frame from org db packages
 #'
-#' @param dds A [DESeqDataSet()] object
+#' @param dds A [DESeq2::DESeqDataSet()] object
 #' @param orgdb_species Character string, named as the `org.XX.eg.db`
 #' package which should be available in Bioconductor
 #' @param idtype Character, the ID type of the genes as in the row names of
-#' `dds`, to be used for the call to [mapIds()]
+#' `dds`, to be used for the call to [AnnotationDbi::mapIds()]
 #' @param key_for_genenames Character, corresponding to the column name for the 
 #' key in the orgDb package containing the official gene name (often called 
 #' gene symbol). 

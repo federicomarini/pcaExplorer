@@ -7,8 +7,8 @@
 geneprofiler(se, genelist = NULL, intgroup = "condition", plotZ = FALSE)
 }
 \arguments{
-\item{se}{A \code{\link[=DESeqDataSet]{DESeqDataSet()}} object, or a
-\code{\link[=DESeqTransform]{DESeqTransform()}} object.}
+\item{se}{A \code{\link[DESeq2:DESeqDataSet]{DESeq2::DESeqDataSet()}} object, or a
+\code{\link[DESeq2:DESeqTransform]{DESeq2::DESeqTransform()}} object.}
 
 \item{genelist}{An array of characters, including the names of the genes of
 interest of which the profile is to be plotted}

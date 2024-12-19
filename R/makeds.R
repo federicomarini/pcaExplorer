@@ -5,7 +5,7 @@
 #' and the `betaSD_tissue` arguments.
 #'
 #' This function is designed and inspired following the proposal of
-#' [makeExampleDESeqDataSet()] from the `DESeq2` package. Credits are given
+#' [DESeq2::makeExampleDESeqDataSet()] from the `DESeq2` package. Credits are given
 #' to Mike Love for the nice initial implementation
 #'
 #' @param n number of rows (genes)
@@ -18,7 +18,7 @@
 #' `2^trueIntercept`
 #' @param sizeFactors multiplicative factors for each sample
 #'
-#' @return a [DESeqDataSet()] with true dispersion,
+#' @return a [DESeq2::DESeqDataSet()] with true dispersion,
 #' intercept for two factors (condition and tissue) and beta values in the
 #'  metadata columns.  Note that the true betas are provided on the log2 scale.
 #'

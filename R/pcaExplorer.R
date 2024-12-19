@@ -3,10 +3,10 @@
 #' Launch a Shiny App for interactive exploration of a dataset from the perspective
 #' of Principal Components Analysis
 #'
-#' @param dds A [DESeqDataSet()] object. If not provided, then a `countmatrix`
+#' @param dds A [DESeq2::DESeqDataSet()] object. If not provided, then a `countmatrix`
 #' and a `coldata` need to be provided. If none of the above is provided, it is possible
 #' to upload the data during the execution of the Shiny App
-#' @param dst A [DESeqTransform()] object. Can be computed from the `dds` object
+#' @param dst A [DESeq2::DESeqTransform()] object. Can be computed from the `dds` object
 #' if left NULL. If none is provided, then a `countmatrix`
 #' and a `coldata` need to be provided. If none of the above is provided, it is possible
 #' to upload the data during the execution of the Shiny App

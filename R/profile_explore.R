@@ -1,7 +1,7 @@
 #' Extract and plot the expression profile of genes
 #'
-#' @param se A [DESeqDataSet()] object, or a
-#' [DESeqTransform()] object.
+#' @param se A [DESeq2::DESeqDataSet()] object, or a
+#' [DESeq2::DESeqTransform()] object.
 #' @param genelist An array of characters, including the names of the genes of
 #' interest of which the profile is to be plotted
 #' @param intgroup A factor, needs to be in the `colnames` of `colData(se)`

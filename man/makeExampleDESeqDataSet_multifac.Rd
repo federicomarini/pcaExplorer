@@ -34,7 +34,7 @@ makeExampleDESeqDataSet_multifac(
 \item{sizeFactors}{multiplicative factors for each sample}
 }
 \value{
-a \code{\link[=DESeqDataSet]{DESeqDataSet()}} with true dispersion,
+a \code{\link[DESeq2:DESeqDataSet]{DESeq2::DESeqDataSet()}} with true dispersion,
 intercept for two factors (condition and tissue) and beta values in the
 metadata columns.  Note that the true betas are provided on the log2 scale.
 }
@@ -45,7 +45,7 @@ and the \code{betaSD_tissue} arguments.
 }
 \details{
 This function is designed and inspired following the proposal of
-\code{\link[=makeExampleDESeqDataSet]{makeExampleDESeqDataSet()}} from the \code{DESeq2} package. Credits are given
+\code{\link[DESeq2:makeExampleDESeqDataSet]{DESeq2::makeExampleDESeqDataSet()}} from the \code{DESeq2} package. Credits are given
 to Mike Love for the nice initial implementation
 }
 \examples{

@@ -7,7 +7,7 @@
 distro_expr(rld, plot_type = "density")
 }
 \arguments{
-\item{rld}{A \code{\link[=DESeqTransform]{DESeqTransform()}} object.}
+\item{rld}{A \code{\link[DESeq2:DESeqTransform]{DESeq2::DESeqTransform()}} object.}
 
 \item{plot_type}{Character, choose one of \code{boxplot}, \code{violin} or
 \code{density}. Defaults to \code{density}}

@@ -8,9 +8,9 @@
 #' The adaptation and additional parameters are tailored to display typical genomics data
 #' such as the transformed counts of RNA-seq experiments
 #'
-#' @param x A [DESeqTransform()] object, with data in `assay(x)`,
-#' produced for example by either [rlog()] or
-#' [varianceStabilizingTransformation()]
+#' @param x A [DESeq2::DESeqTransform()] object, with data in `assay(x)`,
+#' produced for example by either [DESeq2::rlog()] or
+#' [DESeq2::varianceStabilizingTransformation()]
 #' @param ntop Number of top genes to use for principal components,
 #' selected by highest row variance
 #' @param choices Vector of two numeric values, to select on which principal components to plot

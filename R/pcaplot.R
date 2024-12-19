@@ -2,9 +2,9 @@
 #'
 #' Plots the results of PCA on a 2-dimensional space
 #'
-#' @param x A [DESeqTransform()] object, with data in `assay(x)`,
-#' produced for example by either [rlog()] or
-#' [varianceStabilizingTransformation()]/[vst()]
+#' @param x A [DESeq2::DESeqTransform()] object, with data in `assay(x)`,
+#' produced for example by either [DESeq2::rlog()] or
+#' [DESeq2::varianceStabilizingTransformation()]/[DESeq2::vst()]
 #' @param intgroup Interesting groups: a character vector of
 #' names in `colData(x)` to use for grouping. Defaults to NULL, which would then 
 #' select the first column of the `colData` slot
@@ -180,9 +180,9 @@ pcascree <- function(obj, type = c("pev", "cev"),pc_nr=NULL,title=NULL)
 #'
 #' Plots the results of PCA on a 3-dimensional space, interactively
 #'
-#' @param x A [DESeqTransform()] object, with data in `assay(x)`,
-#' produced for example by either [rlog()] or
-#' [varianceStabilizingTransformation()]
+#' @param x A [DESeq2::DESeqTransform()] object, with data in `assay(x)`,
+#' produced for example by either [DESeq2::rlog()] or
+#' [DESeq2::varianceStabilizingTransformation()]
 #' @param intgroup Interesting groups: a character vector of
 #' names in `colData(x)` to use for grouping
 #' @param ntop Number of top genes to use for principal components,
