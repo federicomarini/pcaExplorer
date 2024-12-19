@@ -1,3 +1,9 @@
+# pcaExplorer 3.2.0
+
+## Other notes
+
+* Some changes in the source of the documentation, providing anchors to all function calls. This avoids the new note in R CMD check in the new major release
+
 # pcaExplorer 2.99.0
 
 ## New features
