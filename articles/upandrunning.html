@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.3.0</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip></h1>
-<p>Up and running with <em><a href="https://bioconductor.org/packages/3.21/pcaExplorer" class="external-link">pcaExplorer</a></em></p>
+<p>Up and running with <em><a href="https://bioconductor.org/packages/3.22/pcaExplorer" class="external-link">pcaExplorer</a></em></p>
                         <h4 data-toc-skip class="author">Federico
 Marini</h4>
             <address class="author_afil">
@@ -101,7 +101,7 @@ Mainz<br><a class="author_email" href="mailto:#"></a><a href="mailto:marinif@uni
 Binder</h4>
             <address class="author_afil">
       Institute of Medical Biostatistics, Epidemiology and Informatics
-(IMBEI), Mainz<br><h4 data-toc-skip class="date">7 March 2025</h4>
+(IMBEI), Mainz<br><h4 data-toc-skip class="date">2 May 2025</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/federicomarini/pcaExplorer/blob/devel/vignettes/upandrunning.Rmd" class="external-link"><code>vignettes/upandrunning.Rmd</code></a></small>
       <div class="hidden name"><code>upandrunning.Rmd</code></div>
@@ -126,14 +126,14 @@ Binder</h4>
 <div class="section level2">
 <h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
 </h2>
-<p>First things first: install <em><a href="https://bioconductor.org/packages/3.21/pcaExplorer" class="external-link">pcaExplorer</a></em>
+<p>First things first: install <em><a href="https://bioconductor.org/packages/3.22/pcaExplorer" class="external-link">pcaExplorer</a></em>
 and load it into your R session. You should receive a message
 notification if this is completed without errors.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"pcaExplorer"</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/federicomarini/pcaExplorer" class="external-link">"pcaExplorer"</a></span><span class="op">)</span></span></code></pre></div>
-<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.21/pcaExplorer" class="external-link">pcaExplorer</a></em>,
-based on the dataset in the <em><a href="https://bioconductor.org/packages/3.21/airway" class="external-link">airway</a></em>
+<p>This document describes a use case for <em><a href="https://bioconductor.org/packages/3.22/pcaExplorer" class="external-link">pcaExplorer</a></em>,
+based on the dataset in the <em><a href="https://bioconductor.org/packages/3.22/airway" class="external-link">airway</a></em>
 package. If this package is not available on your machine, please
 install it by executing:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -150,22 +150,22 @@ untreated.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/federicomarini/pcaExplorer" class="external-link">"pcaExplorer"</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/pcaExplorer.html">pcaExplorer</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.21/airway" class="external-link">airway</a></em>
+<p>The easiest way to explore the <em><a href="https://bioconductor.org/packages/3.22/airway" class="external-link">airway</a></em>
 dataset is by clicking on the dedicated button in the <strong>Data
 Upload</strong> panel. This action will:</p>
 <ul>
-<li>load the <em><a href="https://bioconductor.org/packages/3.21/airway" class="external-link">airway</a></em>
+<li>load the <em><a href="https://bioconductor.org/packages/3.22/airway" class="external-link">airway</a></em>
 package</li>
 <li>load the count matrix and the experimental metadata</li>
 <li>compose the <code>dds</code> object, normalize the expression values
 (using the robust method proposed by Anders and Huber in the original
 DESeq manuscript), and compute the variance stabilizing transformed
 expression values (stored in the <code>dst</code> object)</li>
-<li>retrieve the gene annotation information via the <em><a href="https://bioconductor.org/packages/3.21/org.Hs.eg.db" class="external-link">org.Hs.eg.db</a></em>,
+<li>retrieve the gene annotation information via the <em><a href="https://bioconductor.org/packages/3.22/org.Hs.eg.db" class="external-link">org.Hs.eg.db</a></em>,
 adding gene symbols to the ENSEMBL ids - this step is optional, but
 recommended for more human-readable identifiers to be used.</li>
 </ul>
-<p>If you want to load your expression data, please refer to the <a href="https://bioconductor.org/packages/3.21/pcaExplorer/vignettes/pcaExplorer.html" class="external-link">User
+<p>If you want to load your expression data, please refer to the <a href="https://bioconductor.org/packages/3.22/pcaExplorer/vignettes/pcaExplorer.html" class="external-link">User
 Guide</a>, which contains detailed information on the formats your data
 have to respect.</p>
 <p>Once the preprocessing of the input is done, you should get a
@@ -360,12 +360,12 @@ loadings.
 </p>
 </div>
 <p>Still, a previous call to <code>pca2go</code> is recommended, as it
-relies on the algorithm of the <em><a href="https://bioconductor.org/packages/3.21/topGO" class="external-link">topGO</a></em>
+relies on the algorithm of the <em><a href="https://bioconductor.org/packages/3.22/topGO" class="external-link">topGO</a></em>
 package: it will require some additional computing time, but it is
 likely to deliver more precise terms (i.e. in turn more relevant from
 the point of view of their biological relevance). To do so, you should
 exit the live session, compute this object, and provide it in the call
-to <code>pcaExplorer</code> (see more how to do so in <a href="https://bioconductor.org/packages/3.21/pcaExplorer/vignettes/pcaExplorer.html" class="external-link">the
+to <code>pcaExplorer</code> (see more how to do so in <a href="https://bioconductor.org/packages/3.22/pcaExplorer/vignettes/pcaExplorer.html" class="external-link">the
 main user guide</a>).</p>
 </div>
 <div class="section level2">
@@ -429,9 +429,9 @@ in mind that the fully rendered report (the one you can obtain with the
 </h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## R Under development (unstable) (2025-03-06 r87893)</span></span>
+<pre><code><span><span class="co">## R version 4.5.0 (2025-04-11)</span></span>
 <span><span class="co">## Platform: aarch64-apple-darwin20</span></span>
-<span><span class="co">## Running under: macOS Sonoma 14.7.4</span></span>
+<span><span class="co">## Running under: macOS Sonoma 14.7.5</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Matrix products: default</span></span>
 <span><span class="co">## BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib </span></span>
@@ -447,19 +447,19 @@ in mind that the fully rendered report (the one you can obtain with the
 <span><span class="co">## [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## other attached packages:</span></span>
-<span><span class="co">## [1] BiocStyle_2.35.0</span></span>
+<span><span class="co">## [1] BiocStyle_2.37.0</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## loaded via a namespace (and not attached):</span></span>
 <span><span class="co">##  [1] digest_0.6.37       desc_1.4.3          R6_2.6.1           </span></span>
-<span><span class="co">##  [4] bookdown_0.42       fastmap_1.2.0       xfun_0.51          </span></span>
-<span><span class="co">##  [7] cachem_1.1.0        knitr_1.49          htmltools_0.5.8.1  </span></span>
+<span><span class="co">##  [4] bookdown_0.43       fastmap_1.2.0       xfun_0.52          </span></span>
+<span><span class="co">##  [7] cachem_1.1.0        knitr_1.50          htmltools_0.5.8.1  </span></span>
 <span><span class="co">## [10] png_0.1-8           rmarkdown_2.29      lifecycle_1.0.4    </span></span>
-<span><span class="co">## [13] cli_3.6.4           sass_0.4.9          pkgdown_2.1.1.9000 </span></span>
-<span><span class="co">## [16] textshaping_1.0.0   jquerylib_0.1.4     systemfonts_1.2.1  </span></span>
-<span><span class="co">## [19] compiler_4.5.0      tools_4.5.0         ragg_1.3.3         </span></span>
+<span><span class="co">## [13] cli_3.6.5           sass_0.4.10         pkgdown_2.1.2.9000 </span></span>
+<span><span class="co">## [16] textshaping_1.0.1   jquerylib_0.1.4     systemfonts_1.2.3  </span></span>
+<span><span class="co">## [19] compiler_4.5.0      tools_4.5.0         ragg_1.4.0         </span></span>
 <span><span class="co">## [22] evaluate_1.0.3      bslib_0.9.0         yaml_2.3.10        </span></span>
-<span><span class="co">## [25] BiocManager_1.30.25 jsonlite_1.9.1      rlang_1.1.5        </span></span>
-<span><span class="co">## [28] fs_1.6.5            htmlwidgets_1.6.4</span></span></code></pre>
+<span><span class="co">## [25] BiocManager_1.30.25 jsonlite_2.0.0      rlang_1.1.6        </span></span>
+<span><span class="co">## [28] fs_1.6.6            htmlwidgets_1.6.4</span></span></code></pre>
 </div>
   </div>
 
@@ -478,7 +478,7 @@ in mind that the fully rendered report (the one you can obtain with the
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.9000.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.9000.</p>
 </div>
 
       </footer>
