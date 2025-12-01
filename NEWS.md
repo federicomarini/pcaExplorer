@@ -1,3 +1,9 @@
+# pcaExplorer 3.6.0
+
+## Other notes
+
+* `pcaplot()` labels now all samples with a segment connector in grey to increase its visibility on a bw/classic theme
+
 # pcaExplorer 3.2.0
 
 ## Other notes
