@@ -19,7 +19,7 @@ the topGO package"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/aja
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">pcaExplorer</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.5.0</span>
       </span>
     </div>
 
@@ -189,7 +189,7 @@ of the main <code><a href="pcaExplorer.html">pcaExplorer()</a></code> function</
 <span class="r-in"><span>                            multiVals <span class="op">=</span> <span class="st">"first"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">anno_df</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">anno_df</span><span class="op">$</span><span class="va">gene_id</span></span></span>
 <span class="r-in"><span><span class="va">bg_ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/row_colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/colSums.html" class="external-link">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/dge.html" class="external-link">counts</a></span><span class="op">(</span><span class="va">dds_airway</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span></span></span>
-<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">topGO</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/federicomarini/topGO" class="external-link">topGO</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">pca2go_airway</span> <span class="op">&lt;-</span> <span class="fu">pca2go</span><span class="op">(</span><span class="va">rld_airway</span>,</span></span>
 <span class="r-in"><span>                        annotation <span class="op">=</span> <span class="va">anno_df</span>,</span></span>
 <span class="r-in"><span>                        organism <span class="op">=</span> <span class="st">"Hs"</span>,</span></span>
@@ -211,7 +211,7 @@ of the main <code><a href="pcaExplorer.html">pcaExplorer()</a></code> function</
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.9000.</p>
 </div>
 
       </footer></div>
