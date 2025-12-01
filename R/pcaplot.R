@@ -102,8 +102,11 @@ pcaplot <- function(x,
   }
 
   if (text_labels)
-    g <- g + geom_label_repel(mapping = aes_string(label = "names", fill = "group"),
-                              color = "white", show.legend = TRUE)
+    g <- g + geom_label_repel(mapping = aes_string(label = "names", 
+                                                   fill = "group"),
+                              color = "white", 
+                              segment.color = "grey80",
+                              show.legend = TRUE)
 
   plot_title <- paste0("PCA plot - top ", length(select), " variable genes")
   if (!is.null(title)) {
