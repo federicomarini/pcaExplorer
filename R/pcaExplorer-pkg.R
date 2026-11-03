@@ -30,7 +30,7 @@
 #' @importFrom ggrepel geom_label_repel
 #' @importFrom DT datatable
 #' @importFrom shinyAce aceAutocomplete aceEditor getAceModes getAceThemes
-#' updateAceEditor
+#'   updateAceEditor
 #' @import threejs
 #' @import biomaRt
 #' @importFrom pheatmap pheatmap

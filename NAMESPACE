@@ -30,9 +30,11 @@ import(shiny)
 import(shinydashboard)
 import(threejs)
 import(topGO)
-importFrom(AnnotationDbi,Term)
-importFrom(AnnotationDbi,mapIds)
-importFrom(AnnotationDbi,select)
+importFrom(AnnotationDbi,
+  Term,
+  mapIds,
+  select
+)
 importFrom(DT,datatable)
 importFrom(GenomicRanges,GRanges)
 importFrom(IRanges,IRanges)
@@ -41,30 +43,44 @@ importFrom(S4Vectors,DataFrame)
 importFrom(base64enc,dataURI)
 importFrom(genefilter,rowVars)
 importFrom(ggrepel,geom_label_repel)
-importFrom(grDevices,colorRamp)
-importFrom(grDevices,dev.off)
-importFrom(grDevices,pdf)
-importFrom(grDevices,rainbow)
-importFrom(grDevices,rgb)
+importFrom(grDevices,
+  colorRamp,
+  dev.off,
+  pdf,
+  rainbow,
+  rgb
+)
 importFrom(heatmaply,heatmaply)
-importFrom(limma,goana)
-importFrom(limma,topGO)
-importFrom(mosdef,gene_plot)
-importFrom(mosdef,run_topGO)
+importFrom(limma,
+  goana,
+  topGO
+)
+importFrom(mosdef,
+  gene_plot,
+  run_topGO
+)
 importFrom(pheatmap,pheatmap)
-importFrom(plotly,plotlyOutput)
-importFrom(plotly,renderPlotly)
-importFrom(scales,brewer_pal)
-importFrom(scales,hue_pal)
+importFrom(plotly,
+  plotlyOutput,
+  renderPlotly
+)
+importFrom(scales,
+  brewer_pal,
+  hue_pal
+)
 importFrom(shiny,addResourcePath)
-importFrom(shinyAce,aceAutocomplete)
-importFrom(shinyAce,aceEditor)
-importFrom(shinyAce,getAceModes)
-importFrom(shinyAce,getAceThemes)
-importFrom(shinyAce,updateAceEditor)
-importFrom(shinyBS,bsCollapse)
-importFrom(shinyBS,bsCollapsePanel)
-importFrom(shinyBS,bsTooltip)
+importFrom(shinyAce,
+  aceAutocomplete,
+  aceEditor,
+  getAceModes,
+  getAceThemes,
+  updateAceEditor
+)
+importFrom(shinyBS,
+  bsCollapse,
+  bsCollapsePanel,
+  bsTooltip
+)
 importFrom(tidyr,gather)
 importMethodsFrom(GOstats,hyperGTest)
 importMethodsFrom(GOstats,summary)

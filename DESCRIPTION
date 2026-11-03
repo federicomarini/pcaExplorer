@@ -58,7 +58,7 @@ BugReports: https://github.com/federicomarini/pcaExplorer/issues
 biocViews: ImmunoOncology, Visualization, RNASeq, DimensionReduction,
     PrincipalComponent, QualityControl, GUI, ReportWriting, ShinyApps
 VignetteBuilder: knitr
-RoxygenNote: 7.3.2
 Encoding: UTF-8
 NeedsCompilation: no
 Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.1

@@ -13,7 +13,7 @@ get_annotation_orgdb(dds, orgdb_species, idtype, key_for_genenames = "SYMBOL")
 package which should be available in Bioconductor}
 
 \item{idtype}{Character, the ID type of the genes as in the row names of
-\code{dds}, to be used for the call to \code{\link[AnnotationDbi:AnnotationDb-class]{AnnotationDbi::mapIds()}}}
+\code{dds}, to be used for the call to \code{\link[AnnotationDbi:mapIds]{AnnotationDbi::mapIds()}}}
 
 \item{key_for_genenames}{Character, corresponding to the column name for the
 key in the orgDb package containing the official gene name (often called
